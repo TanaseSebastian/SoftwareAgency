@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+      <link rel="stylesheet" href="..//css/login.css">
+</head>
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2 class="active">Reset password </h2>
+      
+          <!-- Icon -->
+          <div class="fadeIn first">
+            <img src="..//assets//img/userIcon.png" id="icon" alt="User Icon" />
+          </div>
+      
+          <!-- Login Form -->
+          <form action="..//gestforgot?cmd=resetpsw" method="post">
+            <input type="password" id="password" class="fadeIn third" name="password" placeholder="nuova password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Deve contenere almeno un numero,una lettera maiuscola e una lettera minuscola, e deve essere composta da almeno 8 o più caratteri"  required onkeyup='check();'>
+            <input type="password" id="confirm_password" class="fadeIn third" name="confirm-password" placeholder="conferma la password" required onkeyup='check();'>
+            <h2 id='message'></h2>
+            <input type="submit" class="fadeIn fourth" value="Resetta la password">
+          </form>
+      
+          
+      
+        </div>
+      </div>
+</body>
+<script>
+
+var check = function() {
+	  if (document.getElementById('password').value ==
+	    document.getElementById('confirm_password').value) {
+	    document.getElementById('message').style.color = 'green';
+	    document.getElementById('message').innerHTML = 'password corrispondono';
+	  } else {
+	    document.getElementById('message').style.color = 'red';
+	    document.getElementById('message').innerHTML = 'password diverse';
+	  }
+	  if(document.getElementById('password').value ==""){
+		  document.getElementById('message').innerHTML = '';
+	  }
+	 
+	}
+
+</script>
+</html>
