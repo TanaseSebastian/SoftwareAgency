@@ -29,12 +29,73 @@
   <!-- Template Main CSS File -->
   <link href="frontend/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: BizLand - v3.1.0
-  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+	<script type="text/javascript">
+   function googleTranslateElementInit() {
+   new google.translate.TranslateElement({pageLanguage: 'it',
+   includedLanguages: 'it,en,es,jv,pt,fr,de,ru,zh-CN',
+   layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false}, 'google_translate_element');
+	}
+	</script>
+	
+		<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<style>
+		#google_translate_element {
+	 position: absolute;
+	margin-left: -10%;
+	
+}
+ .goog-te-gadget {
+	 font-family: "Raleway", sans-serif;
+	 font-weight: bold; 
+}
+
+ .goog-te-gadget-simple {
+ 			padding: 5px;
+			background-color: #white;
+			border: 2px solid #298ce5;
+			border-radius: 18px;
+			font-size: 12pt;
+			display: inline-block;
+			cursor: pointer;
+			margin-top: 10px;
+			zoom: 1;
+			display: inline;
+			text-align: left;
+			
+}
+
+ .goog-te-menu2 {
+	 width: 100%;
+}
+
+ .goog-te-menu-value {
+	 color: #298ce5 !important;
+}
+
+ .goog-te-menu-value span:nth-child(5) {
+ 	color: red;
+	 display: none;
+}
+ .goog-te-menu-value span:nth-child(3) {
+	 border: none !important;
+	 font-family: 'Calibri';
+}
+
+ .goog-te-gadget-icon {
+	 background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Globe_Atlantic.svg/1200px-Globe_Atlantic.svg.png");
+	 background-position: 0px 0px;
+	 height: 0px !important;
+	 width: 0px !important;
+	 margin-right: 1px !important;
+	 direction: none;
+}
+
+  .goog-te-banner-frame.skiptranslate {
+	 display: none !important;
+	}
+	body { top: 0px !important; } 
+</style>
 </head>
 
 <body>
@@ -46,12 +107,9 @@
         <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
         <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
       </div>
+     
       <div class="social-links d-none d-md-flex align-items-center">
-        <a href="login.jsp"><i class="bi bi-person-circle"></i> Area Riservata</a>
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <div id="google_translate_element" >
       </div>
     </div>
   </section>
@@ -73,6 +131,7 @@
           <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a href="login.jsp"><i class="bi bi-person-circle"></i>&nbsp;Area Riservata</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

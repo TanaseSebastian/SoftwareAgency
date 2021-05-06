@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+  <link rel="stylesheet" href="..//css/login.css">
+</head>
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2 class="active">Verifica Account</h2>
+      
+          <!-- Icon -->
+          <div class="fadeIn first">
+          <img src="..//assets//img/userIcon.png" id="icon" alt="User Icon" />
+          </div>
+      
+          <!-- Login Form -->
+          <form action="..//gestforgot?cmd=codecontrol" method="post">
+            <h2 style="color: black; text-transform: none;">Gentile utente è stato inviato il codice di verifica all'indrizzo email da lei scelto. La preghiamo di autenticarsi.</h2>
+            <input type="tel" id="code" class="fadeIn third" name="code"  placeholder="inserisci qui il codice" maxlength="5"  required>
+            <input type="submit" class="fadeIn fourth" value="Verifica">
+          </form>
+      
+      
+        </div>
+      </div>
+</body>
+</html>

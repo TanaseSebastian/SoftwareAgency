@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="..//css/login.css">
+</head>
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2 class="active">Verifica Account</h2>
+      
+          <!-- Icon -->
+          <div class="fadeIn first">
+            <img src="..//assets//img/userIcon.png" id="icon" alt="User Icon" />
+          </div>
+      
+          <!-- Login Form -->
+          <form action="..//gestforgot?cmd=sendcode" method="post">
+            <h2 style="color: black; text-transform: none;">Gentile utente per poter recuperare la password bisogna prima verificare l'account</h2>
+            <input type="submit" id="invia" class="fadeIn fourth" value="Inviami il codice di verifica">
+            <h2 id="message" style="color: black; text-transform: none;">Gentile utente,la preghiamo di attendere il caricamento...</h2>
+          </form>
+      
+      
+        </div>
+      </div>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+$(document).ready(function(){
+$("#message").hide();
+});
+$('#invia').click(function(){  $("#message").show();});
+</script>
+</html>

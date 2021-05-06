@@ -1,5 +1,5 @@
 package it.meucci;
-
+import org.apache.logging.log4j.*;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,12 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class GestioneLogin
+ * Servlet implementation class gestioneLogin
  */
-@WebServlet("/gestLogin")
+@WebServlet("/gestlogin")
 public class GestioneLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	static Logger logger = LogManager.getLogger(GestioneLogin.class); 
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -34,8 +34,83 @@ public class GestioneLogin extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+		String comando = request.getParameter("cmd");
+		if(comando.equals("register")) {
+		Dipendente user;
+		String username = request.getParameter("username");
+		String codiceRegistrazione = request.getParameter("codiceRegistrazione");
+		logger.info("un nuovo utente si sta registrando nell'applicazione, utente="+username);
 
+		try {
+			//controllo se l'utente esiste nel database
+			DBManager db = new DBManager();
+			int trovati=db.verificaCredenzialidiRegistrazione(username, codiceRegistrazione);
+			if (trovati==1)
+			{
+					//UTENTE IN SESSIONE
+				   user = db.getUser(username);
+				  request.getSession().setAttribute("SESSION_USER", user);
+				  request.getSession().setAttribute("utente_loggato", "true");
+				  request.getSession().setAttribute("Benvenuto", "true");
+				 
+				if(user.getAmministratore().equals("N")) {
+					logger.info("l'utente e' un cliente,per cui rimando sulla index.");
+					response.sendRedirect("index.jsp");
+				}
+				else if(user.getAmministratore().equals("Y")) {
+					logger.info("l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.");
+					response.sendRedirect("dashboard.jsp");
+				}
+			}
+			else {
+				logger.info("utente non riconosciuto,rimando su login.jsp e avviso l'utente delle credenziali probabilmente errate.");
+				request.getSession().setAttribute("MESSAGGIO", "<p class='text-danger'>Username o codice errati</p>");
+				response.sendRedirect("registrazione.jsp");
+			}
+			db.close();
+		} catch (Exception e) {
+			response.sendRedirect("404.jsp");
+		}
+	}
+	
+	
+	 if(comando.equals("login")) { 
+	Dipendente user;
+	String username = request.getParameter("login-username");
+	String password = request.getParameter("login-password");
+	logger.info("utente sta accedendo all'applicazione username_utente= "+username);
+	try {
+		//controllo se l'utente esiste nel database
+		DBManager db = new DBManager();
+		int trovati=db.verificaCredenziali(username, password);
+		if (trovati==1)
+		{
+			//UTENTE IN SESSIONE
+			user = db.getUser(username);
+			  request.getSession().setAttribute("SESSION_USER", user);
+			  request.getSession().setAttribute("utente_loggato", "true");
+			  request.getSession().setAttribute("Benvenuto", "false");
+			 
+			if(user.getAmministratore().equals("N")) {
+				logger.info("l'utente e' un cliente,per cui rimando sulla index.");
+				response.sendRedirect("index.jsp");
+			}
+			else if(user.getAmministratore().equals("Y")) {
+				logger.info("l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.");
+				response.sendRedirect("dashboard.jsp");
+			}
+		}
+		else {
+			logger.info("utente non riconosciuto,rimando su login.jsp e avviso l'utente delle credenziali probabilmente errate.");
+			request.getSession().setAttribute("MESSAGGIO", "<p class='text-danger'>Username o Password errati</p>");
+			response.sendRedirect("login.jsp");
+		}
+		db.close();
+	} catch (Exception e) {
+		response.sendRedirect("404.jsp");
+		e.printStackTrace();
+	}
+	}
+	
+	}
 }
