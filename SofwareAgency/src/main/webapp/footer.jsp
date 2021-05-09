@@ -9,53 +9,57 @@
             <!-- END Footer -->
         </div>
         <!-- END Page Container -->
-
-
-        <script src="assets/js/codebase.core.min.js"></script>
-        <script src="assets/js/codebase.app.min.js"></script>
-        <script src="assets/js/plugins/flatpickr/flatpickr.min.js"></script>
-
-
-            <!-- Page JS Plugins -->
-            <script src="assets/js/plugins/jquery-vide/jquery.vide.min.js"></script>
-            <!-- Page JS Plugins -->
-            <script src="assets/js/plugins/select2/js/select2.full.min.js"></script>
-            <script src="assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
-            <script src="assets/js/plugins/jquery-validation/additional-methods.js"></script>
-            <<!-- Page JS Plugins -->
-        <script src="assets/js/plugins/pwstrength-bootstrap/pwstrength-bootstrap.min.js"></script>
-        <script src="assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-        <script src="assets/js/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
-        <script src="assets/js/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
-        <script src="assets/js/plugins/select2/js/select2.full.min.js"></script>
-        <script src="assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.js"></script>
-        <script src="assets/js/plugins/jquery-auto-complete/jquery.auto-complete.min.js"></script>
-        <script src="assets/js/plugins/masked-inputs/jquery.maskedinput.min.js"></script>
-        <script src="assets/js/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
-        <script src="assets/js/plugins/dropzonejs/dropzone.min.js"></script>
-        <script src="assets/js/plugins/flatpickr/flatpickr.min.js"></script>
-            
         
-            <!-- Page JS Code -->
-            <script src="assets/js/pages/be_forms_plugins.min.js"></script>
-
-
-        <!-- Page JS Plugins -->
-        <script src="assets/js/plugins/chartjs/Chart.bundle.min.js"></script>
-        <script src="assets/js/plugins/slick/slick.min.js"></script>
-
-        <!-- Page JS Code -->
-        <script src="assets/js/pages/be_forms_validation.min.js"></script>
-        <script src="assets/js/pages/be_pages_dashboard.min.js"></script>
-        
-        
-<script>
-  $(".date").flatpickr({
-	    dateFormat: "Y-m-d",
-	    "locale": {
-	        "firstDayOfWeek": 1 // set start day of week to Monday
-	    }
-	});
-</script>
-    </body>
-</html>
+         <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sicuro di voler uscire?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Seleziona "Logout" se sei sicuro di voler terminare la sessione.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Annulla</button>
+                    <a class="btn btn-primary" href="logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+          <!-- modulo per scelta della quantità di elementi datatables-->
+ <div class="modal" id="chooseEntries" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4>
+                Indicare il numero di righe che si vuole vedere.
+              </h4>
+          </div>
+          <div class="modal-body">
+          <form action="" method="post" id="chooseEntriesForm" name="chooseEntriesForm" role="form" >
+            <div class="col-md-12 form-group">
+				<center>
+				<select id="select-entries" name="select-entries" class="col-md-6 " required>
+				 <option value="" disabled selected hidden>Seleziona numero righe</option>
+					<option value="1">1</option>
+					<option value="10">10</option>
+					<option value="25">25</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+					<option value="-1">TUTTE</option>
+				</select>
+				</center>
+            </div>
+          <div class="text-center" style="margin-top: 30px;">
+           <button type="button" class="btn btn-danger" data-dismiss="modal">Annulla</button>
+          <button type="submit" class="btn btn-primary">Prosegui <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+          </div>
+        </form>
+          </div>
+      </div>
+  </div>
+  </div>

@@ -4,11 +4,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 <%@include file="header.jsp"%>
 <%
-	// Leggo le proprietà da file properties
-	prop = obj.loadProperties("DB.properties");
-	prop = obj.loadProperties("DB.properties");
-	String userDB = prop.getProperty("Username");
-	String pwDB = prop.getProperty("Pasword");
+Dipendente d = (Dipendente) request.getAttribute("UTENTE");
+String utente = (String) request.getAttribute("tipoutente");
+
+// Leggo le proprietà da file properties
+prop = obj.loadProperties("DB.properties");
+prop = obj.loadProperties("DB.properties");
+String userDB = prop.getProperty("Username");
+String pwDB = prop.getProperty("Pasword");
+DBManager db = new DBManager();
 %>
 <sql:setDataSource var="myDS" driver="com.mysql.cj.jdbc.Driver"
 	url="jdbc:mysql://localhost:3306/softwarehouse?serverTimezone=UTC"
@@ -28,9 +32,14 @@
 		<div class="bg-black-op-75">
 			<div class="content content-top content-full text-center">
 				<div class="py-20">
-					<h1 class="h2 font-w700 text-white mb-10">Nuovo Dipendente</h1>
-					<h2 class="h4 font-w400 text-white-op mb-0">Completa i campi e
-						inserisci un nuovo dipendente .</h2>
+					<h1 class="h2 font-w700 text-white mb-10">
+						Aggiorna
+						<%=utente%></h1>
+					<h2 class="h4 font-w400 text-white-op mb-0">
+						Aggiorna i dati di
+						<%=d.getCognome() + " " + d.getNome()%>
+						.
+					</h2>
 				</div>
 			</div>
 		</div>
@@ -41,9 +50,10 @@
 	<div class="bg-body-light border-b">
 		<div class="content py-5 text-center">
 			<nav class="breadcrumb bg-body-light mb-0">
-				<a class="breadcrumb-item" href="personale.jsp">Personale
-					Aziendale</a> <span class="breadcrumb-item active">Nuovo
-					Dipendente</span>
+				<a class="breadcrumb-item" href="dashboard.jsp">Dashboard</a> <a
+					class="breadcrumb-item"
+					href="gestutenti?cmd=viewall&tipo=<%=utente%>">Visualizza <%=utente%>/i
+				</a> <span class="breadcrumb-item active">Nuovo <%=utente%></span>
 			</nav>
 		</div>
 	</div>
@@ -54,7 +64,7 @@
 		<!-- Bootstrap Forms Validation -->
 		<div class="block">
 			<div class="block-header block-header-default">
-				<h3 class="block-title">Form Nuovo Dipendente</h3>
+				<h3 class="block-title">Aggiornamento dati</h3>
 				<div class="block-options">
 					<button type="button" class="btn-block-option">
 						<i class="si si-wrench"></i>
@@ -62,23 +72,27 @@
 				</div>
 			</div>
 			<div class="block-content">
+				<button type="submit" class="btn btn-outline-success"
+					style="margin-left: 0%;" data-target="#resetPassword"
+					data-toggle="modal">Modifica Password</button>
 				<div class="row justify-content-center py-20">
 					<div class="col-xl-6">
 						<!-- jQuery Validation functionality is initialized in js/pages/be_forms_validation.min.js which was auto compiled from _es6/pages/be_forms_validation.js -->
 						<!-- For more info and examples you can check out https://github.com/jzaefferer/jquery-validation -->
 						<form class="js-validation-bootstrap"
-							action="gestutenti?cmd=nuovoDipendente" method="post">
+							action="gestutenti?cmd=modifica&tipoutente=<%=utente%>"
+							method="post">
 							<%=messaggio%>
-							<%request.getSession().setAttribute("MESSAGGIO", ""); %>
+							<%
+							request.getSession().setAttribute("MESSAGGIO", "");
+							%>
 							<div class="form-group row">
 								<label class="col-lg-4 col-form-label" for="cf">Codice
 									Fiscale <span class="text-danger">*</span>
 								</label>
 								<div class="col-lg-8">
 									<input type="text" class="form-control" id="cf" name="cf"
-										placeholder="Inserisci il codice fiscale" required="required"
-										minlength="16" maxlength="16"
-										title="Inserire un codice fiscale valido">
+										value="<%=d.getCf()%>" readonly="readonly">
 								</div>
 							</div>
 							<div class="form-group row">
@@ -87,8 +101,7 @@
 								</label>
 								<div class="col-lg-8">
 									<input type="text" class="form-control" id="cognome"
-										name="cognome" placeholder="Inserire il cognome"
-										required="required" title="inserire un cognome">
+										name="cognome" value="<%=d.getCognome()%>" readonly="readonly">
 								</div>
 							</div>
 							<div class="form-group row">
@@ -96,8 +109,7 @@
 									class="text-danger">*</span></label>
 								<div class="col-lg-8">
 									<input type="text" class="form-control" id="nome" name="nome"
-										placeholder="inserire il nome" required="required"
-										title="inserire un nome">
+										value="<%=d.getNome()%>" readonly="readonly">
 								</div>
 							</div>
 							<div class="form-group row">
@@ -107,7 +119,8 @@
 								<div class="col-lg-8">
 									<input type="text" class="form-control" id="username"
 										name="username" placeholder="inserire username"
-										required="required" title="inserire un username">
+										required="required" title="inserire un username"
+										value="<%=d.getUsername()%>">
 								</div>
 							</div>
 							<div class="form-group row">
@@ -117,7 +130,7 @@
 								<div class="col-lg-8">
 									<input type="email" class="form-control" id="email"
 										name="email" placeholder="Inserire l'email"
-										required="required" title="inserire una email valida">
+										value="<%=d.getEmail()%>">
 								</div>
 							</div>
 							<div class="form-group row">
@@ -127,8 +140,7 @@
 								<div class="col-lg-8">
 									<input type="text" class="form-control" pattern="[0-9]+"
 										id="phone" name="phone" placeholder="3400000000"
-										minlenght="10" maxlength="10"
-										title="inserire un numero cellulare valido">
+										minlenght="10" maxlength="10" value="<%=d.getPhone()%>">
 								</div>
 							</div>
 							<div class="form-group row">
@@ -136,12 +148,15 @@
 									class="text-danger">*</span></label>
 								<div class="col-lg-8">
 									<sql:query var="dipartimenti" dataSource="${myDS}">
-										        SELECT * FROM Dipartimenti WHERE NOT Nome="Amministrazione";
+										        SELECT * FROM Dipartimenti;
 										    </sql:query>
 									<select class="form-control" id="dipartimento"
 										name="dipartimento" required="required"
 										title="inserire un dipartimento d'appartenenza">
-										<option value="" hidden>Selezionare dipartimento</option>
+										<option value="<%=d.getCodDipartimento()%>"
+											selected="selected">Dipartimento attuale
+											d'appartenenza:
+											<%=db.getNomeDipartimento(String.valueOf(d.getCodDipartimento()))%></option>
 										<c:forEach var="row" items="${dipartimenti.rows}">
 											<option value="${row.codDipartimento}"><c:out
 													value="${row.nome}" /></option>
@@ -156,7 +171,9 @@
 								<div class="col-lg-8">
 									<select class="form-control" id="qualifica" name="qualifica"
 										required="required" title="inserire una qualifica">
-										<option value="" hidden>Selezionare qualifica</option>
+										<option value="<%=d.getQualificaProfessionale()%>"
+											selected="selected">Qualifica attuale:
+											<%=d.getQualificaProfessionale()%></option>
 										<option value="Dirigente">Dirigente</option>
 										<option value="Responsabile">Responsabile</option>
 										<option value="Impiegato">Impiegato</option>
@@ -172,7 +189,8 @@
 									<input type="text" class="form-control" id="professione"
 										name="professione"
 										placeholder="inserisci il nome completo  della professione"
-										required="required" title="inserire il nome della professione">
+										required="required" title="inserire il nome della professione"
+										value="<%=d.getNomeProfessione()%>">
 								</div>
 							</div>
 							<div class="form-group row">
@@ -183,25 +201,32 @@
 									<input type="text" class="date col-lg-12" id="assunzione"
 										name="assunzione" placeholder="Anno-mese-giorno"
 										required="required"
-										title="inserire la data dell'assunzione del dipendente">
+										title="inserire la data dell'assunzione del dipendente"
+										value="<%=d.getDataAssunzione()%>">
 								</div>
 							</div>
 							<div class="form-group row">
-								<label class="col-lg-4 col-form-label" for="nascita">Data
-									di Nascita <span class="text-danger">*</span>
+								<label class="col-lg-4 col-form-label" for="anni">Anni
+									di anzianita' <span class="text-danger">*</span>
 								</label>
 								<div class="col-lg-8">
-									<input type="text" class="date col-lg-12" id="nascita"
-										name="nascita" placeholder="Anno-mese-giorno"
-										required="required"
-										title="inserire la data di nascita del dipendente">
+									<div class="input-group">
+										<input type="number" class="form-control" id="anni"
+											name="anni" min=0 max=100 required="required"
+											title="inserire gli anni di anzianita'"
+											value="<%=d.getAnniAnzianita()%>">
+									</div>
 								</div>
 							</div>
 							<div class="form-group row">
-								<label class="col-lg-4 col-form-label" for="provincia">Provincia di residenza<span
-									class="text-danger">*</span></label>
+								<label class="col-lg-4 col-form-label" for="provincia">Provincia
+									di residenza<span class="text-danger">*</span>
+								</label>
 								<div class="col-lg-8">
 									<select id="provincia" name="provincia">
+										<option selected="selected" value="<%=d.getProvincia()%>">Provincia
+											attuale:
+											<%=d.getProvincia()%></option>
 										<option value="ag">Agrigento</option>
 										<option value="al">Alessandria</option>
 										<option value="an">Ancona</option>
@@ -328,13 +353,33 @@
 										<input type="number" class="form-control" id="stipendio"
 											name="stipendio" placeholder="25000.00" min=0 max=9999999.99
 											step=0.01 required="required"
-											title="inserire lo stipendio del dipendente">
+											title="inserire lo stipendio del dipendente"
+											value="<%=d.getStipendio()%>">
 									</div>
 								</div>
 							</div>
 							<div class="form-group row">
+								<label class="col-lg-4 col-form-label" for="amministratore">Amministratore
+									<span class="text-danger">*</span>
+								</label>
+								<div class="col-lg-8">
+									<select class="form-control" id="amministratore"
+										name="amministratore" required="required"
+										title="inserire un tipo di privilegi">
+										<option value="<%=d.getAmministratore()%>" selected="selected">Mantieni
+											Privilegi attuali</option>
+										<option value="N">Questo utente non ha privilegi di
+											amministratore</option>
+										<option value="Y">CONSENTO i privilegi di
+											AMMINISTRATORE a questo utente</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group row">
 								<div class="col-lg-8 ml-auto">
-									<button type="submit" class="btn btn-alt-primary">Inserisci Dipendente</button>
+									<button type="submit" class="btn btn-alt-primary">
+										Aggiorna
+										<%=utente%></button>
 								</div>
 							</div>
 						</form>
@@ -349,6 +394,59 @@
 
 </main>
 <!-- END Main Container -->
+
+
+<!-- modulo per la modifica della password-->
+<div class="modal" id="resetPassword" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4>Modifica Password dell'utente interessato.</h4>
+			</div>
+			<div class="modal-body">
+				<form action="gestutenti?cmd=changepassword" method="post"
+					id="form2">
+					<div class="col-md-12 form-group">
+						<div class="form-group mb-3">
+							<input type="text" class="form-control" name="tipo"
+								id="tipo" value="<%=utente%>" hidden="hidden"
+								readonly="readonly">
+								<input type="text" class="form-control" name="id"
+								id="id" value="<%=user.getCodiceDipendente()%>" hidden="hidden"
+								readonly="readonly">
+								<input type="text" class="form-control" name="cf"
+								id="cf" value="<%=user.getCf()%>" hidden="hidden"
+								readonly="readonly">
+								<input type="text" class="form-control" hidden="hidden" name="email" id="email"
+								value=<%=user.getEmail()%>> <label class="label"
+								for="password">Password</label> <input type="password"
+								name="password" id="password" class="form-control"
+								placeholder="Inserisci Password"
+								pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+								title="Deve contenere almeno un numero,una lettera maiuscola e una lettera minuscola, e deve essere composta da almeno 8 o più caratteri"
+								required onchange='check_pass();' />
+						</div>
+						<div class="form-group mb-3">
+							<label class="label" for="password">Conferma Password</label> <input
+								type="password" name="confirm_password" id="confirm_password"
+								class="form-control" placeholder="Conferma Password" required
+								onchange='check_pass();' />
+						</div>
+					</div>
+					<div class="text-center" style="margin-top: 30px;">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Annulla</button>
+						<button type="submit" class="btn btn-primary" id="submit"
+							name=submit>
+							Modifica <i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 
 <%@include file="footer.jsp"%>
 <%@include file="librerie.jsp"%>

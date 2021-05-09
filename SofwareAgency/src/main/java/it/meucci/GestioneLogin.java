@@ -48,7 +48,7 @@ public class GestioneLogin extends HttpServlet {
 			if (trovati==1)
 			{
 					//UTENTE IN SESSIONE
-				   user = db.getUser(username);
+				   user = db.getUserbyUsername(username);
 				  request.getSession().setAttribute("SESSION_USER", user);
 				  request.getSession().setAttribute("utente_loggato", "true");
 				  request.getSession().setAttribute("Benvenuto", "true");
@@ -86,7 +86,7 @@ public class GestioneLogin extends HttpServlet {
 		if (trovati==1)
 		{
 			//UTENTE IN SESSIONE
-			user = db.getUser(username);
+			user = db.getUserbyUsername(username);
 			  request.getSession().setAttribute("SESSION_USER", user);
 			  request.getSession().setAttribute("utente_loggato", "true");
 			  request.getSession().setAttribute("Benvenuto", "false");

@@ -1,16 +1,15 @@
 <%@ page language="java" import="java.util.*,it.meucci.*"
 	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%!ArrayList<Software> elenco;
+<%!ArrayList<Dipendente> elenco;
 	int i;
-	Software s;%>
+	Dipendente d;%>
 <%
-//jstl
 String righe = (String) session.getAttribute("numeroRighe");
 if (righe == null) {
 	righe = "10";
 }
 DBManager db = new DBManager();
-elenco = (ArrayList<Software>) request.getAttribute("ELENCO_SOFTWARE");
+elenco = (ArrayList<Dipendente>) request.getAttribute("ELENCO_AMMINISTRATORI");
 %>
 <%@include file="header.jsp"%>
 <!-- Main Container -->
@@ -26,9 +25,9 @@ elenco = (ArrayList<Software>) request.getAttribute("ELENCO_SOFTWARE");
 			<div class="content content-top content-full text-center">
 				<div class="py-20">
 					<h1 class="h2 font-w700 text-white mb-10">Visualizza
-						Pacchetti Software</h1>
+						Amministratori</h1>
 					<h2 class="h4 font-w400 text-white-op mb-0">in questa sezione
-						potrai vedere tutti i pacchetti software che possiede
+						potrai vedere tutto il personale amministrativo che compone
 						l'azienda .</h2>
 				</div>
 			</div>
@@ -41,7 +40,8 @@ elenco = (ArrayList<Software>) request.getAttribute("ELENCO_SOFTWARE");
 		<div class="content py-5 text-center">
 			<nav class="breadcrumb bg-body-light mb-0">
 				<a class="breadcrumb-item" href="dashboard.jsp">Dashboard</a> <span
-					class="breadcrumb-item active">Visualizza Pacchetti Software</span>
+					class="breadcrumb-item active">Personale Aziendale</span> <span
+					class="breadcrumb-item active">Visualizza Personale</span>
 			</nav>
 		</div>
 	</div>
@@ -61,7 +61,7 @@ elenco = (ArrayList<Software>) request.getAttribute("ELENCO_SOFTWARE");
 		<!-- Dynamic Table Full -->
 		<div class="block">
 			<div class="block-header block-header-default">
-				<h3 class="block-title">Tabella Pacchetti Software</h3>
+				<h3 class="block-title">Tabella Amministratori</h3>
 			</div>
 			<div class="table-responsive">
 				<form id="form" method="post">
@@ -76,56 +76,58 @@ elenco = (ArrayList<Software>) request.getAttribute("ELENCO_SOFTWARE");
 							<div style="margin-bottom: 10px; margin-top: 20px;"">
 								<button type="submit"
 									class="col-md-3 btn btn-outline-danger ml-10 "
-									onclick="if(confirm('Sei sicuro di voler eliminare definitivamente questi pacchetti software dal database?')){submitForm('gestsoftware?cmd=elimina')}else{return false}">
+									onclick="if(confirm('Sei sicuro di voler eliminare definitivamente queste operazioni dal database?')){submitForm('gestutenti?cmd=elimina&tipo=amministratore')}else{return false}">
 									<i class="fa fa-trash" aria-hidden="true"></i> Elimina i
-									pacchetti selezionati
+									clienti selezionati
 								</button>
 							</div>
 							<div style="margin-bottom: 10px; margin-top: 20px;"">
 								<button type="button"
 									class="col-md-3 btn btn-outline-primary ml-10 "
 									data-target="#chooseEntries" data-toggle="modal"
-									data-id="visualizzaPacchetti.jsp" id="changeEntriesButton">
+									data-id="visualizzaAmministratori.jsp" id="changeEntriesButton">
 									<i class="fa fa-eye" aria-hidden="true"></i> Cambia numero
 									righe
 								</button>
 							</div>
 							<div style="margin-bottom: 10px; margin-top: 20px;"">
 								<a type="button" class="col-md-3 btn btn-outline-success ml-10 "
-									href="nuovoSoftware.jsp"><i class="fa fa-plus"
-									aria-hidden="true"></i> Inserisci nuovo pacchetto software</a>
+									href="nuovoAmministratore.jsp"><i class="fa fa-plus"
+									aria-hidden="true"></i> Inserisci nuovo amministratore</a>
 							</div>
 							<tr>
 								<th><input type="checkbox" id="checkboxAll"
 									onclick='$(".check").prop("checked",$ (this).prop("checked"));'>Seleziona
 									tutto</th>
 								<th>Dettagli</th>
-								<th>Codice software</th>
-								<th>Nome Software</th>
-								<th>Tempo in Giorni/Uomo</th>
-								<th>Costo</th>
-								<th>Responsabile</th>
+								<th>Codice Dipendente</th>
+								<th>Full Name</th>
+								<th>Qualifica Professionale</th>
+								<th>Nome Professione</th>
+								<th>Stipendio</th>
+								<th>Dipartimento</th>
 								<th>Aggiorna</th>
 							</tr>
 						</thead>
 						<tbody>
 							<%
 							for (i = 0; i < elenco.size(); i++) {
-								s = (Software)elenco.get(i);
+								d = (Dipendente) elenco.get(i);
 							%>
 							<tr>
 								<td><input type="checkbox" class="check" name="check"
-									value="<%=s.getCodSoftware()%>"></td>
+									value="<%=d.getCodiceDipendente()%>"></td>
 								<td><a
-									href="gestsoftware?cmd=dettagli&id=<%=s.getCodSoftware()%>"><i
+									href="gestutenti?cmd=dettagli&id=<%=d.getCodiceDipendente()%>"><i
 										class="fa fa-info-circle" aria-hidden="true"></i></a></td>
-								<td><%=s.getCodSoftware()%></td>
-								<td><%=s.getNome()%></td>
-								<td><%=s.getTempoGiorniUomo()%></td>
-								<td><%="€" + s.getCosto()%></td>
-								<td><%=db.getFullName(String.valueOf(s.getCodResponsabile()))%></td>
+								<td><%=d.getCodiceDipendente()%></td>
+								<td><%=d.getCognome() + " " + d.getNome()%></td>
+								<td><%=d.getQualificaProfessionale()%></td>
+								<td><%=d.getNomeProfessione()%></td>
+								<td><%="€" + d.getStipendio()%></td>
+								<td><%=db.getNomeDipartimento(String.valueOf(d.getCodDipartimento()))%></td>
 								<td><a
-									href="gestsoftware?cmd=aggiorna&id=<%=s.getCodSoftware()%>"><i
+									href="gestutenti?cmd=aggiorna&tipoutente=amministratore&id=<%=d.getCodiceDipendente()%>"><i
 										class="fa fa-pencil" aria-hidden="true"></i></a></td>
 							</tr>
 

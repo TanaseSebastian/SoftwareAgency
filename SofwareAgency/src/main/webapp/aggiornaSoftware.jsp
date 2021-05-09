@@ -10,6 +10,11 @@
 	String userDB = prop.getProperty("Username");
 	String pwDB = prop.getProperty("Pasword");
 %>
+<%
+
+	Software s = (Software)request.getAttribute("PACCHETTO_SOFTWARE");
+	DBManager db=new DBManager();
+%>
 <sql:setDataSource var="myDS" driver="com.mysql.cj.jdbc.Driver"
 	url="jdbc:mysql://localhost:3306/softwarehouse?serverTimezone=UTC"
 	user='<%=userDB%>' password='<%=pwDB%>' />
@@ -22,8 +27,8 @@
                     <div class="bg-black-op-75">
                         <div class="content content-top content-full text-center">
                             <div class="py-20">
-                                <h1 class="h2 font-w700 text-white mb-10">  <i class="fa fa-plus text-muted mr-5"></i>Nuovo Software</h1>
-                                <h2 class="h4 font-w400 text-white-op mb-0"> inserisci le informazioni e aggiungi un nuovo software !.</h2>
+                                <h1 class="h2 font-w700 text-white mb-10">  <i class="fa fa-plus text-muted mr-5"></i>Aggiorna Pacchetto Software</h1>
+                                <h2 class="h4 font-w400 text-white-op mb-0"> inserisci le informazioni e aggiorna il pacchetto software !.</h2>
                             </div>
                         </div>
                     </div>
@@ -48,7 +53,7 @@
                   <div class="content">
                     <div class="block block-rounded block-fx-shadow">
                         <div class="block-content">
-                            <form action="gestsoftware?cmd=nuovoSoftware" method="POST">
+                            <form action="gestsoftware?cmd=modifica" method="POST">
 
                                 <!-- Vital Info -->
                                 <h2 class="content-heading text-black">Informazioni generali</h2>
@@ -61,11 +66,11 @@
                                     <div class="col-lg-7 offset-lg-1">
                                         <div class="form-group">
                                             <label for="re-listing-name">Nome</label>
-                                            <input type="text" class="form-control form-control-lg" id="nome" name="nome" placeholder="es: Tieni il conto ">
+                                            <input type="text" class="form-control form-control-lg" id="nome" name="nome" placeholder="es: Tieni il conto" value="<%=s.getNome()%>">
                                         </div>
                                         <div class="form-group">
                                             <label for="re-listing-address">Tempo in termini di Giorni/Uomo</label>
-                                            <input type="number" class="form-control form-control-lg" id="tempo" name="tempo" placeholder="es: 450" min="10">
+                                            <input type="number" class="form-control form-control-lg" id="tempo" name="tempo" placeholder="es: 450" min="10" value="<%=s.getTempoGiorniUomo()%>">
                                         </div>
                                         <div class="form-group">
                                            <label for="stipendio">Costo del pacchetto software (IVA esclusa)</label>
@@ -78,7 +83,10 @@
 												<input type="number" class="form-control" id="costo"
 													name="costo" placeholder="1500.00" min=0 max=9999999.99
 													step=0.01 required="required"
-													title="inserire il costo del software">
+													title="inserire il costo del software" value="<%=s.getCosto()%>">
+													
+													<input type="text" class="form-control" id="codSoftware"
+													name="codSoftware" hidden value="<%=s.getCodSoftware()%>">
 											
 										</div>
                                         </div>
@@ -97,7 +105,7 @@
                                     <div class="col-lg-7 offset-lg-1">
                                         <div class="form-group">
                                             <label for="re-listing-description">Descrizione</label>
-                                            <textarea class="form-control form-control-lg" id="descrizione" name="descrizione" rows="8" placeholder="es: Tieni il conto è un pacchetto software gestionale pensato per le PMI capace di risolvere tutte le esigenze,in modo pratico e veloce, riguardanti la contabilità e la fatturazione elettronica." maxlength="255"></textarea>
+                                            <textarea class="form-control form-control-lg" id="descrizione" name="descrizione" rows="8" placeholder="es: Tieni il conto è un pacchetto software gestionale pensato per le PMI capace di risolvere tutte le esigenze,in modo pratico e veloce, riguardanti la contabilità e la fatturazione elettronica." maxlength="255"><%=s.getDescrizione() %></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -118,9 +126,9 @@
                                             <div class="col-md-8">
                                                 <label for="re-listing-bedrooms">Project Manager</label>
                                                 <select class="form-control form-control-lg" id="responsabile" name="responsabile">
-                                                    <option selected="selected" hidden>Seleziona</option>
+                                                    <option selected="selected" value="<%=s.getCodResponsabile()%>">attualmente: <%=db.getFullName(String.valueOf(s.getCodResponsabile())) %></option>
                                                     <sql:query var="manager" dataSource="${myDS}">
-										   		    select * from dipendenti Where codDipartimento=2 and qualificaProfessionale="Responsabile";
+										   		    select * from dipendenti Where codDipartimento=2 and qualificaProfessionale="Responsabile" and not codiceDipendente=<%=s.getCodResponsabile() %>;
 										    		</sql:query>
 													<c:forEach var="row" items="${manager.rows}">
 													<option value="${row.codiceDipendente}"><c:out
@@ -139,7 +147,7 @@
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-alt-success">
                                                 <i class="fa fa-plus mr-5"></i>
-                                                Agiungi questo software
+                                                Aggiorna questo software
                                             </button>
                                         </div>
                                     </div>

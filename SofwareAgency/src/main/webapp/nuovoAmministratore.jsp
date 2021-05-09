@@ -28,9 +28,9 @@
 		<div class="bg-black-op-75">
 			<div class="content content-top content-full text-center">
 				<div class="py-20">
-					<h1 class="h2 font-w700 text-white mb-10">Nuovo Dipendente</h1>
+					<h1 class="h2 font-w700 text-white mb-10">Nuovo Amministratore</h1>
 					<h2 class="h4 font-w400 text-white-op mb-0">Completa i campi e
-						inserisci un nuovo dipendente .</h2>
+						inserisci un nuovo amministratore .</h2>
 				</div>
 			</div>
 		</div>
@@ -42,7 +42,9 @@
 		<div class="content py-5 text-center">
 			<nav class="breadcrumb bg-body-light mb-0">
 				<a class="breadcrumb-item" href="personale.jsp">Personale
-					Aziendale</a> <span class="breadcrumb-item active">Nuovo
+					Aziendale</a> <a class="breadcrumb-item"
+					href="gestutenti?cmd=viewall&tipo=amministratore">Visualizza
+					Amministratori</a> <span class="breadcrumb-item active">Nuovo
 					Dipendente</span>
 			</nav>
 		</div>
@@ -67,7 +69,7 @@
 						<!-- jQuery Validation functionality is initialized in js/pages/be_forms_validation.min.js which was auto compiled from _es6/pages/be_forms_validation.js -->
 						<!-- For more info and examples you can check out https://github.com/jzaefferer/jquery-validation -->
 						<form class="js-validation-bootstrap"
-							action="gestutenti?cmd=nuovoDipendente" method="post">
+							action="gestutenti?cmd=nuovoAmministratore" method="post">
 							<%=messaggio%>
 							<%request.getSession().setAttribute("MESSAGGIO", ""); %>
 							<div class="form-group row">
@@ -136,12 +138,12 @@
 									class="text-danger">*</span></label>
 								<div class="col-lg-8">
 									<sql:query var="dipartimenti" dataSource="${myDS}">
-										        SELECT * FROM Dipartimenti WHERE NOT Nome="Amministrazione";
+										        SELECT * FROM Dipartimenti WHERE nome="Amministrazione";
 										    </sql:query>
 									<select class="form-control" id="dipartimento"
 										name="dipartimento" required="required"
 										title="inserire un dipartimento d'appartenenza">
-										<option value="" hidden>Selezionare dipartimento</option>
+										<option value="" hidden>Selezionare dipartimenti</option>
 										<c:forEach var="row" items="${dipartimenti.rows}">
 											<option value="${row.codDipartimento}"><c:out
 													value="${row.nome}" /></option>
@@ -334,7 +336,7 @@
 							</div>
 							<div class="form-group row">
 								<div class="col-lg-8 ml-auto">
-									<button type="submit" class="btn btn-alt-primary">Inserisci Dipendente</button>
+									<button type="submit" class="btn btn-alt-primary">Inserisci amministratore</button>
 								</div>
 							</div>
 						</form>

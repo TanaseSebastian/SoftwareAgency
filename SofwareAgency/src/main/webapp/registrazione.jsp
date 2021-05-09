@@ -1,12 +1,17 @@
 <%@ page language="java" import="it.meucci.*" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%
+String messaggio = (String) session.getAttribute("MESSAGGIO");
+if (messaggio == null)
+	messaggio = "";
+%>
 <!doctype html>
 <html lang="en" class="no-focus">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-        <title>Codebase - Bootstrap 4 Admin Template &amp; UI Framework</title>
+        <title>Codebase</title>
 
         <meta name="description" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
         <meta name="author" content="pixelcave">
@@ -104,6 +109,8 @@
                                         <button type="submit" class="btn btn-sm btn-hero btn-alt-success">
                                             <i class="fa fa-plus mr-10"></i> Create Account
                                         </button>
+                                         <%=messaggio%>
+										<%request.getSession().setAttribute("MESSAGGIO", ""); %>
                                         <div class="mt-30">
                                             <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="#" data-toggle="modal" data-target="#modal-terms">
                                                 <i class="fa fa-book text-muted mr-5"></i> Read Terms

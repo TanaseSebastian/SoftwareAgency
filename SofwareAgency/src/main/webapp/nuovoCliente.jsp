@@ -233,5 +233,7 @@
 
 
 
-
-<%@include file= "footer.jsp" %>
+		<%@include file="footer.jsp"%>
+        <%@include file="librerie.jsp"%>
+    </body>
+</html>

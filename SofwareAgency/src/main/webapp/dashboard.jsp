@@ -16,7 +16,8 @@
                         <div class="content text-center">
                             <div style="padding: 45vh 0 45vh 0;" >
                                 <h1 class="font-w700 text-white mb-10">Dashboard</h1>
-                                <h2 class="h4 font-w400 text-white-op">Welcome to your own SaaS!</h2>
+                                <h2 class="h4 font-w400 text-white-op">Benvenuto <%=user.getNome()%> nella dashbord di  <i class="si si-fire text-primary"></i>
+                                    <span class="font-size-xl text-dual-primary-light">code</span><span class="font-size-xl text-primary">base</span> !</h2>
                             </div>
                         </div>
                     </div>
@@ -138,4 +139,8 @@
 			<%}%>
             <%request.getSession().setAttribute("Benvenuto", "false"); %>
 
-            <%@include file="footer.jsp" %>
+           
+		<%@include file="footer.jsp"%>
+        <%@include file="librerie.jsp"%>
+    </body>
+</html>
