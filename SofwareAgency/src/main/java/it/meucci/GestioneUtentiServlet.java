@@ -434,6 +434,9 @@ public class GestioneUtentiServlet extends HttpServlet {
 			case "visualizzaPacchetti.jsp":
 				response.sendRedirect("gestsoftware?cmd=viewall");
 				break;
+			case "visualizzaLavorazioni.jsp":
+				response.sendRedirect("gestlavorazioni?cmd=viewall");
+				break;
 			default:
 				response.sendRedirect(requestPage);
 				break;
@@ -577,6 +580,12 @@ public class GestioneUtentiServlet extends HttpServlet {
 			//**********************
 		
 	}
+		
+		
+		
+		
+		
+		
 
 	}
 

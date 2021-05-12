@@ -923,3 +923,709 @@
 2021-05-09 03:10:43,628 INFO i.m.GestioneUtentiServlet [http-nio-8080-exec-227] software [codSoftware=6, codResponsabile=13, nome=Tieni il conto, descrizione=aggiornata descrizione, tempoGiorniUomo=423, costo=3341.98]
 2021-05-09 03:10:43,676 INFO i.m.DBManager [http-nio-8080-exec-218] ELENCO SOFTWARE CARICATI: 2
 2021-05-09 03:10:49,688 INFO i.m.DBManager [http-nio-8080-exec-219] software [codSoftware=6, codResponsabile=13, nome=Tieni il conto, descrizione=aggiornata descrizione, tempoGiorniUomo=423, costo=3341.98]
+2021-05-09 19:07:30,941 INFO i.m.GestioneLogin [http-nio-8080-exec-8] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-09 19:07:31,501 INFO i.m.DBManager [http-nio-8080-exec-8] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-09 19:07:31,502 INFO i.m.GestioneLogin [http-nio-8080-exec-8] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-09 21:03:45,641 INFO i.m.GestioneLogin [http-nio-8080-exec-2] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-09 21:03:45,652 INFO i.m.DBManager [http-nio-8080-exec-2] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-09 21:03:45,653 INFO i.m.GestioneLogin [http-nio-8080-exec-2] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-09 22:29:36,921 INFO i.m.GestioneLogin [http-nio-8080-exec-29] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-09 22:29:37,142 INFO i.m.DBManager [http-nio-8080-exec-29] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-09 22:29:37,142 INFO i.m.GestioneLogin [http-nio-8080-exec-29] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-09 22:33:16,370 INFO i.m.GestioneLogin [http-nio-8080-exec-32] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-09 22:33:16,583 INFO i.m.DBManager [http-nio-8080-exec-32] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-09 22:33:16,583 INFO i.m.GestioneLogin [http-nio-8080-exec-32] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-09 22:33:44,212 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-37] Lavorazione [codLavorazione=0, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=null, repository=]
+2021-05-09 22:33:44,217 INFO i.m.DBManager [http-nio-8080-exec-37] com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO lavorazioni(codSoftware,nome,descrizione,dataInizio,repository) VALUES (6,'fsdfsfsf','adasdasdasdasdasdadadsad','2021-05-09','');
+2021-05-09 22:33:44,223 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-37] nuova lavorazione inserita con successo nel db
+2021-05-09 22:33:44,255 INFO i.m.DBManager [http-nio-8080-exec-33] ELENCO SOFTWARE CARICATI: 2
+2021-05-09 22:35:45,706 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-46] Lavorazione [codLavorazione=0, codSoftware=7, nome=ssadasdasdas, descrizione=asdfafasdasdasddddddddddddddddddd, dataInizio=2021-05-09, dataFine=null, stato=null, repository=github.com]
+2021-05-09 22:35:45,711 INFO i.m.DBManager [http-nio-8080-exec-46] com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO lavorazioni(codSoftware,nome,descrizione,dataInizio,repository) VALUES (7,'ssadasdasdas','asdfafasdasdasddddddddddddddddddd','2021-05-09','github.com');
+2021-05-09 22:35:45,719 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-46] nuova lavorazione inserita con successo nel db
+2021-05-09 22:35:45,760 INFO i.m.DBManager [http-nio-8080-exec-47] ELENCO SOFTWARE CARICATI: 2
+2021-05-09 23:50:19,333 INFO i.m.GestioneLogin [http-nio-8080-exec-56] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-09 23:50:19,568 INFO i.m.DBManager [http-nio-8080-exec-56] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-09 23:50:19,569 INFO i.m.GestioneLogin [http-nio-8080-exec-56] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-09 23:51:08,401 INFO i.m.DBManager [http-nio-8080-exec-52] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-09 23:57:55,007 INFO i.m.GestioneLogin [http-nio-8080-exec-53] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-09 23:57:55,235 INFO i.m.DBManager [http-nio-8080-exec-53] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-09 23:57:55,236 INFO i.m.GestioneLogin [http-nio-8080-exec-53] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-09 23:58:02,294 INFO i.m.DBManager [http-nio-8080-exec-59] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 00:09:10,279 INFO i.m.DBManager [http-nio-8080-exec-61] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 00:13:14,278 INFO i.m.DBManager [http-nio-8080-exec-64] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 00:17:33,912 INFO i.m.DBManager [http-nio-8080-exec-70] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 01:00:55,817 INFO i.m.DBManager [http-nio-8080-exec-62] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 01:01:20,499 INFO i.m.GestioneLogin [http-nio-8080-exec-63] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-10 01:01:20,545 INFO i.m.DBManager [http-nio-8080-exec-63] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-10 01:01:20,545 INFO i.m.GestioneLogin [http-nio-8080-exec-63] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-10 01:01:37,072 INFO i.m.DBManager [http-nio-8080-exec-67] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 01:03:08,385 INFO i.m.DBManager [http-nio-8080-exec-62] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 01:49:45,248 INFO i.m.GestioneLogin [http-nio-8080-exec-62] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-10 01:49:45,253 INFO i.m.DBManager [http-nio-8080-exec-62] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-10 01:49:45,254 INFO i.m.GestioneLogin [http-nio-8080-exec-62] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-10 01:50:22,146 INFO i.m.DBManager [http-nio-8080-exec-67] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 01:53:53,634 INFO i.m.DBManager [http-nio-8080-exec-64] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 01:56:43,974 INFO i.m.DBManager [http-nio-8080-exec-65] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 01:57:59,575 INFO i.m.DBManager [http-nio-8080-exec-64] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 01:58:51,131 INFO i.m.DBManager [http-nio-8080-exec-70] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 13:36:04,395 INFO i.m.GestioneLogin [http-nio-8080-exec-8] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-10 13:36:05,031 INFO i.m.DBManager [http-nio-8080-exec-8] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-10 13:36:05,032 INFO i.m.GestioneLogin [http-nio-8080-exec-8] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-10 13:36:18,986 INFO i.m.DBManager [http-nio-8080-exec-8] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 13:39:09,177 INFO i.m.DBManager [http-nio-8080-exec-5] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 13:40:30,271 INFO i.m.DBManager [http-nio-8080-exec-1] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 13:42:21,125 INFO i.m.DBManager [http-nio-8080-exec-10] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 13:45:01,936 INFO i.m.DBManager [http-nio-8080-exec-3] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 13:45:55,287 INFO i.m.DBManager [http-nio-8080-exec-7] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 13:46:51,382 INFO i.m.DBManager [http-nio-8080-exec-8] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 13:48:20,120 INFO i.m.DBManager [http-nio-8080-exec-1] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 13:48:43,928 INFO i.m.DBManager [http-nio-8080-exec-10] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 13:49:01,800 INFO i.m.DBManager [http-nio-8080-exec-7] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 13:49:27,964 INFO i.m.DBManager [http-nio-8080-exec-9] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 13:49:52,116 INFO i.m.DBManager [http-nio-8080-exec-3] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:14:58,097 INFO i.m.DBManager [http-nio-8080-exec-4] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:16:21,051 INFO i.m.DBManager [http-nio-8080-exec-7] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:17:38,685 INFO i.m.DBManager [http-nio-8080-exec-4] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:18:25,717 INFO i.m.DBManager [http-nio-8080-exec-1] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:18:46,592 INFO i.m.DBManager [http-nio-8080-exec-2] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:19:35,254 INFO i.m.DBManager [http-nio-8080-exec-5] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:20:04,289 INFO i.m.DBManager [http-nio-8080-exec-1] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:20:34,064 INFO i.m.DBManager [http-nio-8080-exec-5] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:21:17,252 INFO i.m.DBManager [http-nio-8080-exec-2] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:21:42,061 INFO i.m.DBManager [http-nio-8080-exec-8] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:22:48,762 INFO i.m.DBManager [http-nio-8080-exec-5] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:23:09,557 INFO i.m.DBManager [http-nio-8080-exec-10] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:24:15,750 INFO i.m.DBManager [http-nio-8080-exec-3] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:25:36,664 INFO i.m.DBManager [http-nio-8080-exec-2] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:27:29,961 INFO i.m.DBManager [http-nio-8080-exec-3] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:28:05,825 INFO i.m.DBManager [http-nio-8080-exec-8] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:31:34,968 INFO i.m.DBManager [http-nio-8080-exec-9] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:32:08,379 INFO i.m.DBManager [http-nio-8080-exec-6] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:32:46,547 INFO i.m.DBManager [http-nio-8080-exec-3] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:33:45,245 INFO i.m.DBManager [http-nio-8080-exec-2] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:34:09,791 INFO i.m.DBManager [http-nio-8080-exec-7] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:34:32,470 INFO i.m.DBManager [http-nio-8080-exec-6] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:35:40,290 INFO i.m.DBManager [http-nio-8080-exec-4] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:36:01,792 INFO i.m.DBManager [http-nio-8080-exec-8] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:38:04,529 INFO i.m.DBManager [http-nio-8080-exec-2] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:38:57,448 INFO i.m.DBManager [http-nio-8080-exec-5] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-10 14:39:43,082 INFO i.m.DBManager [http-nio-8080-exec-3] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 00:34:09,826 INFO i.m.GestioneLogin [http-nio-8080-exec-9] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 00:34:11,481 INFO i.m.DBManager [http-nio-8080-exec-9] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 00:34:11,534 INFO i.m.GestioneLogin [http-nio-8080-exec-9] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 00:40:32,958 INFO i.m.GestioneLogin [http-nio-8080-exec-7] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 00:40:33,476 INFO i.m.DBManager [http-nio-8080-exec-7] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 00:40:33,476 INFO i.m.GestioneLogin [http-nio-8080-exec-7] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 00:40:41,464 INFO i.m.DBManager [http-nio-8080-exec-6] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 00:52:00,246 INFO i.m.GestioneLogin [http-nio-8080-exec-12] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 00:52:00,987 INFO i.m.DBManager [http-nio-8080-exec-12] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 00:52:00,988 INFO i.m.GestioneLogin [http-nio-8080-exec-12] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 00:52:10,765 INFO i.m.DBManager [http-nio-8080-exec-15] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 00:52:41,979 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-17] LAVORAZIONI DA ELIMINARE :
+2021-05-11 00:52:41,992 INFO i.m.DBManager [http-nio-8080-exec-17] QUERY:DELETE FROM lavorazione  WHERE codLavorazione IN ('2');
+2021-05-11 00:52:42,095 INFO i.m.DBManager [http-nio-8080-exec-11] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 00:54:58,474 INFO i.m.GestioneLogin [http-nio-8080-exec-16] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 00:54:58,972 INFO i.m.DBManager [http-nio-8080-exec-16] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 00:54:58,973 INFO i.m.GestioneLogin [http-nio-8080-exec-16] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 00:55:10,021 INFO i.m.DBManager [http-nio-8080-exec-22] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 00:55:27,836 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-9] LAVORAZIONI DA ELIMINARE :
+2021-05-11 00:55:27,845 INFO i.m.DBManager [http-nio-8080-exec-9] QUERY:DELETE FROM lavorazioni WHERE codLavorazione IN ('2');
+2021-05-11 00:55:27,852 INFO i.m.DBManager [http-nio-8080-exec-9] Numero lavorazioni eliminati dal db:1
+2021-05-11 00:55:27,905 INFO i.m.DBManager [http-nio-8080-exec-18] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 02:11:25,842 INFO i.m.GestioneLogin [http-nio-8080-exec-41] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 02:11:26,627 INFO i.m.DBManager [http-nio-8080-exec-41] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 02:11:26,628 INFO i.m.GestioneLogin [http-nio-8080-exec-41] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 02:11:57,306 INFO i.m.DBManager [http-nio-8080-exec-47] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 02:13:03,502 INFO i.m.DBManager [http-nio-8080-exec-41] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 02:18:16,868 INFO i.m.DBManager [http-nio-8080-exec-43] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=]
+2021-05-11 02:22:40,635 INFO i.m.DBManager [http-nio-8080-exec-39] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 02:22:52,768 INFO i.m.DBManager [http-nio-8080-exec-40] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=]
+2021-05-11 02:23:33,707 INFO i.m.DBManager [http-nio-8080-exec-42] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=]
+2021-05-11 02:42:38,456 INFO i.m.DBManager [http-nio-8080-exec-45] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 02:42:50,231 INFO i.m.DBManager [http-nio-8080-exec-43] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=]
+2021-05-11 02:43:42,949 INFO i.m.DBManager [http-nio-8080-exec-40] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=]
+2021-05-11 02:45:19,268 INFO i.m.DBManager [http-nio-8080-exec-44] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=]
+2021-05-11 02:48:03,770 INFO i.m.DBManager [http-nio-8080-exec-39] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=]
+2021-05-11 02:49:05,610 INFO i.m.DBManager [http-nio-8080-exec-40] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=]
+2021-05-11 02:49:19,557 INFO i.m.DBManager [http-nio-8080-exec-48] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=]
+2021-05-11 03:09:22,332 INFO i.m.DBManager [http-nio-8080-exec-39] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=]
+2021-05-11 03:09:35,581 INFO i.m.DBManager [http-nio-8080-exec-41] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=]
+2021-05-11 03:09:42,058 INFO i.m.DBManager [http-nio-8080-exec-46] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 03:10:09,279 INFO i.m.DBManager [http-nio-8080-exec-40] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=github.com]
+2021-05-11 03:10:31,538 INFO i.m.DBManager [http-nio-8080-exec-41] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=github.com]
+2021-05-11 03:11:15,714 INFO i.m.DBManager [http-nio-8080-exec-43] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 03:11:33,044 INFO i.m.DBManager [http-nio-8080-exec-47] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=www.github.com]
+2021-05-11 03:11:53,770 INFO i.m.DBManager [http-nio-8080-exec-45] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=www.github.com]
+2021-05-11 03:12:46,931 INFO i.m.DBManager [http-nio-8080-exec-39] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 03:12:57,503 INFO i.m.DBManager [http-nio-8080-exec-40] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=https://www.w3schools.com/]
+2021-05-11 03:14:03,284 INFO i.m.DBManager [http-nio-8080-exec-41] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=https://www.w3schools.com/]
+2021-05-11 03:14:29,027 INFO i.m.DBManager [http-nio-8080-exec-47] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 03:14:49,970 INFO i.m.DBManager [http-nio-8080-exec-39] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=https://github.com/TanaseSebastian/SoftwareAgency]
+2021-05-11 03:15:20,251 INFO i.m.DBManager [http-nio-8080-exec-41] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=https://github.com/TanaseSebastian/SoftwareAgency]
+2021-05-11 03:16:46,421 INFO i.m.DBManager [http-nio-8080-exec-43] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 03:16:59,193 INFO i.m.DBManager [http-nio-8080-exec-47] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=https://github.com/TanaseSebastian/SoftwareAgency]
+2021-05-11 03:21:16,870 INFO i.m.GestioneLogin [http-nio-8080-exec-4] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 03:21:17,461 INFO i.m.DBManager [http-nio-8080-exec-4] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 03:21:17,462 INFO i.m.GestioneLogin [http-nio-8080-exec-4] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 03:21:23,895 INFO i.m.DBManager [http-nio-8080-exec-10] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 03:21:32,373 INFO i.m.DBManager [http-nio-8080-exec-2] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=https://github.com/TanaseSebastian/SoftwareAgency]
+2021-05-11 03:21:48,807 INFO i.m.DBManager [http-nio-8080-exec-5] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 03:21:54,575 INFO i.m.DBManager [http-nio-8080-exec-6] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=https://github.com/TanaseSebastian/SoftwareAgency]
+2021-05-11 03:22:03,540 INFO i.m.DBManager [http-nio-8080-exec-7] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 03:23:10,554 INFO i.m.DBManager [http-nio-8080-exec-9] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 03:23:54,530 INFO i.m.DBManager [http-nio-8080-exec-2] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 03:23:59,682 INFO i.m.DBManager [http-nio-8080-exec-3] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=#]
+2021-05-11 03:24:04,881 INFO i.m.DBManager [http-nio-8080-exec-4] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=#]
+2021-05-11 03:31:14,187 INFO i.m.DBManager [http-nio-8080-exec-7] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 03:31:19,810 INFO i.m.DBManager [http-nio-8080-exec-8] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 03:32:04,034 INFO i.m.DBManager [http-nio-8080-exec-1] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 03:32:15,416 INFO i.m.DBManager [http-nio-8080-exec-1] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 03:33:39,290 INFO i.m.DBManager [http-nio-8080-exec-3] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 03:34:06,517 INFO i.m.DBManager [http-nio-8080-exec-7] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 03:39:13,829 INFO i.m.DBManager [http-nio-8080-exec-5] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=https://google.com]
+2021-05-11 03:39:49,065 INFO i.m.DBManager [http-nio-8080-exec-1] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 03:41:15,876 INFO i.m.DBManager [http-nio-8080-exec-2] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 03:48:25,517 INFO i.m.DBManager [http-nio-8080-exec-9] software [codSoftware=0, codResponsabile=0, nome=null, descrizione=null, tempoGiorniUomo=0, costo=null]
+2021-05-11 03:48:31,350 INFO i.m.DBManager [http-nio-8080-exec-7] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 12:08:40,650 INFO i.m.GestioneLogin [http-nio-8080-exec-8] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 12:09:45,338 INFO i.m.GestioneLogin [http-nio-8080-exec-3] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 12:09:45,589 INFO i.m.DBManager [http-nio-8080-exec-3] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 12:09:45,590 INFO i.m.GestioneLogin [http-nio-8080-exec-3] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 12:10:27,013 INFO i.m.DBManager [http-nio-8080-exec-3] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 12:10:36,119 INFO i.m.DBManager [http-nio-8080-exec-5] software [codSoftware=0, codResponsabile=0, nome=null, descrizione=null, tempoGiorniUomo=0, costo=null]
+2021-05-11 12:11:37,483 INFO i.m.DBManager [http-nio-8080-exec-7] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 12:12:04,945 INFO i.m.DBManager [http-nio-8080-exec-8] software [codSoftware=0, codResponsabile=0, nome=null, descrizione=null, tempoGiorniUomo=0, costo=null]
+2021-05-11 12:12:07,468 INFO i.m.DBManager [http-nio-8080-exec-10] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 12:12:15,742 INFO i.m.DBManager [http-nio-8080-exec-3] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 12:12:24,086 INFO i.m.DBManager [http-nio-8080-exec-4] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 12:29:48,610 INFO i.m.DBManager [http-nio-8080-exec-6] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 12:29:56,518 INFO i.m.DBManager [http-nio-8080-exec-7] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 12:30:35,054 INFO i.m.DBManager [http-nio-8080-exec-9] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 12:30:36,753 INFO i.m.DBManager [http-nio-8080-exec-2] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 12:30:42,939 INFO i.m.DBManager [http-nio-8080-exec-8] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 13:42:15,741 INFO i.m.GestioneLogin [http-nio-8080-exec-2] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 13:42:15,746 INFO i.m.DBManager [http-nio-8080-exec-2] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 13:42:15,747 INFO i.m.GestioneLogin [http-nio-8080-exec-2] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 13:42:21,045 INFO i.m.DBManager [http-nio-8080-exec-4] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 13:42:28,532 INFO i.m.DBManager [http-nio-8080-exec-5] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 13:48:00,559 INFO i.m.DBManager [http-nio-8080-exec-6] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 13:48:05,043 INFO i.m.DBManager [http-nio-8080-exec-9] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 13:48:46,062 INFO i.m.DBManager [http-nio-8080-exec-8] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 13:58:40,832 INFO i.m.DBManager [http-nio-8080-exec-4] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 13:58:45,852 INFO i.m.DBManager [http-nio-8080-exec-2] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 13:59:41,289 INFO i.m.DBManager [http-nio-8080-exec-10] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 14:01:06,731 INFO i.m.DBManager [http-nio-8080-exec-3] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 14:02:09,586 INFO i.m.GestioneLogin [http-nio-8080-exec-1] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 14:02:09,591 INFO i.m.DBManager [http-nio-8080-exec-1] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 14:02:09,591 INFO i.m.GestioneLogin [http-nio-8080-exec-1] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 14:02:20,978 INFO i.m.DBManager [http-nio-8080-exec-10] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 14:02:26,377 INFO i.m.DBManager [http-nio-8080-exec-1] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 14:02:48,801 INFO i.m.DBManager [http-nio-8080-exec-2] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 14:03:37,877 INFO i.m.DBManager [http-nio-8080-exec-3] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=Eseguita, repository=null]
+2021-05-11 14:04:04,735 INFO i.m.DBManager [http-nio-8080-exec-10] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 14:04:08,820 INFO i.m.DBManager [http-nio-8080-exec-4] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=Eseguita, repository=null]
+2021-05-11 14:04:30,173 INFO i.m.DBManager [http-nio-8080-exec-6] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=2021-05-14 14:04:21, stato=Eseguita, repository=null]
+2021-05-11 14:05:10,747 INFO i.m.DBManager [http-nio-8080-exec-4] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=2021-05-14 14:04:21, stato=Eseguita, repository=null]
+2021-05-11 14:06:03,469 INFO i.m.DBManager [http-nio-8080-exec-9] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=2021-05-14, stato=Eseguita, repository=null]
+2021-05-11 14:07:39,331 INFO i.m.DBManager [http-nio-8080-exec-5] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=2021-05-14, stato=Eseguita, repository=null]
+2021-05-11 14:08:52,094 INFO i.m.DBManager [http-nio-8080-exec-6] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=2021-05-14, stato=Eseguita, repository=null]
+2021-05-11 14:09:09,903 INFO i.m.DBManager [http-nio-8080-exec-7] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=Eseguita, repository=null]
+2021-05-11 14:09:51,771 INFO i.m.DBManager [http-nio-8080-exec-1] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 14:10:41,724 INFO i.m.DBManager [http-nio-8080-exec-10] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 14:10:52,735 INFO i.m.DBManager [http-nio-8080-exec-3] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 14:11:00,664 INFO i.m.DBManager [http-nio-8080-exec-4] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 14:13:46,089 INFO i.m.DBManager [http-nio-8080-exec-5] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 14:30:10,541 INFO i.m.DBManager [http-nio-8080-exec-3] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 14:48:11,025 INFO i.m.DBManager [http-nio-8080-exec-2] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 14:55:15,928 INFO i.m.GestioneLogin [http-nio-8080-exec-10] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 14:55:16,221 INFO i.m.DBManager [http-nio-8080-exec-10] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 14:55:16,222 INFO i.m.GestioneLogin [http-nio-8080-exec-10] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 14:55:22,798 INFO i.m.DBManager [http-nio-8080-exec-6] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 14:55:28,165 INFO i.m.DBManager [http-nio-8080-exec-3] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 14:56:59,589 INFO i.m.DBManager [http-nio-8080-exec-11] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 14:57:09,606 INFO i.m.DBManager [http-nio-8080-exec-18] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 14:57:25,589 INFO i.m.DBManager [http-nio-8080-exec-19] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 14:58:54,526 INFO i.m.GestioneLogin [http-nio-8080-exec-14] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 14:58:54,800 INFO i.m.DBManager [http-nio-8080-exec-14] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 14:58:54,800 INFO i.m.GestioneLogin [http-nio-8080-exec-14] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 14:59:19,466 INFO i.m.DBManager [http-nio-8080-exec-11] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 14:59:43,941 INFO i.m.DBManager [http-nio-8080-exec-17] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 14:59:57,946 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-21] entro dentro la servlet
+2021-05-11 15:23:01,216 INFO i.m.DBManager [http-nio-8080-exec-22] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:23:11,143 INFO i.m.DBManager [http-nio-8080-exec-28] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:23:14,644 INFO i.m.DBManager [http-nio-8080-exec-29] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:23:21,613 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-21] entro dentro la servlet
+2021-05-11 15:23:21,613 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-21] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=, stato=null, repository=]
+2021-05-11 15:23:21,681 INFO i.m.DBManager [http-nio-8080-exec-27] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:24:13,022 INFO i.m.DBManager [http-nio-8080-exec-25] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 15:24:41,379 INFO i.m.DBManager [http-nio-8080-exec-21] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:25:59,117 INFO i.m.DBManager [http-nio-8080-exec-23] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:26:32,991 INFO i.m.DBManager [http-nio-8080-exec-23] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:26:56,335 INFO i.m.DBManager [http-nio-8080-exec-28] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:27:27,136 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-22] entro dentro la servlet
+2021-05-11 15:27:27,137 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-22] Lavorazione [codLavorazione=1, codSoftware=6, nome=prima lavorazione, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=#, stato=null, repository=]
+2021-05-11 15:27:27,188 INFO i.m.DBManager [http-nio-8080-exec-23] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:27:41,644 INFO i.m.DBManager [http-nio-8080-exec-30] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 15:27:47,610 INFO i.m.DBManager [http-nio-8080-exec-29] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:28:02,533 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-27] entro dentro la servlet
+2021-05-11 15:28:02,533 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-27] Lavorazione [codLavorazione=1, codSoftware=6, nome=prima lavorazione, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=#, stato=null, repository=]
+2021-05-11 15:28:02,586 INFO i.m.DBManager [http-nio-8080-exec-24] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:29:24,789 INFO i.m.DBManager [http-nio-8080-exec-25] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 15:29:29,942 INFO i.m.DBManager [http-nio-8080-exec-22] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:29:49,637 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-23] entro dentro la servlet
+2021-05-11 15:29:49,637 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-23] Lavorazione [codLavorazione=1, codSoftware=6, nome=prima lavorazione, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=, stato=null, repository=]
+2021-05-11 15:29:49,692 INFO i.m.DBManager [http-nio-8080-exec-26] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:30:43,083 INFO i.m.DBManager [http-nio-8080-exec-29] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 15:30:46,973 INFO i.m.DBManager [http-nio-8080-exec-27] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 15:30:53,223 INFO i.m.DBManager [http-nio-8080-exec-30] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:31:27,738 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-26] entro dentro la servlet
+2021-05-11 15:31:27,738 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-26] Lavorazione [codLavorazione=1, codSoftware=6, nome=prima lavorazione, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=null, repository=]
+2021-05-11 15:31:27,794 INFO i.m.DBManager [http-nio-8080-exec-21] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:44:49,256 INFO i.m.DBManager [http-nio-8080-exec-33] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:44:54,350 INFO i.m.GestioneLogin [http-nio-8080-exec-35] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 15:44:54,359 INFO i.m.DBManager [http-nio-8080-exec-35] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 15:44:54,360 INFO i.m.GestioneLogin [http-nio-8080-exec-35] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 15:45:02,600 INFO i.m.DBManager [http-nio-8080-exec-28] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 15:45:28,811 INFO i.m.GestioneLogin [http-nio-8080-exec-25] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 15:45:28,840 INFO i.m.DBManager [http-nio-8080-exec-25] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 15:45:28,841 INFO i.m.GestioneLogin [http-nio-8080-exec-25] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 15:45:34,137 INFO i.m.DBManager [http-nio-8080-exec-33] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 15:45:40,706 INFO i.m.DBManager [http-nio-8080-exec-22] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:45:58,560 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-38] entro dentro la servlet
+2021-05-11 15:45:58,561 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-38] Lavorazione [codLavorazione=1, codSoftware=6, nome=prima lavorazione, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=null, repository=]
+2021-05-11 15:45:58,616 INFO i.m.DBManager [http-nio-8080-exec-34] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:48:42,507 INFO i.m.DBManager [http-nio-8080-exec-40] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 15:48:52,650 INFO i.m.GestioneLogin [http-nio-8080-exec-39] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 15:48:52,682 INFO i.m.DBManager [http-nio-8080-exec-39] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 15:48:52,683 INFO i.m.GestioneLogin [http-nio-8080-exec-39] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 15:49:19,022 INFO i.m.DBManager [http-nio-8080-exec-42] ELENCO SOFTWARE CARICATI: 2
+2021-05-11 15:49:23,901 INFO i.m.DBManager [http-nio-8080-exec-51] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 15:49:44,716 INFO i.m.DBManager [http-nio-8080-exec-52] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:50:02,117 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-48] entro dentro la servlet
+2021-05-11 15:50:02,117 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-48] Lavorazione [codLavorazione=1, codSoftware=6, nome=prima lavorazione, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=null, repository=]
+2021-05-11 15:50:02,162 INFO i.m.DBManager [http-nio-8080-exec-45] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:52:34,000 INFO i.m.DBManager [http-nio-8080-exec-49] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 15:54:10,459 INFO i.m.DBManager [http-nio-8080-exec-58] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:54:12,118 INFO i.m.DBManager [http-nio-8080-exec-56] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 15:54:20,110 INFO i.m.GestioneLogin [http-nio-8080-exec-51] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 15:54:20,121 INFO i.m.DBManager [http-nio-8080-exec-51] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 15:54:20,121 INFO i.m.GestioneLogin [http-nio-8080-exec-51] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 15:54:53,444 INFO i.m.DBManager [http-nio-8080-exec-59] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 15:54:57,981 INFO i.m.DBManager [http-nio-8080-exec-58] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:55:03,252 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-60] entro dentro la servlet
+2021-05-11 15:55:03,254 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-60] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=null, repository=]
+2021-05-11 15:55:03,381 INFO i.m.DBManager [http-nio-8080-exec-61] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:58:14,646 INFO i.m.DBManager [http-nio-8080-exec-63] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 15:58:23,910 INFO i.m.DBManager [http-nio-8080-exec-66] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 15:58:29,401 INFO i.m.GestioneLogin [http-nio-8080-exec-65] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 15:58:29,446 INFO i.m.DBManager [http-nio-8080-exec-65] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 15:58:29,446 INFO i.m.GestioneLogin [http-nio-8080-exec-65] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 15:58:36,325 INFO i.m.DBManager [http-nio-8080-exec-59] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 15:58:59,880 INFO i.m.DBManager [http-nio-8080-exec-68] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 15:59:18,189 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-64] entro dentro la servlet
+2021-05-11 15:59:18,190 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-64] Lavorazione [codLavorazione=1, codSoftware=6, nome=prima lavorazione, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=null, repository=]
+2021-05-11 15:59:18,239 INFO i.m.DBManager [http-nio-8080-exec-71] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 16:00:54,247 INFO i.m.DBManager [http-nio-8080-exec-75] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:01:04,799 INFO i.m.GestioneLogin [http-nio-8080-exec-72] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 16:01:04,830 INFO i.m.DBManager [http-nio-8080-exec-72] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 16:01:04,831 INFO i.m.GestioneLogin [http-nio-8080-exec-72] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 16:01:11,923 INFO i.m.DBManager [http-nio-8080-exec-73] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:01:18,362 INFO i.m.DBManager [http-nio-8080-exec-76] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 16:01:35,564 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-79] entro dentro la servlet
+2021-05-11 16:01:35,565 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-79] Lavorazione [codLavorazione=1, codSoftware=6, nome=prova cambio del nome lavorazione, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=null, repository=]
+2021-05-11 16:01:35,617 INFO i.m.DBManager [http-nio-8080-exec-78] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 16:22:06,934 INFO i.m.GestioneLogin [http-nio-8080-exec-88] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 16:22:07,160 INFO i.m.DBManager [http-nio-8080-exec-88] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 16:22:07,161 INFO i.m.GestioneLogin [http-nio-8080-exec-88] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 16:22:19,084 INFO i.m.DBManager [http-nio-8080-exec-96] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:22:25,770 INFO i.m.DBManager [http-nio-8080-exec-90] Lavorazione [codLavorazione=1, codSoftware=6, nome=fsdfsfsf, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=null]
+2021-05-11 16:23:15,452 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-97] data fine vuota per cui non la metto nell'aggiornamento
+2021-05-11 16:23:15,452 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-97] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=null, repository=]
+2021-05-11 16:23:15,494 INFO i.m.DBManager [http-nio-8080-exec-98] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:23:47,704 INFO i.m.DBManager [http-nio-8080-exec-100] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-09, dataFine=null, stato=In lavorazione, repository=]
+2021-05-11 16:23:57,821 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-93] data fine vuota per cui non la metto nell'aggiornamento
+2021-05-11 16:23:57,821 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-93] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=null, stato=null, repository=]
+2021-05-11 16:23:57,862 INFO i.m.DBManager [http-nio-8080-exec-95] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:24:03,660 INFO i.m.DBManager [http-nio-8080-exec-101] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=null, stato=In lavorazione, repository=]
+2021-05-11 16:24:27,483 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-97] data fine vuota per cui non la metto nell'aggiornamento
+2021-05-11 16:24:27,483 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-97] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=null, stato=null, repository=https://google.it]
+2021-05-11 16:24:27,532 INFO i.m.DBManager [http-nio-8080-exec-98] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:24:34,111 INFO i.m.DBManager [http-nio-8080-exec-99] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=null, stato=In lavorazione, repository=https://google.it]
+2021-05-11 16:24:51,130 INFO i.m.DBManager [http-nio-8080-exec-100] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:24:56,314 INFO i.m.DBManager [http-nio-8080-exec-103] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=null, stato=In lavorazione, repository=https://google.it]
+2021-05-11 16:25:38,983 INFO i.m.DBManager [http-nio-8080-exec-101] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=null, stato=Eseguita, repository=https://google.it]
+2021-05-11 16:26:02,790 INFO i.m.DBManager [http-nio-8080-exec-97] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-19, stato=Eseguita, repository=https://google.it]
+2021-05-11 16:26:15,147 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-104] data fine non è null,per cui setto la variabile nell'ogetto lavorazione
+2021-05-11 16:26:15,147 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-104] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-22, stato=null, repository=https://google.it]
+2021-05-11 16:26:15,148 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-104] eseguo l'aggiornamento con data fine
+2021-05-11 16:26:15,193 INFO i.m.DBManager [http-nio-8080-exec-98] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:26:20,685 INFO i.m.DBManager [http-nio-8080-exec-100] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-19, stato=Eseguita, repository=https://google.it]
+2021-05-11 16:26:29,836 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-101] data fine non è null,per cui setto la variabile nell'ogetto lavorazione
+2021-05-11 16:26:29,836 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-101] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-20, stato=null, repository=https://google.it]
+2021-05-11 16:26:29,836 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-101] eseguo l'aggiornamento con data fine
+2021-05-11 16:26:29,874 INFO i.m.DBManager [http-nio-8080-exec-99] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:26:44,726 INFO i.m.DBManager [http-nio-8080-exec-104] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-19, stato=Eseguita, repository=https://google.it]
+2021-05-11 16:26:52,359 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-98] data fine non è null,per cui setto la variabile nell'ogetto lavorazione
+2021-05-11 16:26:52,360 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-98] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-20, stato=null, repository=https://google.it]
+2021-05-11 16:26:52,360 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-98] eseguo l'aggiornamento con data fine
+2021-05-11 16:26:52,419 INFO i.m.DBManager [http-nio-8080-exec-100] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:27:27,556 INFO i.m.DBManager [http-nio-8080-exec-103] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-19, stato=Eseguita, repository=https://google.it]
+2021-05-11 16:27:37,548 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-105] data fine non è null,per cui setto la variabile nell'ogetto lavorazione
+2021-05-11 16:27:37,549 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-105] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-13, stato=null, repository=https://google.it]
+2021-05-11 16:27:37,549 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-105] eseguo l'aggiornamento con data fine
+2021-05-11 16:27:37,587 INFO i.m.DBManager [http-nio-8080-exec-102] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:29:10,954 INFO i.m.DBManager [http-nio-8080-exec-98] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-19, stato=Eseguita, repository=https://google.it]
+2021-05-11 16:29:16,060 INFO i.m.GestioneLogin [http-nio-8080-exec-103] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 16:29:16,071 INFO i.m.DBManager [http-nio-8080-exec-103] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 16:29:16,072 INFO i.m.GestioneLogin [http-nio-8080-exec-103] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 16:29:22,285 INFO i.m.DBManager [http-nio-8080-exec-97] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:29:27,283 INFO i.m.DBManager [http-nio-8080-exec-100] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-19, stato=Eseguita, repository=https://google.it]
+2021-05-11 16:29:37,919 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-107] data fine non è null,per cui setto la variabile nell'ogetto lavorazione
+2021-05-11 16:29:37,919 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-107] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-13, stato=null, repository=https://google.it]
+2021-05-11 16:29:37,919 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-107] eseguo l'aggiornamento con data fine
+2021-05-11 16:29:37,968 INFO i.m.DBManager [http-nio-8080-exec-101] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:30:48,946 INFO i.m.DBManager [http-nio-8080-exec-109] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:30:54,586 INFO i.m.DBManager [http-nio-8080-exec-108] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-19, stato=Eseguita, repository=https://google.it]
+2021-05-11 16:31:02,622 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-113] data fine non è null,per cui setto la variabile nell'ogetto lavorazione
+2021-05-11 16:31:02,635 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-113] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-13, stato=null, repository=https://google.it]
+2021-05-11 16:31:02,636 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-113] eseguo l'aggiornamento con data fine
+2021-05-11 16:31:02,882 INFO i.m.DBManager [http-nio-8080-exec-108] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:31:14,170 INFO i.m.GestioneLogin [http-nio-8080-exec-106] utente sta accedendo all'applicazione username_utente= tanasese
+2021-05-11 16:31:14,180 INFO i.m.GestioneLogin [http-nio-8080-exec-106] utente non riconosciuto,rimando su login.jsp e avviso l'utente delle credenziali probabilmente errate.
+2021-05-11 16:31:17,280 INFO i.m.GestioneLogin [http-nio-8080-exec-108] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 16:31:17,289 INFO i.m.DBManager [http-nio-8080-exec-108] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 16:31:17,290 INFO i.m.GestioneLogin [http-nio-8080-exec-108] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 16:31:30,122 INFO i.m.DBManager [http-nio-8080-exec-117] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:31:34,746 INFO i.m.DBManager [http-nio-8080-exec-115] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-19, stato=Eseguita, repository=https://google.it]
+2021-05-11 16:31:41,674 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-107] data fine non è null,per cui setto la variabile nell'ogetto lavorazione
+2021-05-11 16:31:41,674 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-107] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-13, stato=null, repository=https://google.it]
+2021-05-11 16:31:41,675 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-107] eseguo l'aggiornamento con data fine
+2021-05-11 16:31:41,720 INFO i.m.DBManager [http-nio-8080-exec-118] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:33:18,472 INFO i.m.DBManager [http-nio-8080-exec-119] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:33:25,932 INFO i.m.DBManager [http-nio-8080-exec-125] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-19, stato=Eseguita, repository=https://google.it]
+2021-05-11 16:33:31,387 INFO i.m.GestioneLogin [http-nio-8080-exec-119] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 16:33:31,403 INFO i.m.DBManager [http-nio-8080-exec-119] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 16:33:31,405 INFO i.m.GestioneLogin [http-nio-8080-exec-119] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 16:33:36,197 INFO i.m.DBManager [http-nio-8080-exec-118] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:33:54,081 INFO i.m.DBManager [http-nio-8080-exec-123] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-19, stato=Eseguita, repository=https://google.it]
+2021-05-11 16:34:01,968 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-126] data fine non è null,per cui setto la variabile nell'ogetto lavorazione
+2021-05-11 16:34:01,969 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-126] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-20, stato=null, repository=https://google.it]
+2021-05-11 16:34:01,969 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-126] eseguo l'aggiornamento con data fine
+2021-05-11 16:34:02,034 INFO i.m.DBManager [http-nio-8080-exec-127] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 16:34:23,228 INFO i.m.DBManager [http-nio-8080-exec-120] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-20, stato=Eseguita, repository=https://google.it]
+2021-05-11 16:34:31,132 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-129] data fine non è null,per cui setto la variabile nell'ogetto lavorazione
+2021-05-11 16:34:31,133 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-129] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=2021-05-13, stato=null, repository=https://google.it]
+2021-05-11 16:34:31,133 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-129] eseguo l'aggiornamento con data fine
+2021-05-11 16:34:31,232 INFO i.m.DBManager [http-nio-8080-exec-116] ELENCO LAVORAZIONI CARICATE: 1
+2021-05-11 17:02:27,349 INFO i.m.DBManager [http-nio-8080-exec-131] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:03:07,765 INFO i.m.GestioneUtentiServlet [http-nio-8080-exec-131] La request page è visualizzaPacchetti.jsp
+2021-05-11 17:03:07,818 INFO i.m.DBManager [http-nio-8080-exec-132] ELENCO SOFTWARE CARICATI: 2
+2021-05-11 17:03:21,181 INFO i.m.DBManager [http-nio-8080-exec-129] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:04:04,908 INFO i.m.DBManager [http-nio-8080-exec-135] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:04:13,123 INFO i.m.GestioneUtentiServlet [http-nio-8080-exec-131] La request page è visualizzaLavorazioni.jsp
+2021-05-11 17:06:03,205 INFO i.m.DBManager [http-nio-8080-exec-129] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:06:11,658 INFO i.m.GestioneLogin [http-nio-8080-exec-126] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 17:06:11,687 INFO i.m.DBManager [http-nio-8080-exec-126] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 17:06:11,688 INFO i.m.GestioneLogin [http-nio-8080-exec-126] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 17:06:38,483 INFO i.m.DBManager [http-nio-8080-exec-133] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:06:53,674 INFO i.m.GestioneUtentiServlet [http-nio-8080-exec-128] La request page è visualizzaLavorazioni.jsp
+2021-05-11 17:06:53,708 INFO i.m.DBManager [http-nio-8080-exec-134] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:07:03,280 INFO i.m.GestioneUtentiServlet [http-nio-8080-exec-136] La request page è visualizzaLavorazioni.jsp
+2021-05-11 17:07:03,317 INFO i.m.DBManager [http-nio-8080-exec-137] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:08:59,195 INFO i.m.DBManager [http-nio-8080-exec-140] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:10:33,222 INFO i.m.DBManager [http-nio-8080-exec-141] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:12:54,629 INFO i.m.DBManager [http-nio-8080-exec-137] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:14:14,572 INFO i.m.DBManager [http-nio-8080-exec-139] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:14:46,586 INFO i.m.DBManager [http-nio-8080-exec-142] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:16:00,129 INFO i.m.DBManager [http-nio-8080-exec-139] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:16:23,559 INFO i.m.DBManager [http-nio-8080-exec-136] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:16:39,747 INFO i.m.DBManager [http-nio-8080-exec-139] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:17:08,644 INFO i.m.DBManager [http-nio-8080-exec-141] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:23:05,569 INFO i.m.DBManager [http-nio-8080-exec-144] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:23:51,631 INFO i.m.DBManager [http-nio-8080-exec-143] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:42:05,701 INFO i.m.GestioneLogin [http-nio-8080-exec-137] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 17:42:05,708 INFO i.m.DBManager [http-nio-8080-exec-137] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 17:42:05,709 INFO i.m.GestioneLogin [http-nio-8080-exec-137] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 17:42:12,541 INFO i.m.DBManager [http-nio-8080-exec-145] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:43:01,913 INFO i.m.DBManager [http-nio-8080-exec-141] ELENCO SOFTWARE CARICATI: 2
+2021-05-11 17:43:35,020 INFO i.m.DBManager [http-nio-8080-exec-144] DIPENDENTI CARICATI: 3
+2021-05-11 17:44:47,273 INFO i.m.DBManager [http-nio-8080-exec-140] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:46:54,882 INFO i.m.DBManager [http-nio-8080-exec-145] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:47:41,562 INFO i.m.DBManager [http-nio-8080-exec-139] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:48:04,801 INFO i.m.DBManager [http-nio-8080-exec-145] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:50:49,495 INFO i.m.DBManager [http-nio-8080-exec-137] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:51:55,087 INFO i.m.DBManager [http-nio-8080-exec-138] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:52:17,043 INFO i.m.DBManager [http-nio-8080-exec-137] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:52:36,639 INFO i.m.DBManager [http-nio-8080-exec-143] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:53:39,688 INFO i.m.DBManager [http-nio-8080-exec-145] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:54:39,871 INFO i.m.DBManager [http-nio-8080-exec-142] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:55:02,964 INFO i.m.DBManager [http-nio-8080-exec-144] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:56:33,750 INFO i.m.DBManager [http-nio-8080-exec-142] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:56:50,043 INFO i.m.DBManager [http-nio-8080-exec-142] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:57:19,964 INFO i.m.DBManager [http-nio-8080-exec-136] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:57:50,610 INFO i.m.DBManager [http-nio-8080-exec-140] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:59:16,821 INFO i.m.DBManager [http-nio-8080-exec-139] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 17:59:54,643 INFO i.m.DBManager [http-nio-8080-exec-137] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:02:44,682 INFO i.m.DBManager [http-nio-8080-exec-140] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:04:44,227 INFO i.m.DBManager [http-nio-8080-exec-143] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:06:43,292 INFO i.m.DBManager [http-nio-8080-exec-140] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:08:06,480 INFO i.m.DBManager [http-nio-8080-exec-137] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:08:34,831 INFO i.m.DBManager [http-nio-8080-exec-145] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:09:55,021 INFO i.m.DBManager [http-nio-8080-exec-141] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:10:29,528 INFO i.m.DBManager [http-nio-8080-exec-136] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:11:22,169 INFO i.m.DBManager [http-nio-8080-exec-137] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:11:47,776 INFO i.m.DBManager [http-nio-8080-exec-143] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:12:35,832 INFO i.m.DBManager [http-nio-8080-exec-141] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:12:56,006 INFO i.m.DBManager [http-nio-8080-exec-136] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:13:08,540 INFO i.m.DBManager [http-nio-8080-exec-139] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:13:23,890 INFO i.m.DBManager [http-nio-8080-exec-138] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:13:40,907 INFO i.m.DBManager [http-nio-8080-exec-138] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:14:33,133 INFO i.m.DBManager [http-nio-8080-exec-137] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:15:03,846 INFO i.m.DBManager [http-nio-8080-exec-143] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:15:38,549 INFO i.m.DBManager [http-nio-8080-exec-138] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:16:00,003 INFO i.m.DBManager [http-nio-8080-exec-143] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:16:52,022 INFO i.m.DBManager [http-nio-8080-exec-141] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:17:14,410 INFO i.m.DBManager [http-nio-8080-exec-139] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:17:36,087 INFO i.m.DBManager [http-nio-8080-exec-136] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:18:30,738 INFO i.m.DBManager [http-nio-8080-exec-140] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:18:53,475 INFO i.m.DBManager [http-nio-8080-exec-139] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:19:37,942 INFO i.m.DBManager [http-nio-8080-exec-142] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:20:29,115 INFO i.m.DBManager [http-nio-8080-exec-138] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:21:07,194 INFO i.m.DBManager [http-nio-8080-exec-144] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:21:27,300 INFO i.m.DBManager [http-nio-8080-exec-136] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:21:44,736 INFO i.m.DBManager [http-nio-8080-exec-136] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:22:11,404 INFO i.m.DBManager [http-nio-8080-exec-139] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:23:00,718 INFO i.m.DBManager [http-nio-8080-exec-138] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:23:13,234 INFO i.m.DBManager [http-nio-8080-exec-137] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:23:25,239 INFO i.m.DBManager [http-nio-8080-exec-143] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:23:43,696 INFO i.m.DBManager [http-nio-8080-exec-144] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:24:02,107 INFO i.m.DBManager [http-nio-8080-exec-142] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:24:15,938 INFO i.m.DBManager [http-nio-8080-exec-141] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:25:37,186 INFO i.m.DBManager [http-nio-8080-exec-144] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:26:06,698 INFO i.m.DBManager [http-nio-8080-exec-136] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:26:30,717 INFO i.m.DBManager [http-nio-8080-exec-139] ELENCO SOFTWARE CARICATI: 2
+2021-05-11 18:27:45,903 INFO i.m.DBManager [http-nio-8080-exec-141] DIPENDENTI CARICATI: 3
+2021-05-11 18:28:18,433 INFO i.m.DBManager [http-nio-8080-exec-145] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:28:46,935 INFO i.m.DBManager [http-nio-8080-exec-136] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:29:10,099 INFO i.m.DBManager [http-nio-8080-exec-144] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:30:01,044 INFO i.m.DBManager [http-nio-8080-exec-136] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:30:11,973 INFO i.m.DBManager [http-nio-8080-exec-137] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:43:10,378 INFO i.m.GestioneUtentiServlet [http-nio-8080-exec-142] La request page è visualizzaLavorazioni.jsp
+2021-05-11 18:43:10,438 INFO i.m.DBManager [http-nio-8080-exec-138] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 18:46:27,150 INFO i.m.DBManager [http-nio-8080-exec-139] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:08:47,937 INFO i.m.GestioneLogin [http-nio-8080-exec-140] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 19:08:48,191 INFO i.m.DBManager [http-nio-8080-exec-140] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 19:08:48,191 INFO i.m.GestioneLogin [http-nio-8080-exec-140] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 19:08:57,259 INFO i.m.DBManager [http-nio-8080-exec-152] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:09:30,460 INFO i.m.DBManager [http-nio-8080-exec-138] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:10:34,857 INFO i.m.DBManager [http-nio-8080-exec-158] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:10:40,632 INFO i.m.DBManager [http-nio-8080-exec-159] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:10:47,811 INFO i.m.DBManager [http-nio-8080-exec-160] QUERY:UPDATE lavorazioni
+SET stato ='In lavorazione' WHERE codLavorazione IN (1);
+2021-05-11 19:10:47,820 INFO i.m.DBManager [http-nio-8080-exec-160] Numero Lavorazioni modificate dal db:1
+2021-05-11 19:10:47,821 INFO i.m.DBManager [http-nio-8080-exec-160] QUERY:UPDATE lavorazioni
+SET datafine = NULL WHERE codLavorazione IN (1);
+2021-05-11 19:10:47,825 INFO i.m.DBManager [http-nio-8080-exec-160] Numero Lavorazioni modificate dal db:1
+2021-05-11 19:10:47,855 INFO i.m.DBManager [http-nio-8080-exec-158] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:11:13,255 INFO i.m.DBManager [http-nio-8080-exec-166] QUERY:UPDATE lavorazioni
+SET stato ='In lavorazione' WHERE codLavorazione IN (1,3);
+2021-05-11 19:11:13,261 INFO i.m.DBManager [http-nio-8080-exec-166] Numero Lavorazioni modificate dal db:2
+2021-05-11 19:11:13,262 INFO i.m.DBManager [http-nio-8080-exec-166] QUERY:UPDATE lavorazioni
+SET datafine = NULL WHERE codLavorazione IN (1,3);
+2021-05-11 19:11:13,267 INFO i.m.DBManager [http-nio-8080-exec-166] Numero Lavorazioni modificate dal db:2
+2021-05-11 19:11:13,286 INFO i.m.DBManager [http-nio-8080-exec-161] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:11:26,110 INFO i.m.DBManager [http-nio-8080-exec-160] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=adasdasdasdasdasdadadsad, dataInizio=2021-05-12, dataFine=null, stato=In lavorazione, repository=https://google.it]
+2021-05-11 19:11:51,122 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-162] data fine vuota per cui non la metto nell'aggiornamento
+2021-05-11 19:11:51,123 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-162] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=questa Ã¨ una descrizione, dataInizio=2021-05-12, dataFine=null, stato=null, repository=https://google.it]
+2021-05-11 19:11:51,177 INFO i.m.DBManager [http-nio-8080-exec-159] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:15:25,822 INFO i.m.DBManager [http-nio-8080-exec-157] QUERY:UPDATE lavorazioni
+SET stato ='Eseguita' WHERE codLavorazione IN (1,3);
+2021-05-11 19:15:25,837 INFO i.m.DBManager [http-nio-8080-exec-157] Numero Lavorazioni modificate dal db:2
+2021-05-11 19:15:25,837 INFO i.m.DBManager [http-nio-8080-exec-157] QUERY:UPDATE lavorazioni
+SET datafine = UTC_DATE() WHERE codLavorazione IN (1,3);
+2021-05-11 19:15:25,840 INFO i.m.DBManager [http-nio-8080-exec-157] Numero Lavorazioni modificate dal db:2
+2021-05-11 19:15:25,871 INFO i.m.DBManager [http-nio-8080-exec-159] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:15:34,413 INFO i.m.GestioneLogin [http-nio-8080-exec-164] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 19:15:34,453 INFO i.m.DBManager [http-nio-8080-exec-164] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 19:15:34,453 INFO i.m.GestioneLogin [http-nio-8080-exec-164] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 19:15:39,736 INFO i.m.DBManager [http-nio-8080-exec-157] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:15:52,824 INFO i.m.DBManager [http-nio-8080-exec-159] QUERY:UPDATE lavorazioni
+SET stato ='Non eseguita' WHERE codLavorazione IN (1,3);
+2021-05-11 19:15:52,830 INFO i.m.DBManager [http-nio-8080-exec-159] Numero Lavorazioni modificate dal db:2
+2021-05-11 19:15:52,830 INFO i.m.DBManager [http-nio-8080-exec-159] QUERY:UPDATE lavorazioni
+SET datafine = UTC_DATE() WHERE codLavorazione IN (1,3);
+2021-05-11 19:15:52,831 INFO i.m.DBManager [http-nio-8080-exec-159] Numero Lavorazioni modificate dal db:2
+2021-05-11 19:15:52,857 INFO i.m.DBManager [http-nio-8080-exec-160] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:16:09,563 INFO i.m.DBManager [http-nio-8080-exec-166] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=questa Ã¨ una descrizione, dataInizio=2021-05-12, dataFine=2021-05-11, stato=Non eseguita, repository=https://google.it]
+2021-05-11 19:16:17,498 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-170] data fine non è null,per cui setto la variabile nell'ogetto lavorazione
+2021-05-11 19:16:17,499 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-170] Lavorazione [codLavorazione=1, codSoftware=6, nome=Implementazione versione 1 di tieni il conto, descrizione=questa ÃÂ¨ una descrizione, dataInizio=2021-05-12, dataFine=2021-05-31, stato=null, repository=https://google.it]
+2021-05-11 19:16:17,499 INFO i.m.GestioneLavorazioniServlet [http-nio-8080-exec-170] eseguo l'aggiornamento con data fine
+2021-05-11 19:16:17,535 INFO i.m.DBManager [http-nio-8080-exec-167] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:16:31,805 INFO i.m.DBManager [http-nio-8080-exec-160] QUERY:UPDATE lavorazioni
+SET stato ='In lavorazione' WHERE codLavorazione IN (1);
+2021-05-11 19:16:31,811 INFO i.m.DBManager [http-nio-8080-exec-160] Numero Lavorazioni modificate dal db:1
+2021-05-11 19:16:31,812 INFO i.m.DBManager [http-nio-8080-exec-160] QUERY:UPDATE lavorazioni
+SET datafine = NULL WHERE codLavorazione IN (1);
+2021-05-11 19:16:31,815 INFO i.m.DBManager [http-nio-8080-exec-160] Numero Lavorazioni modificate dal db:1
+2021-05-11 19:16:31,839 INFO i.m.DBManager [http-nio-8080-exec-168] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:24:24,955 INFO i.m.DBManager [http-nio-8080-exec-170] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:24:45,074 INFO i.m.DBManager [http-nio-8080-exec-174] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:28:03,522 INFO i.m.DBManager [http-nio-8080-exec-170] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:29:14,156 INFO i.m.DBManager [http-nio-8080-exec-171] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:29:32,126 INFO i.m.DBManager [http-nio-8080-exec-167] QUERY:UPDATE lavorazioni
+SET stato ='Eseguita' WHERE codLavorazione IN (3);
+2021-05-11 19:29:32,134 INFO i.m.DBManager [http-nio-8080-exec-167] Numero Lavorazioni modificate dal db:1
+2021-05-11 19:29:32,135 INFO i.m.DBManager [http-nio-8080-exec-167] QUERY:UPDATE lavorazioni
+SET datafine = UTC_DATE() WHERE codLavorazione IN (3);
+2021-05-11 19:29:32,136 INFO i.m.DBManager [http-nio-8080-exec-167] Numero Lavorazioni modificate dal db:1
+2021-05-11 19:29:32,159 INFO i.m.DBManager [http-nio-8080-exec-174] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 19:30:06,352 INFO i.m.DBManager [http-nio-8080-exec-176] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:35:27,409 INFO i.m.DBManager [http-nio-8080-exec-169] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:35:40,681 INFO i.m.GestioneLogin [http-nio-8080-exec-174] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-11 20:35:40,684 INFO i.m.DBManager [http-nio-8080-exec-174] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-11 20:35:40,687 INFO i.m.GestioneLogin [http-nio-8080-exec-174] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-11 20:35:46,623 INFO i.m.DBManager [http-nio-8080-exec-168] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:36:31,125 INFO i.m.DBManager [http-nio-8080-exec-175] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:36:36,405 INFO i.m.DBManager [http-nio-8080-exec-176] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:36:37,804 INFO i.m.DBManager [http-nio-8080-exec-170] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:39:27,881 INFO i.m.DBManager [http-nio-8080-exec-168] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:47:30,471 INFO i.m.DBManager [http-nio-8080-exec-171] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:48:08,349 INFO i.m.DBManager [http-nio-8080-exec-172] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:51:21,112 INFO i.m.DBManager [http-nio-8080-exec-174] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:52:08,055 INFO i.m.DBManager [http-nio-8080-exec-167] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:52:21,611 INFO i.m.DBManager [http-nio-8080-exec-176] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:52:42,520 INFO i.m.DBManager [http-nio-8080-exec-174] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:53:13,063 INFO i.m.DBManager [http-nio-8080-exec-169] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:53:40,941 INFO i.m.DBManager [http-nio-8080-exec-176] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:53:46,778 INFO i.m.DBManager [http-nio-8080-exec-168] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:54:16,025 INFO i.m.DBManager [http-nio-8080-exec-167] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:55:19,826 INFO i.m.DBManager [http-nio-8080-exec-168] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:55:46,327 INFO i.m.DBManager [http-nio-8080-exec-171] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:56:29,647 INFO i.m.DBManager [http-nio-8080-exec-173] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:56:54,029 INFO i.m.DBManager [http-nio-8080-exec-167] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:57:26,754 INFO i.m.DBManager [http-nio-8080-exec-171] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:59:05,486 INFO i.m.DBManager [http-nio-8080-exec-168] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:59:13,302 INFO i.m.DBManager [http-nio-8080-exec-169] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 20:59:24,238 INFO i.m.DBManager [http-nio-8080-exec-176] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 21:00:19,213 INFO i.m.DBManager [http-nio-8080-exec-174] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 21:01:43,955 INFO i.m.DBManager [http-nio-8080-exec-176] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 21:02:19,811 INFO i.m.DBManager [http-nio-8080-exec-176] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 21:03:29,761 INFO i.m.DBManager [http-nio-8080-exec-167] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 21:04:13,129 INFO i.m.DBManager [http-nio-8080-exec-171] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 21:04:46,311 INFO i.m.DBManager [http-nio-8080-exec-174] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 21:07:09,757 INFO i.m.DBManager [http-nio-8080-exec-172] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 21:08:31,865 INFO i.m.DBManager [http-nio-8080-exec-176] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 21:09:11,836 INFO i.m.DBManager [http-nio-8080-exec-170] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 21:09:21,128 INFO i.m.DBManager [http-nio-8080-exec-173] DIPENDENTI CARICATI: 3
+2021-05-11 21:10:42,913 INFO i.m.DBManager [http-nio-8080-exec-168] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-11 21:10:54,401 INFO i.m.DBManager [http-nio-8080-exec-170] DIPENDENTI CARICATI: 3
+2021-05-11 21:11:10,324 INFO i.m.DBManager [http-nio-8080-exec-173] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-12 00:23:34,572 INFO i.m.GestioneLogin [http-nio-8080-exec-5] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-12 00:23:35,173 INFO i.m.DBManager [http-nio-8080-exec-5] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-12 00:23:35,173 INFO i.m.GestioneLogin [http-nio-8080-exec-5] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-12 00:23:47,440 INFO i.m.DBManager [http-nio-8080-exec-9] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-12 00:24:48,979 INFO i.m.DBManager [http-nio-8080-exec-4] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-12 00:24:55,998 INFO i.m.DBManager [http-nio-8080-exec-5] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 00:24:56,308 INFO i.m.DBManager [http-nio-8080-exec-5] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 00:24:56,311 INFO i.m.DBManager [http-nio-8080-exec-5] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 00:45:25,206 INFO i.m.DBManager [http-nio-8080-exec-9] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 00:45:25,649 INFO i.m.DBManager [http-nio-8080-exec-9] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 00:45:25,654 INFO i.m.DBManager [http-nio-8080-exec-9] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 00:48:27,570 INFO i.m.DBManager [http-nio-8080-exec-5] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 00:48:28,289 INFO i.m.DBManager [http-nio-8080-exec-5] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 00:48:28,293 INFO i.m.DBManager [http-nio-8080-exec-5] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 00:50:43,526 INFO i.m.DBManager [http-nio-8080-exec-9] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 00:50:44,264 INFO i.m.DBManager [http-nio-8080-exec-9] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 00:50:44,274 INFO i.m.DBManager [http-nio-8080-exec-9] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 00:50:44,297 INFO i.m.DBManager [http-nio-8080-exec-9] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 00:50:44,302 INFO i.m.DBManager [http-nio-8080-exec-9] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 00:52:18,400 INFO i.m.DBManager [http-nio-8080-exec-6] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 00:52:19,260 INFO i.m.DBManager [http-nio-8080-exec-6] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 00:52:19,283 INFO i.m.DBManager [http-nio-8080-exec-6] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 00:52:19,287 INFO i.m.DBManager [http-nio-8080-exec-6] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 00:52:19,291 INFO i.m.DBManager [http-nio-8080-exec-6] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 00:54:39,441 INFO i.m.DBManager [http-nio-8080-exec-8] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 00:54:40,180 INFO i.m.DBManager [http-nio-8080-exec-8] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 00:54:40,185 INFO i.m.DBManager [http-nio-8080-exec-8] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 00:54:40,190 INFO i.m.DBManager [http-nio-8080-exec-8] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 00:54:40,199 INFO i.m.DBManager [http-nio-8080-exec-8] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 01:48:49,918 INFO i.m.GestioneLogin [http-nio-8080-exec-16] utente sta accedendo all'applicazione username_utente= Tanase_Sebastian
+2021-05-12 01:48:50,252 INFO i.m.DBManager [http-nio-8080-exec-16] Dipendente [codiceDipendente=1, cf=TNSRNOZTCRNSDSNS, nome=Sebastian, cognome=Tanase, username=Tanase_Sebastian, email=sebastiantanase18@gmail.com, phone=3490596202, psw=85417538419a78449dfaf7674eb36fe1, qualificaProfessionale=Dirigente, nomeProfessione=Amministratore Delegato, dataAssunzione=2021-05-04, dataNascita=2002-03-13, provincia=ba, stipendio=90000, anniAnzianita=4, amministratore=Y, codDipartimento=1, immagineProfilo=foto.jpg, codiceRegistrazione=0]
+2021-05-12 01:48:50,253 INFO i.m.GestioneLogin [http-nio-8080-exec-16] l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.
+2021-05-12 01:48:58,546 INFO i.m.DBManager [http-nio-8080-exec-19] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-12 01:49:07,072 INFO i.m.DBManager [http-nio-8080-exec-20] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 01:49:07,405 INFO i.m.DBManager [http-nio-8080-exec-20] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 01:49:07,408 INFO i.m.DBManager [http-nio-8080-exec-20] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 01:50:25,663 INFO i.m.DBManager [http-nio-8080-exec-22] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 01:50:26,221 INFO i.m.DBManager [http-nio-8080-exec-22] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 01:50:26,224 INFO i.m.DBManager [http-nio-8080-exec-22] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 01:51:52,380 INFO i.m.DBManager [http-nio-8080-exec-21] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 01:51:52,388 INFO i.m.DBManager [http-nio-8080-exec-21] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 01:51:52,390 INFO i.m.DBManager [http-nio-8080-exec-21] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 01:53:19,077 INFO i.m.DBManager [http-nio-8080-exec-22] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 01:53:19,087 INFO i.m.DBManager [http-nio-8080-exec-22] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 01:53:19,090 INFO i.m.DBManager [http-nio-8080-exec-22] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 02:06:00,429 INFO i.m.DBManager [http-nio-8080-exec-20] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 02:06:00,441 INFO i.m.DBManager [http-nio-8080-exec-20] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 02:06:00,443 INFO i.m.DBManager [http-nio-8080-exec-20] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 02:08:49,937 INFO i.m.DBManager [http-nio-8080-exec-15] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 02:08:49,944 INFO i.m.DBManager [http-nio-8080-exec-15] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 02:08:49,948 INFO i.m.DBManager [http-nio-8080-exec-15] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 02:10:02,730 INFO i.m.DBManager [http-nio-8080-exec-20] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 02:10:02,749 INFO i.m.DBManager [http-nio-8080-exec-20] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 02:10:02,750 INFO i.m.DBManager [http-nio-8080-exec-20] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 02:10:07,103 INFO i.m.DBManager [http-nio-8080-exec-17] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 02:10:07,123 INFO i.m.DBManager [http-nio-8080-exec-17] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 02:10:07,127 INFO i.m.DBManager [http-nio-8080-exec-17] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 02:11:13,254 INFO i.m.DBManager [http-nio-8080-exec-15] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 02:11:13,265 INFO i.m.DBManager [http-nio-8080-exec-15] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 02:11:13,269 INFO i.m.DBManager [http-nio-8080-exec-15] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 02:11:17,933 INFO i.m.DBManager [http-nio-8080-exec-21] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 02:11:17,955 INFO i.m.DBManager [http-nio-8080-exec-21] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 02:11:17,962 INFO i.m.DBManager [http-nio-8080-exec-21] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 02:13:01,001 INFO i.m.DBManager [http-nio-8080-exec-21] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 02:13:01,013 INFO i.m.DBManager [http-nio-8080-exec-21] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 02:13:01,015 INFO i.m.DBManager [http-nio-8080-exec-21] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 02:25:36,226 INFO i.m.DBManager [http-nio-8080-exec-14] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 02:25:36,504 INFO i.m.DBManager [http-nio-8080-exec-14] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 02:25:36,508 INFO i.m.DBManager [http-nio-8080-exec-14] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 02:25:43,710 INFO i.m.DBManager [http-nio-8080-exec-20] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 02:25:43,720 INFO i.m.DBManager [http-nio-8080-exec-20] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 02:25:43,725 INFO i.m.DBManager [http-nio-8080-exec-20] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 02:32:18,730 INFO i.m.DBManager [http-nio-8080-exec-18] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 02:32:18,738 INFO i.m.DBManager [http-nio-8080-exec-18] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 02:32:18,740 INFO i.m.DBManager [http-nio-8080-exec-18] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 02:32:33,806 INFO i.m.DBManager [http-nio-8080-exec-22] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 02:32:33,823 INFO i.m.DBManager [http-nio-8080-exec-22] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 02:32:33,825 INFO i.m.DBManager [http-nio-8080-exec-22] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 02:40:31,160 INFO i.m.DBManager [http-nio-8080-exec-23] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 02:40:31,177 INFO i.m.DBManager [http-nio-8080-exec-23] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 02:40:31,178 INFO i.m.DBManager [http-nio-8080-exec-23] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 03:20:39,156 INFO i.m.DBManager [http-nio-8080-exec-19] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 03:20:39,163 INFO i.m.DBManager [http-nio-8080-exec-19] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 03:20:39,165 INFO i.m.DBManager [http-nio-8080-exec-19] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 03:20:44,958 INFO i.m.DBManager [http-nio-8080-exec-16] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 03:20:44,966 INFO i.m.DBManager [http-nio-8080-exec-16] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 03:20:44,968 INFO i.m.DBManager [http-nio-8080-exec-16] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 03:21:40,199 INFO i.m.DBManager [http-nio-8080-exec-19] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 03:21:40,211 INFO i.m.DBManager [http-nio-8080-exec-19] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 03:21:40,215 INFO i.m.DBManager [http-nio-8080-exec-19] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 03:27:51,076 INFO i.m.DBManager [http-nio-8080-exec-15] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 03:27:51,104 INFO i.m.DBManager [http-nio-8080-exec-15] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 03:27:51,109 INFO i.m.DBManager [http-nio-8080-exec-15] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 03:57:37,742 INFO i.m.DBManager [http-nio-8080-exec-22] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 03:57:37,756 INFO i.m.DBManager [http-nio-8080-exec-22] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 03:57:37,757 INFO i.m.DBManager [http-nio-8080-exec-22] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 03:57:41,789 INFO i.m.DBManager [http-nio-8080-exec-19] ELENCO LAVORAZIONI CARICATE: 2
+2021-05-12 03:57:48,567 INFO i.m.DBManager [http-nio-8080-exec-18] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 03:57:48,578 INFO i.m.DBManager [http-nio-8080-exec-18] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 03:57:48,582 INFO i.m.DBManager [http-nio-8080-exec-18] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 03:58:43,054 INFO i.m.DBManager [http-nio-8080-exec-22] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 03:58:43,069 INFO i.m.DBManager [http-nio-8080-exec-22] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 03:58:43,075 INFO i.m.DBManager [http-nio-8080-exec-22] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 04:03:59,248 INFO i.m.DBManager [http-nio-8080-exec-19] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 04:03:59,257 INFO i.m.DBManager [http-nio-8080-exec-19] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 04:03:59,258 INFO i.m.DBManager [http-nio-8080-exec-19] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]
+2021-05-12 04:04:05,997 INFO i.m.DBManager [http-nio-8080-exec-17] ELENCO PERSONALE_COINVOLTO CARICATE: 2
+2021-05-12 04:04:06,011 INFO i.m.DBManager [http-nio-8080-exec-17] Dipendente [codiceDipendente=6, cf=STAMSNMANRNSGTSR, nome=Luigi, cognome=Stamerra, username=Stamerra_Luigi, email=cici@codebase.com, phone=3490596203, psw=d534b96c9c231037a98126891ec898eb, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2021-05-18, provincia=LE, stipendio=35000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=activated]
+2021-05-12 04:04:06,013 INFO i.m.DBManager [http-nio-8080-exec-17] Dipendente [codiceDipendente=10, cf=PAPANTNOALSALFHD, nome=Antonio, cognome=Papallo, username=Antonio_Papallo, email=antoniopappallo@ilmiosito.com, phone=3490596203, psw=null, qualificaProfessionale=Responsabile, nomeProfessione=Project Manager, dataAssunzione=2021-05-11, dataNascita=2002-01-16, provincia=le, stipendio=25000, anniAnzianita=0, amministratore=N, codDipartimento=2, immagineProfilo=null, codiceRegistrazione=a5bb4921ebab7a857ad83a4fb8ff8811]

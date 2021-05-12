@@ -19,7 +19,7 @@ import org.apache.logging.log4j.Logger;
 @WebServlet("/gestsoftware")
 public class GestioneSoftwareServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	static Logger logger = LogManager.getLogger(GestioneUtentiServlet.class);   
+	static Logger logger = LogManager.getLogger(GestioneSoftwareServlet.class);   
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -113,7 +113,7 @@ public class GestioneSoftwareServlet extends HttpServlet {
 		String comando = request.getParameter("cmd");;
 
 
-		//----------------NUOVO Amministratore---------------------------//		
+		//----------------NUOVO SOFTWARE---------------------------//		
 		if(comando.equals("nuovoSoftware")) {
 			Software s=new Software();
 			s.setNome(request.getParameter("nome"));

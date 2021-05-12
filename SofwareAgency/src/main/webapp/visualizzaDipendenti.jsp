@@ -27,6 +27,11 @@ if(righe==null){
                             <div class="py-20">
                                 <h1 class="h2 font-w700 text-white mb-10">Visualizza Dipendenti</h1>
                                 <h2 class="h4 font-w400 text-white-op mb-0">in questa sezione potrai vedere tutto i dipendenti che compongono l'azienda .</h2>
+                                <br>
+                                <a type="button"
+								class="btn btn-outline-success "
+								href="nuovoDipendente.jsp"><i class="fa fa-plus"
+									aria-hidden="true"></i> Inserisci nuovo dipendente</a>
                             </div>
                         </div>
                     </div>
@@ -84,10 +89,6 @@ if(righe==null){
 									righe
 						</div>
 						<div style="margin-bottom: 10px; margin-top: 20px;"">
-							<a type="button"
-								class="col-md-3 btn btn-outline-success ml-10 "
-								href="nuovoDipendente.jsp"><i class="fa fa-plus"
-									aria-hidden="true"></i> Inserisci nuovo amministratore</a>
 						</div>
 						<tr>
 							<th><input type="checkbox" id="checkboxAll" onclick='$(".check").prop("checked",$ (this).prop("checked"));'>Seleziona tutto</th>

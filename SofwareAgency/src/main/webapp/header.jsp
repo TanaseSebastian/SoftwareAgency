@@ -50,6 +50,7 @@ else{
 <!-- Stylesheets -->
 <!-- questo serve per il modal di benvenuto -->
 <link rel="stylesheet" href="assets/js/plugins/slick/slick.css">
+<link rel="stylesheet" href="css/buttons.css">
 <link rel="stylesheet" href="assets/js/plugins/slick/slick-theme.css">
 <!-- -Questo per lo stile-->
 <link rel="stylesheet"
@@ -73,6 +74,11 @@ else{
 a:not([href]):hover {
 	color: white;
 	text-decoration: none;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: 0.85em;
+    padding-bottom: 2em;
 }
 </style>
 </head>
@@ -215,9 +221,9 @@ a:not([href]):hover {
 								class="si si-flag"></i><span class="sidebar-mini-hide">Lavorazioni
 							</span><span class="font-size-s text-primary">(crud)</span></a>
 							<ul>
-								<li><a href="#">Visualizza lavorazioni <span
+								<li><a href="gestlavorazioni?cmd=viewall">Visualizza lavorazioni <span
 										class="font-size-s text-primary">(crud)</span></a></li>
-								<li><a href="#">Inserisci nuova lavorazione</a></li>
+								<li><a href="nuovaLavorazione.jsp">Inserisci nuova lavorazione</a></li>
 								<li><a href="#">Altro</a></li>
 							</ul></li>
 					</ul>

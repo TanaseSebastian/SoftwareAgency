@@ -1,18 +1,13 @@
 <%@ page language="java" import="java.util.*,it.meucci.*"
 	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
-<%@include file= "header.jsp"%>
 <%
-	// Leggo le proprietà da file properties
-	prop = obj.loadProperties("DB.properties");
-	prop = obj.loadProperties("DB.properties");
-	String userDB = prop.getProperty("Username");
-	String pwDB = prop.getProperty("Pasword");
+	Lavorazione l = (Lavorazione)request.getAttribute("LAVORAZIONE");
+	DBManager db=new DBManager();
+	String datafine=l.getDataFine();
+	if(datafine==null)
+	datafine="data fine al momento non disponibile in quanto questa lavorazione è ancora in corso";
 %>
-<sql:setDataSource var="myDS" driver="com.mysql.cj.jdbc.Driver"
-	url="jdbc:mysql://localhost:3306/softwarehouse?serverTimezone=UTC"
-	user='<%=userDB%>' password='<%=pwDB%>' />
+<%@include file= "header.jsp"%>
 
             <!-- Main Container -->
             <main id="main-container">
@@ -22,8 +17,8 @@
                     <div class="bg-black-op-75">
                         <div class="content content-top content-full text-center">
                             <div class="py-20">
-                                <h1 class="h2 font-w700 text-white mb-10">  <i class="fa fa-plus text-muted mr-5"></i>Nuova lavorazione</h1>
-                                <h2 class="h4 font-w400 text-white-op mb-0"> inserisci le informazioni e aggiungi una nuova lavorazione!.</h2>
+                                <h1 class="h2 font-w700 text-white mb-10">  <i class="fa fa-plus text-muted mr-5"></i>Dettaglio lavorazione</h1>
+                                <h2 class="h4 font-w400 text-white-op mb-0"> Visualizza i dettagli di questa lavorazione</h2>
                             </div>
                         </div>
                     </div>
@@ -35,8 +30,8 @@
                     <div class="content py-5 text-center">
                         <nav class="breadcrumb bg-body-light mb-0">
                         <a class="breadcrumb-item" href="dashboard.jsp">Dashboard</a>
-                            <a class="breadcrumb-item" href="visualizzaPacchetti.jsp">Lavorazioni Software</a>
-                            <span class="breadcrumb-item active">Nuova Lavorazione</span>
+                            <a class="breadcrumb-item" href="gestlavorazioni?cmd=viewall">Lavorazioni Software</a>
+                            <span class="breadcrumb-item active">Dettagli Lavorazione</span>
                         </nav>
                     </div>
                 </div>
@@ -53,35 +48,32 @@
                                 <!-- Vital Info -->
                                 <h2 class="content-heading text-black">Informazioni generali</h2>
                                 <div class="row items-push">
-                                    <div class="col-lg-3">
-                                        <p class="text-muted">
-                                            Presta attenzione in quanto questi sono i dati che si vedranno per prima.
-                                        </p>
-                                    </div>
                                     <div class="col-lg-7 offset-lg-1">
+                                   			<div class="form-group">
+                                                <label for="codLavorazione">Codice Lavorazione</label>
+                                                <input type="text" class="form-control form-control-lg" name="codLavorazione" value="<%=l.getCodLavorazione()%>" readonly="readonly">
+                                            </div>
                                   			 <div class="form-group">
-                                                <label for="software">Software</label>
-                                                <select class="form-control form-control-lg" id="software" name="software">
-                                                    <option selected="selected" hidden>Seleziona software</option>
-                                                    <sql:query var="software" dataSource="${myDS}">
-										   		    select * from software;
-										    		</sql:query>
-													<c:forEach var="row" items="${software.rows}">
-													<option value="${row.codSoftware}"><c:out
-													value="${row.nome}" /></option>
-													</c:forEach>
-                                                </select>
+                                                <label for="software">Codice Software</label>
+                                                <input type="text" class="form-control form-control-lg" id="codSoftware" name="codSoftware" readonly="readonly" value="<%=l.getCodSoftware()%>">
+                                            </div>
+                                             <div class="form-group">
+                                                <label for="software">Nome Software</label>
+                                                <input type="text" class="form-control form-control-lg" id="nomeSoftware" name="nomeSoftware" readonly="readonly" value="<%=db.getSoftwareName(String.valueOf(l.getCodSoftware()))%>">
                                             </div>
                                         <div class="form-group">
                                             <label for="re-listing-name">Nome Lavorazione</label>
-                                            <input type="text" class="form-control form-control-lg" id="nome" name="nome" placeholder="es: Implementazione software:Tieni il conto versione 1.0">
+                                            <input type="text" class="form-control form-control-lg" id="nome" name="nome" value="<%=l.getNome()%>">
                                         </div>
                                         <div class="form-group">
                                             <label for="re-listing-address">Data Inizio Lavorazione</label>
-                                            <input type="text" class="date form-control form-control-lg" id="inizio"
-										name="inizio" placeholder="Anno-mese-giorno"
-										required="required"
-										title="inserire la data di nascita del dipendente">
+                                            <input type="text" class="form-control form-control-lg" id="inizio"
+										name="inizio" value="<%=l.getDataInizio() %>" readonly="readonly">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="re-listing-address">Data Fine Lavorazione</label>
+                                            <input type="text" class="form-control form-control-lg" id="fine"
+										name="fine" value="<%=datafine%>" readonly="readonly">
                                         </div>
                                     </div>
                                 </div>
@@ -92,13 +84,13 @@
                                 <div class="row items-push">
                                     <div class="col-lg-3">
                                         <p class="text-muted">
-                                            Aggiungi una breve descrizione della lavorazione
+                                            breve descrizione della lavorazione
                                         </p>
                                     </div>
                                     <div class="col-lg-7 offset-lg-1">
                                         <div class="form-group">
                                             <label for="descrizione">Descrizione</label>
-                                            <textarea class="form-control form-control-lg" id="descrizione" name="descrizione" rows="8" placeholder="es: l'obiettivo di questa lavorazione è implementare la prima versione del software:'Tieni il conto' creando un prodotto funzionante e vendibile nel mercato." maxlength="255"></textarea>
+                                            <textarea class="form-control form-control-lg" id="descrizione" name="descrizione" readonly="readonly" rows="8"  maxlength="255"><%=l.getDescrizione()%></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -107,36 +99,26 @@
                                 
                                 
                                   <!-- responsabile Info -->
-                                <h2 class="content-heading text-black">Integrazione con github (opzionale)</h2>
+                                <h2 class="content-heading text-black">Integrazione con github</h2>
                                 <div class="row items-push">
                                     <div class="col-lg-3">
                                         <p class="text-muted">
-                                            Se desideri utilizzare github per questa implementazione,inserisci il link del repository.Darai la possibilità al personale coinvolto in questa lavorazione di accedervi direttamente.
+                                            link del repository github.
                                         </p>
                                     </div>
                                     <div class="col-lg-7 offset-lg-1">
                                         <div class="form-group row">
                                             <div class="col-md-8">
-                                                 <label for="repository">Link github repository</label>
-                                            	<input type="text" class="form-control form-control-lg" id="repository" name="repository" placeholder="Inserisci qui il link... ">
+                                                 <%if(l.getRepository()==null || l.getRepository().equals("") || l.getRepository().equals("#")){%>
+                                                 <a id="repository" name="repository">Questa lavorazione non contiene link repository github</a>
+                                                 <%}else{ %>
+                                            	<a id="repository" name="repository" href="<%=l.getRepository()%>" target="_blank">Clicca qui per visualizzare il repositoy github di questa lavorazione</a>
+                                            	<%} %>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- END Additional Info -->
-
-                                <!-- Form Submission -->
-                                <div class="row items-push">
-                                    <div class="col-lg-7 offset-lg-4">
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-alt-success">
-                                                <i class="fa fa-plus mr-5"></i>
-                                                Agiungi questa lavorazione
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END Form Submission -->
                             </form>
                         </div>
                     </div>

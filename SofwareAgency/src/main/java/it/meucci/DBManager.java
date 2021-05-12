@@ -122,22 +122,7 @@ public class DBManager{
 	}
 	
 	
-	//funzione che dato il codice software restituisce un oggetto software per visualizzare i dettagli
-		public Software getSoftware(String codiceSoftware) throws Exception 
-		{
-			String sql="SELECT * FROM software WHERE codSoftware=?";
-			PreparedStatement pstm=connessione.prepareStatement(sql);
-			pstm.setString(1,codiceSoftware);
-			rs= pstm.executeQuery();
-			Software s=new Software();
-			while(rs.next())
-			{
-				s=new Software(rs.getInt(1),rs.getInt(2),rs.getString(3), rs.getString(4), rs.getInt(5),rs.getString(6));
-			}
-
-			logger.info(s.toString());
-			return s;
-		}
+	
 
 	//funzione che dato il codice Dipendente restituisce un oggetto dipendente
 	public Dipendente getUserbyUsername(String username) throws Exception 
@@ -472,6 +457,26 @@ public class DBManager{
 			return nRighe;
 		}
 		
+		
+		//funzione che dato il codice software restituisce un oggetto software per visualizzare i dettagli
+				public Software getSoftware(String codiceSoftware) throws Exception 
+				{
+					String sql="SELECT * FROM software WHERE codSoftware=?";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setString(1,codiceSoftware);
+					rs= pstm.executeQuery();
+					Software s=new Software();
+					while(rs.next())
+					{
+						s=new Software(rs.getInt(1),rs.getInt(2),rs.getString(3), rs.getString(4), rs.getInt(5),rs.getString(6));
+					}
+
+					logger.info(s.toString());
+					return s;
+				}
+		
+		
+		
 		//funzione che ritorna elenco software
 		public ArrayList<Software> getPacchettiSoftware() throws Exception 
 		{
@@ -499,7 +504,7 @@ public class DBManager{
 		}
 		
 		
-		//funzione che elimina un array di Oggetti di tipo Dipendente
+		//funzione che elimina un array di Oggetti di tipo Software
 		public int deleteSoftware(String[] id) throws Exception 
 		{
 			String delimiter = ",";
@@ -527,12 +532,226 @@ public class DBManager{
 					return nRighe;
 				}
 		
-		
-		
-		
-		
+				
+				
+				
+				//metodo che mi restituisce il nome di un software dato il codiceSoftware
+				public String getSoftwareName(String codiceSoftware)throws Exception {
+					String sql="SELECT nome FROM software WHERE codSoftware='"+codiceSoftware+"' ;";
+					rs = query.executeQuery(sql);
+					String s = "";
+					if (rs.next()) {
+						String NOME = rs.getString("nome");
+						s = NOME;
+					}
+					//logger.info(s);
+					return s;
+				}
 		//------------------------------------------------------------------//
 
+				
+		//------------------LAVORAZIONI---------------------//
+				//funzione che inserisce una nuova lavorazione
+				public int insertLavorazione(Lavorazione l)
+						throws Exception {
+					String sql = "INSERT INTO lavorazioni(codSoftware,nome,descrizione,dataInizio,repository) VALUES (?,?,?,?,?);";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setInt(1,l.getCodSoftware());
+					pstm.setString(2,l.getNome());
+					pstm.setString(3,l.getDescrizione());
+					pstm.setString(4,l.getDataInizio());
+					pstm.setString(5,l.getRepository());
+					logger.info(pstm.toString());
+					int nRighe= pstm.executeUpdate();
+					return nRighe;
+				}
+				
+				
+				//funzione che ritorna elenco lavorazioni
+				public ArrayList<Lavorazione> getLavorazioni() throws Exception 
+				{
+					ArrayList<Lavorazione> elenco = new ArrayList<Lavorazione>();
+					String sql="";
+					sql="SELECT * FROM lavorazioni;";
+					rs=query.executeQuery(sql);
+					Lavorazione l;
+
+					while(rs.next())
+					{
+						l=new Lavorazione();
+						l.setCodLavorazione(rs.getInt("codLavorazione"));
+						l.setCodSoftware(rs.getInt("codSoftware"));
+						l.setNome(rs.getString("nome"));
+						l.setStato(rs.getString("stato"));
+						l.setDescrizione(rs.getString("descrizione"));
+						l.setDataInizio(rs.getString("dataInizio"));
+						l.setDataFine(rs.getString("dataFine"));
+						elenco.add(l);
+					}
+
+					logger.info("ELENCO LAVORAZIONI CARICATE: " + elenco.size());
+
+					return elenco;
+				}
+				
+				
+				//funzione che elimina un array di Oggetti di tipo Lavorazione
+				public int deletelavorazione(String[] id) throws Exception 
+				{
+					String delimiter = ",";
+					String s=String.join(delimiter, id);
+					String deleteSql="DELETE FROM lavorazioni WHERE codLavorazione IN ('"+s+"');";
+					logger.info("QUERY:"+deleteSql);
+					int nRighe=query.executeUpdate(deleteSql);
+					logger.info("Numero lavorazioni eliminati dal db:"+nRighe);
+					return nRighe;
+				}
+				
+				
+				//funzione che dato il codice lavorazione restituisce una lavorazione per visualizzare i dettagli
+				public Lavorazione getLavorazione(String codicelavorazione) throws Exception 
+				{
+					String sql="SELECT * FROM lavorazioni WHERE codLavorazione=?";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setString(1,codicelavorazione);
+					rs= pstm.executeQuery();
+					Lavorazione l=new Lavorazione();
+					while(rs.next())
+					{
+						l=new Lavorazione(rs.getInt(1),rs.getInt(2),rs.getString(3), rs.getString(4), rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8));
+					}
+
+					logger.info(l.toString());
+					return l;
+				}
+				
+				
+				
+				//funzione che aggiorna una lavorazione
+				public int aggiornaLavorazioneCompleta(Lavorazione l)
+						throws Exception {
+					String sql="UPDATE lavorazioni SET codSoftware = ?, nome = ?, descrizione =?, dataInizio = ?, dataFine = ?, stato = ?,repository = ?  WHERE codLavorazione = ? ";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setInt(1,l.getCodSoftware());
+					pstm.setString(2,l.getNome());
+					pstm.setString(3,l.getDescrizione());
+					pstm.setString(4,l.getDataInizio());
+					pstm.setString(5,l.getDataFine());
+					pstm.setString(6,l.getStato());
+					pstm.setString(7,l.getRepository());
+					pstm.setInt(8,l.getCodLavorazione());
+					int nRighe= pstm.executeUpdate();
+					return nRighe;
+				}
+				
+				//funzione che aggiorna una lavorazione
+				public int aggiornaLavorazioneConDataFine(Lavorazione l)
+						throws Exception {
+					String sql="UPDATE lavorazioni SET codSoftware = ?, nome = ?, descrizione =?, dataInizio = ?, dataFine = ?,repository = ?  WHERE codLavorazione = ? ";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setInt(1,l.getCodSoftware());
+					pstm.setString(2,l.getNome());
+					pstm.setString(3,l.getDescrizione());
+					pstm.setString(4,l.getDataInizio());
+					pstm.setString(5,l.getDataFine());
+					pstm.setString(6,l.getRepository());
+					pstm.setInt(7,l.getCodLavorazione());
+					System.out.println(pstm.toString());
+					int nRighe= pstm.executeUpdate();
+					return nRighe;
+				}
+				
+				//funzione che aggiorna una lavorazione
+				public int aggiornaLavorazioneSenzaDataFine(Lavorazione l)
+						throws Exception {
+					String sql="UPDATE lavorazioni SET codSoftware = ?, nome = ?, descrizione =?, dataInizio = ?,repository = ?  WHERE codLavorazione = ? ";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setInt(1,l.getCodSoftware());
+					pstm.setString(2,l.getNome());
+					pstm.setString(3,l.getDescrizione());
+					pstm.setString(4,l.getDataInizio());
+					pstm.setString(5,l.getRepository());
+					pstm.setInt(6,l.getCodLavorazione());
+					int nRighe= pstm.executeUpdate();
+					return nRighe;
+				}
+				
+				
+				
+				public int setStatoLavorazioni(String[] id,String stato) throws Exception 
+				{
+					String delimiter = ",";
+					String s=String.join(delimiter, id);
+					String sql="UPDATE lavorazioni\r\n"
+					+"SET stato ='"+stato+"' WHERE codLavorazione IN ("+s+");";
+					logger.info("QUERY:"+sql);
+					int nRighe=query.executeUpdate(sql);
+					logger.info("Numero Lavorazioni modificate dal db:"+nRighe);
+					return nRighe;
+				}
+				
+				
+				public int setDataFineCurrentDate(String[] id) throws Exception 
+				{
+					String delimiter = ",";
+					String s=String.join(delimiter, id);
+					String sql="UPDATE lavorazioni\r\n"
+					+"SET datafine = UTC_DATE() WHERE codLavorazione IN ("+s+");";
+					logger.info("QUERY:"+sql);
+					int nRighe=query.executeUpdate(sql);
+					logger.info("Numero Lavorazioni modificate dal db:"+nRighe);
+					return nRighe;
+				}
+				
+				
+				public int setDataFineNull(String[] id) throws Exception 
+				{
+					String delimiter = ",";
+					String s=String.join(delimiter, id);
+					String sql="UPDATE lavorazioni\r\n"
+					+"SET datafine = NULL WHERE codLavorazione IN ("+s+");";
+					logger.info("QUERY:"+sql);
+					int nRighe=query.executeUpdate(sql);
+					logger.info("Numero Lavorazioni modificate dal db:"+nRighe);
+					return nRighe;
+				}
+								
+				
+				
+				
+				
+		//--------------------------------------------------//		
+			
+				
+		//-----------------GESTIONE PERSONALE COINVOLTO--------------//
+				
+				//funzione che ritorna elenco del personale coinvolto
+				public ArrayList<Personale> getPersonaleCoinvolto(String codiceLavorazione) throws Exception 
+				{
+					ArrayList<Personale> elenco = new ArrayList<Personale>();
+					String sql="";
+					sql="SELECT * FROM personale_coinvolto WHERE codLavorazione=?;";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setString(1,codiceLavorazione);
+					rs= pstm.executeQuery();
+					Personale p;
+					while(rs.next())
+					{
+						p=new Personale();
+						p.setCodLavorazione(rs.getInt("codLavorazione"));
+						p.setCodDipendente(rs.getInt("codDipendente"));
+						p.setDescrizione(rs.getString("Descrizione"));
+						p.setDataInizio(rs.getString("dataInizio"));
+						p.setDataFine(rs.getString("dataFine"));
+						elenco.add(p);
+					}
+					logger.info("ELENCO PERSONALE_COINVOLTO CARICATE: " + elenco.size());
+					return elenco;
+				}
+				
+		//---------------------------------------------------------------------//		
+				
+				
 	public void close() throws Exception {
 		query.close();
 		connessione.close();

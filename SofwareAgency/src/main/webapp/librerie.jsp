@@ -133,3 +133,9 @@ $(document).ready(function() {
 	    }
 	}
   </script>
+  <script>
+$(document).ready(function(){
+   $("span:contains(Print)").html("Stampa");
+   $("span:contains(Copy)").html("<span id='copia' onclick=alert('Copiato')>Copia negli appunti</span>");
+});
+</script>

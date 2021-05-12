@@ -1,0 +1,28 @@
+
+.buttons-html5 {
+  color: white;
+  /*! background-color: green; */
+  font-weight: bolder;
+  font-family: initial;
+}
+.dt-button.buttons-excel.buttons-html5 {
+  background-color: green;
+}
+.dt-button.buttons-pdf.buttons-html5 {
+  background-color: crimson;
+}
+.dt-button.buttons-csv.buttons-html5 {
+  background-color: darkcyan;
+}
+.dt-button.buttons-copy.buttons-html5 {
+  background-color: darkmagenta;
+}
+.dt-button.buttons-print {
+  background-color: orangered;
+  color: white;
+  font-weight: bolder;
+  font-family: initial;
+}
+.dt-button.buttons-print:hover {
+  /*! background-color: coral; */
+}

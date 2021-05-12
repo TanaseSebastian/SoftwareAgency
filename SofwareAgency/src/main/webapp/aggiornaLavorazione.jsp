@@ -10,6 +10,13 @@
 	String userDB = prop.getProperty("Username");
 	String pwDB = prop.getProperty("Pasword");
 %>
+<%
+	Lavorazione l = (Lavorazione)request.getAttribute("LAVORAZIONE");
+	DBManager db=new DBManager();
+	String datafine=l.getDataFine();
+	if(datafine==null)
+	datafine="data fine al momento non disponibile in quanto questa lavorazione è ancora in corso";
+%>
 <sql:setDataSource var="myDS" driver="com.mysql.cj.jdbc.Driver"
 	url="jdbc:mysql://localhost:3306/softwarehouse?serverTimezone=UTC"
 	user='<%=userDB%>' password='<%=pwDB%>' />
@@ -22,8 +29,8 @@
                     <div class="bg-black-op-75">
                         <div class="content content-top content-full text-center">
                             <div class="py-20">
-                                <h1 class="h2 font-w700 text-white mb-10">  <i class="fa fa-plus text-muted mr-5"></i>Nuova lavorazione</h1>
-                                <h2 class="h4 font-w400 text-white-op mb-0"> inserisci le informazioni e aggiungi una nuova lavorazione!.</h2>
+                                <h1 class="h2 font-w700 text-white mb-10">  <i class="fa fa-plus text-muted mr-5"></i>Aggiorna lavorazione</h1>
+                                <h2 class="h4 font-w400 text-white-op mb-0"> modifica le informazioni e aggiorna questa lavorazione!</h2>
                             </div>
                         </div>
                     </div>
@@ -35,8 +42,8 @@
                     <div class="content py-5 text-center">
                         <nav class="breadcrumb bg-body-light mb-0">
                         <a class="breadcrumb-item" href="dashboard.jsp">Dashboard</a>
-                            <a class="breadcrumb-item" href="visualizzaPacchetti.jsp">Lavorazioni Software</a>
-                            <span class="breadcrumb-item active">Nuova Lavorazione</span>
+                            <a class="breadcrumb-item" href="gestlavorazioni?cmd=viewall">Lavorazioni Software</a>
+                            <span class="breadcrumb-item active">Aggiorna Lavorazione</span>
                         </nav>
                     </div>
                 </div>
@@ -48,7 +55,11 @@
                   <div class="content">
                     <div class="block block-rounded block-fx-shadow">
                         <div class="block-content">
-                            <form action="gestlavorazioni?cmd=nuovaLavorazione" method="POST">
+                        <%=messaggio%>
+							<%
+							request.getSession().setAttribute("MESSAGGIO", "");
+							%>
+                            <form action="gestlavorazioni?cmd=modifica" method="POST">
 
                                 <!-- Vital Info -->
                                 <h2 class="content-heading text-black">Informazioni generali</h2>
@@ -62,9 +73,9 @@
                                   			 <div class="form-group">
                                                 <label for="software">Software</label>
                                                 <select class="form-control form-control-lg" id="software" name="software">
-                                                    <option selected="selected" hidden>Seleziona software</option>
+                                                    <option selected="selected" value="<%=l.getCodSoftware()%>">Software attuale: <%=db.getSoftwareName(String.valueOf(l.getCodSoftware()))%></option>
                                                     <sql:query var="software" dataSource="${myDS}">
-										   		    select * from software;
+										   		    select * from software where not codSoftware=<%=l.getCodSoftware()%>
 										    		</sql:query>
 													<c:forEach var="row" items="${software.rows}">
 													<option value="${row.codSoftware}"><c:out
@@ -74,14 +85,31 @@
                                             </div>
                                         <div class="form-group">
                                             <label for="re-listing-name">Nome Lavorazione</label>
-                                            <input type="text" class="form-control form-control-lg" id="nome" name="nome" placeholder="es: Implementazione software:Tieni il conto versione 1.0">
+                                            <input type="text" class="form-control form-control-lg" name="codLavorazione" value="<%=l.getCodLavorazione()%>" readonly="readonly" hidden>
+                                            <input type="text" class="form-control form-control-lg" id="nome" name="nome" placeholder="es: Implementazione software:Tieni il conto versione 1.0" value="<%=l.getNome()%>">
                                         </div>
                                         <div class="form-group">
                                             <label for="re-listing-address">Data Inizio Lavorazione</label>
                                             <input type="text" class="date form-control form-control-lg" id="inizio"
 										name="inizio" placeholder="Anno-mese-giorno"
 										required="required"
-										title="inserire la data di nascita del dipendente">
+										title="inserire la data di nascita del dipendente"
+										value="<%=l.getDataInizio() %>">
+                                        </div>
+                                        <div class="form-group">
+                                         <label>Data Fine Lavorazione:</label>
+                                             <%if(l.getStato().equals("In lavorazione")){ %>
+											   <input type="text" class="form-control form-control-lg" id="fine"
+												name="fine" placeholder="<%=datafine%>" value="noDataFine" readonly="readonly" hidden>
+												<input type="text" class="form-control form-control-lg" 
+												 placeholder="<%=datafine%>" readonly="readonly">
+											    <%}else if(l.getStato().equals("Non eseguita")){%>
+											   <input type="text" class="date form-control form-control-lg" id="fine"
+												name="fine" value="<%=datafine%>">
+											    <%}else if(l.getStato().equals("Eseguita")){%>
+											   <input type="text" class="date form-control form-control-lg" id="fine"
+												name="fine" value="<%=datafine%>">
+											    <%}%>
                                         </div>
                                     </div>
                                 </div>
@@ -98,8 +126,7 @@
                                     <div class="col-lg-7 offset-lg-1">
                                         <div class="form-group">
                                             <label for="descrizione">Descrizione</label>
-                                            <textarea class="form-control form-control-lg" id="descrizione" name="descrizione" rows="8" placeholder="es: l'obiettivo di questa lavorazione è implementare la prima versione del software:'Tieni il conto' creando un prodotto funzionante e vendibile nel mercato." maxlength="255"></textarea>
-                                        </div>
+<textarea class="form-control form-control-lg" id="descrizione" name="descrizione"  rows="8"  maxlength="255"><%=l.getDescrizione()%></textarea>                                        </div>
                                     </div>
                                 </div>
                                 <!-- END Additional Info -->
@@ -118,7 +145,11 @@
                                         <div class="form-group row">
                                             <div class="col-md-8">
                                                  <label for="repository">Link github repository</label>
-                                            	<input type="text" class="form-control form-control-lg" id="repository" name="repository" placeholder="Inserisci qui il link... ">
+                                            	 <%if(l.getRepository()==null || l.getRepository().equals("") || l.getRepository().equals("#")){%>
+                                                 <input class="form-control form-control-lg" type="text" id="repository" name="repository" placeholder="nessun repository attualmente...">
+                                                 <%}else{ %>
+                                            	<input class="form-control form-control-lg" type="text" id="repository" name="repository" value="<%=l.getRepository()%>">
+                                            	<%} %>
                                             </div>
                                         </div>
                                     </div>
@@ -131,7 +162,7 @@
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-alt-success">
                                                 <i class="fa fa-plus mr-5"></i>
-                                                Agiungi questa lavorazione
+                                                Aggiorna questa lavorazione
                                             </button>
                                         </div>
                                     </div>
