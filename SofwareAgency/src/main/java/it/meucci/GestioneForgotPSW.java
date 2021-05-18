@@ -11,6 +11,7 @@ import javax.mail.Transport;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,6 +26,8 @@ public class GestioneForgotPSW extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	public  String email;
 	public int code;
+	int codiceDipendente=0;
+	
 	   
     /**
      * @see HttpServlet#HttpServlet()
@@ -56,13 +59,17 @@ public class GestioneForgotPSW extends HttpServlet {
 		if(comando.equals("verifyemail")) {
 		try {
 		    email=request.getParameter("email");
+		    String pathimmagine="";
 			System.out.println("email inserita dall'utente : " +email);
 			System.out.println("sto cercando di connettermi al db");
 			DBManager db=new DBManager();
 			if(db.controlEmail(email)==true) {
 				if(db.activatedCodRegistrazione(email)==false) {
-				System.out.println("lo rimando su sendCode.html");
-				response.sendRedirect("ForgotPSW\\sendCode.html");
+					codiceDipendente=db.controlEmailAndgetID(email);
+					Dipendente d= db.getUser(String.valueOf(codiceDipendente));
+					request.getSession().setAttribute("SESSION_USERFORGOT",d);
+					System.out.println("lo rimando su sendCode.jsp");
+					response.sendRedirect("ForgotPSW\\sendCode.jsp");
 			}else{
 				request.getSession().setAttribute("MESSAGGIO", "<p class='text-danger'>Non hai completato la registrazione! registrati prima di utilizzare il forgot password</p>");
 				response.sendRedirect("forgotPSW.jsp");
@@ -106,7 +113,8 @@ public class GestioneForgotPSW extends HttpServlet {
 								+ "<title>Messaggio</title>"
 								+ "</head>"
 								+ "<body style='text-align: center; font-size: larger;'>"
-								+ "<p style=\"color: #197ED1; font-size:40px; font-weight: 900; font-family:sans-serif;\">codebase</p>"
+								+"<img src=\"cid:image\">"
+								+ "<p style=\"color: #197ED1; font-size:40px; font-weight: 900; font-family:sans-serif;\">SeTech</p>"
 										+ "<p style=\"color: #2C4964; font-size: x-large; font-weight: 900;\">Gentile cliente, per reimpostare la password utilizzare il seguende codice:</p>"
 												+ "<p style=\"color: #197ED1; font-size: 40px; font-weight: 900;\"><strong>"+code+"</strong></p>"
 						+"<p style=\"color: yellowgreen;\"><strong>Per qualsiasi dubbio o problema non esitare a contattarci tramite telefono o email.</strong></p>"
@@ -118,7 +126,7 @@ public class GestioneForgotPSW extends HttpServlet {
 		      //invio dell'email con i parametri
 				sender.sendFromGMail(to, subject,messaggioDaInviare,null,null);
 		        
-		        response.sendRedirect("ForgotPSW\\verifyCode.html");
+		        response.sendRedirect("ForgotPSW\\verifyCode.jsp");
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -141,12 +149,12 @@ public class GestioneForgotPSW extends HttpServlet {
 		System.out.println("codice inserito dall'utente "+code_validation);
 		if(code==code_validation) {
 			System.out.println("i codici corrispondono");
-			System.out.println("reindirizzo il client verso resetPSW.html");
-			response.sendRedirect("ForgotPSW\\resetPSW.html");
+			System.out.println("reindirizzo il client verso resetPSW.jsp");
+			response.sendRedirect("ForgotPSW\\resetPSW.jsp");
 		}
 		else {
-			System.out.println("l'utente ha sbagliato il codice lo inoltro su verifyCodeError.html");
-			response.sendRedirect("ForgotPSW\\verifyCodeError.html");
+			System.out.println("l'utente ha sbagliato il codice lo inoltro su verifyCodeError.jsp");
+			response.sendRedirect("ForgotPSW\\verifyCodeError.jsp");
 		}
 		
 		}
@@ -167,8 +175,8 @@ public class GestioneForgotPSW extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("ora lo reindirizzo su successResetPSW.html");
-		response.sendRedirect("ForgotPSW\\successResetPSW.html");
+		System.out.println("ora lo reindirizzo su successResetPSW.jsp");
+		response.sendRedirect("ForgotPSW\\successResetPSW.jsp");
 		}
 		
 		

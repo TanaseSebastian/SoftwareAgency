@@ -74,6 +74,7 @@
                                                 <label for="software">Software</label>
                                                 <select class="form-control form-control-lg" id="software" name="software">
                                                     <option selected="selected" value="<%=l.getCodSoftware()%>">Software attuale: <%=db.getSoftwareName(String.valueOf(l.getCodSoftware()))%></option>
+                                                   <%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
                                                     <sql:query var="software" dataSource="${myDS}">
 										   		    select * from software where not codSoftware=<%=l.getCodSoftware()%>
 										    		</sql:query>
@@ -81,6 +82,7 @@
 													<option value="${row.codSoftware}"><c:out
 													value="${row.nome}" /></option>
 													</c:forEach>
+													<%} %>
                                                 </select>
                                             </div>
                                         <div class="form-group">

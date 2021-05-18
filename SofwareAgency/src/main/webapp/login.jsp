@@ -54,7 +54,7 @@
                         <div class="hero-static col-md-6 col-xl-8 d-none d-md-flex align-items-md-end">
                             <div class="p-30 invisible" data-toggle="appear">
                                 <p class="font-size-h3 font-w600 text-white">
-                                    Get Inspired and Create.
+                                    Ispirati e crea insieme a SeTech.
                                 </p>
                                 <p class="font-italic text-white-op">
                                     Copyright &copy; <span class="js-year-copy"></span>
@@ -71,8 +71,8 @@
 								class="font-size-xl text-dual-primary-dark">Se</span><span
 								class="font-size-xl text-primary">Tech</span>
                                     </a>
-                                    <h1 class="h3 font-w700 mt-30 mb-10">Welcome to Your Dashboard</h1>
-                                    <h2 class="h5 font-w400 text-muted mb-0">Please sign in</h2>
+                                    <h1 class="h3 font-w700 mt-30 mb-10">Benvenuto nella Dashboard</h1>
+                                    <h2 class="h5 font-w400 text-muted mb-0">Perfavore esegui il login</h2>
                                 </div>
                                 <!-- END Header -->
 
@@ -100,7 +100,7 @@
                                         <div class="col-12">
                                             <div class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input" id="login-remember-me" name="login-remember-me">
-                                                <label class="custom-control-label" for="login-remember-me">Remember Me</label>
+                                                <label class="custom-control-label" for="login-remember-me">Ricordami</label>
                                             </div>
                                         </div>
                                     </div>
@@ -108,14 +108,14 @@
                                     <%=messaggio%>
 									<%request.getSession().setAttribute("MESSAGGIO", ""); %>
                                         <button type="submit" class="btn btn-sm btn-hero btn-alt-primary">
-                                            <i class="si si-login mr-10"></i> Sign In
+                                            <i class="si si-login mr-10"></i> Esegui Login
                                         </button>
                                         <div class="mt-30">
                                             <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="registrazione.jsp">
-                                                <i class="fa fa-plus mr-5"></i> Create Account
+                                                <i class="fa fa-plus mr-5"></i> Registra account
                                             </a>
                                             <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="forgotPSW.jsp">
-                                                <i class="fa fa-warning mr-5"></i> Forgot Password
+                                                <i class="fa fa-warning mr-5"></i> Password Dimenticata
                                             </a>
                                         </div>
                                     </div>

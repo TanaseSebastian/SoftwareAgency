@@ -54,10 +54,10 @@ if (messaggio == null)
                         <div class="hero-static col-md-6 col-xl-8 d-none d-md-flex align-items-md-end">
                             <div class="p-30 invisible" data-toggle="appear">
                                 <p class="font-size-h3 font-w600 text-white mb-5">
-                                    We're very happy you are joining our community!
+                                    Siamo molto contenti che stai per far parte della nostra famiglia!
                                 </p>
                                 <p class="font-size-h5 text-white">
-                                    <i class="fa fa-angles-right"></i> Create your account today and receive 50% off.
+                                    <i class="fa fa-angles-right"></i> Registra il tuo account e inzia a scoprire SeTech!
                                 </p>
                                 <p class="font-italic text-white-op">
                                     Copyright &copy; <span class="js-year-copy"></span>
@@ -74,8 +74,8 @@ if (messaggio == null)
 								class="font-size-xl text-dual-primary-dark">Se</span><span
 								class="font-size-xl text-primary">Tech</span>
                                     </a>
-                                    <h1 class="h3 font-w700 mt-30 mb-10">Create New Account</h1>
-                                    <h2 class="h5 font-w400 text-muted mb-0">Please add your details</h2>
+                                    <h1 class="h3 font-w700 mt-30 mb-10">Registra nuovo account</h1>
+                                    <h2 class="h5 font-w400 text-muted mb-0">Perfavore inserisci i tuoi dati</h2>
                                 </div>
                                 <!-- END Header -->
 
@@ -109,16 +109,16 @@ if (messaggio == null)
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-sm btn-hero btn-alt-success">
-                                            <i class="fa fa-plus mr-10"></i> Create Account
+                                            <i class="fa fa-plus mr-10"></i> Registra account
                                         </button>
                                          <%=messaggio%>
 										<%request.getSession().setAttribute("MESSAGGIO", ""); %>
                                         <div class="mt-30">
                                             <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="#" data-toggle="modal" data-target="#modal-terms">
-                                                <i class="fa fa-book text-muted mr-5"></i> Read Terms
+                                                <i class="fa fa-book text-muted mr-5"></i> Leggi Termini
                                             </a>
                                             <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="login.jsp">
-                                                <i class="fa fa-user text-muted mr-5"></i> Sign In
+                                                <i class="fa fa-user text-muted mr-5"></i> Vai al login
                                             </a>
                                         </div>
                                     </div>
@@ -141,7 +141,7 @@ if (messaggio == null)
                 <div class="modal-content">
                     <div class="block block-themed block-transparent mb-0">
                         <div class="block-header bg-primary-dark">
-                            <h3 class="block-title">Terms &amp; Conditions</h3>
+                            <h3 class="block-title">Termini &amp; Condizioni</h3>
                             <div class="block-options">
                                 <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
                                     <i class="si si-close"></i>
@@ -149,15 +149,13 @@ if (messaggio == null)
                             </div>
                         </div>
                         <div class="block-content">
-                            <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>
-                            <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>
-                            <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>
+                        <textarea rows="10" cols="80">Setech S.r.l.Società con unico socio – Direzione e  Coordinamento di Setech S.r.l. VIA CELDIT 2 – 12100 CUNEO – ITALIATEL. +39 0171 412470  FAX +39 0171 411826 chemicalcontrolsrl@eurofins.com www.eurofins.itCapitale sociale € 80.000 i.v. Registro delle imprese di Cuneo 00644710048 R.E.A. C.C.I.A.A. Cuneo 114739 Cod.Fiscale – Partita I.V.A. 00644710048Pag. 1 di 6 Termini e condizioni generali di fornitura di servizi (Italia) 1. Definizioni Nei presenti Termini e condizioni generali di fornitura di servizi, i seguenti termini avranno il significato di seguito loro attribuito: Campione/i: il  campione  e/o  materiale  consegnato  dal  Cliente  ad  ES  al  fine  di  sottoporlo  ad  esame  / analisi.Cliente: il soggetto che trasmette a ES un Ordine al fine di concludere con ES un contratto di prestazione di servizi. Contratto:  il  contratto  di  prestazione  di  servizi  di  volta  in  volta  concluso  fra  ES  ed  il  Cliente  ed assoggettato ai presenti Termini e Condizioni. ES: Eurofins Scientific Italia S.r.l. e/o le sue società controllate e collegate ai sensi dell’art. 2359 cod. civ. Modello d’Ordine: il modulo d’ordine predefinito di ES. Ordine: la richiesta che il Cliente indirizza a ES a mezzo del Modello d’Ordine od altrimenti, finalizzata adusufruire dei servizi offerti da ES. Parti: collettivamente ES ed il Cliente. Piano di Campionamento: il piano che precisa quali campioni di quali materie prime e prodotti finiti e con quale frequenza debbano essere analizzati da ES. Prezzo: il corrispettivo dei servizi resi da ES al Cliente ed oggetto del Contratto. Rapporto/i  di  Analisi: il  rapporto  contenente  i  risultati,  nonché  eventuali  interpretazioni,  valutazioni, consulenze e conclusioni delle analisi commissionate a ES dal Cliente. Termini e Condizioni: i presenti termini e condizioni generali di contratto di fornitura di servizi. 2. Principi generali 2.1.  Tutti i Contratti intercorsi tra ES ed i Clienti sono regolati da questi Termini e Condizioni.  2.2.  Un  Contratto  assoggettato  a  questi  Termini  e Condizioni  si  considera  perfezionato  quando  un Ordine  viene  accettato  da  ES.  Un  Ordine  è  considerato  come  accettato  da  ES  se  (a)  ES  inizia  a dare esecuzione a quell’Ordine, o (b) ES conferma l’Ordine per iscritto. 2.3.  Ciascun  Ordine  è  irrevocabile  e  costituisce  proposta  contrattuale  del  Cliente  e,  pertanto,  sarà vincolante  per  ES  solo  se  ed  in  quanto  dalla  stessa  accettato  con  le  modalità  di  cui  al  precedente articolo  2.2).  Ogni  Ordine  accettato  da  ES  sarà  considerato  come  un  autonomo  e  separato Contratto.  2.4.  ES si riserva la facoltà di modificare nel tempo i presenti Termini e Condizioni. A ciascun Contratto sono applicabili i Termini e Condizioni vigenti al momento della trasmissione dell’Ordine. 2.5.  Questi  Termini  e  Condizioni  sostituiscono  ogni  precedente  accordo,  verbalmente  o  per  iscritto, eventualmente   intercorso   tra   le   Parti   e   prevalgono su   ogni   disposizione   confliggente   od incompatibile  eventualmente  contenuta  in  successivi  accordi  intercorsi  tra  le  Parti,  salva  espressa previsione  scritta  di  deroga  ai  presenti  Termini  e Condizioni.  In  ogni  caso,  nessuna  modifica, rinuncia  o  alterazione  dei  presenti  Termini  e  Condizioni  è  vincolante  nei  confronti  di  ES,  se  non espressamente  approvata  da  ES.  Eventuali  condizioni  generali  di  acquisto  del  Cliente  non  sono accettate e comunque sono derogate in favore dei presenti Termini e Condizioni</textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-alt-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-alt-secondary" data-dismiss="modal">Chiudi</button>
                         <button type="button" class="btn btn-alt-success" data-dismiss="modal">
-                            <i class="fa fa-check"></i> Perfect
+                            <i class="fa fa-check"></i> Perfetto
                         </button>
                     </div>
                 </div>

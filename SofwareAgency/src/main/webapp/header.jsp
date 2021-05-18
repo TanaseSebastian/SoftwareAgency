@@ -176,10 +176,10 @@ div.dataTables_wrapper div.dataTables_info {
 				<!-- Side Navigation -->
 				<div class="content-side content-side-full">
 					<ul class="nav-main">
-						<li><a href="dashboard.jsp"><i class="si si-cup"></i><span
+						<li><a href="dashboard.jsp"><i class="si si-rocket"></i><span
 								class="sidebar-mini-hide">Dashboard</span></a></li>
 						<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
-								class="si si-vector"></i><span class="sidebar-mini-hide">Dipendenti
+								class="si si-users"></i><span class="sidebar-mini-hide">Dipendenti
 							</span>
 							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 							<span class="font-size-s text-primary">(crud)</span>
@@ -198,7 +198,7 @@ div.dataTables_wrapper div.dataTables_info {
 							
 							
 						<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
-								class="si si-vector"></i><span class="sidebar-mini-hide">Amministratori
+								class="si si-users"></i><span class="sidebar-mini-hide">Amministratori
 							</span>
 							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 							<span class="font-size-s text-primary">(crud)</span>
@@ -215,7 +215,7 @@ div.dataTables_wrapper div.dataTables_info {
 
 						
 						<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
-								class="si si-puzzle"></i><span class="sidebar-mini-hide">Software
+								class="si si-social-dropbox"></i><span class="sidebar-mini-hide">Software
 							</span>
 							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 							<span class="font-size-s text-primary">(crud)</span>
@@ -231,7 +231,7 @@ div.dataTables_wrapper div.dataTables_info {
 							</ul></li>
 
 						<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
-								class="si si-flag"></i><span class="sidebar-mini-hide">Lavorazioni
+								class="fa fa-github"></i><span class="sidebar-mini-hide">Lavorazioni
 							</span>
 							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 							<span class="font-size-s text-primary">(crud)</span>
@@ -251,7 +251,7 @@ div.dataTables_wrapper div.dataTables_info {
 							
 					<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") || user.getQualificaProfessionale().equals("Responsabile") ){%>
 						<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
-								class="si si-flag"></i><span class="sidebar-mini-hide">Clienti
+								class="fa fa-group"></i><span class="sidebar-mini-hide">Clienti
 							</span>
 							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 							<span class="font-size-s text-primary">(crud)</span>
@@ -271,7 +271,7 @@ div.dataTables_wrapper div.dataTables_info {
 							
 							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") ){%>
 							<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
-								class="si si-flag"></i><span class="sidebar-mini-hide">Ordini
+								class="fa fa-shopping-bag"></i><span class="sidebar-mini-hide">Ordini
 							</span>
 							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 							<span class="font-size-s text-primary">(crud)</span>
@@ -292,7 +292,7 @@ div.dataTables_wrapper div.dataTables_info {
 							<!-- parte delle query -->
 							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") ){%>
 							<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
-								class="si si-vector"></i><span class="sidebar-mini-hide">Ricerche avanzate
+								class="si si-magnifier"></i><span class="sidebar-mini-hide">Ricerche avanzate
 							</span></a>
 							<ul>
 								<li><a href="query.jsp">Scegli ricerca</a></li>

@@ -119,10 +119,10 @@ elenco = (ArrayList<Lavorazione>) request.getAttribute("ELENCO_LAVORAZIONI");
 							for (i = 0; i < elenco.size(); i++) {
 								l = (Lavorazione)elenco.get(i);
 							%>
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") || user.getQualificaProfessionale().equals("Responsabile")){%>
 							<tr>
 							  <%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") || user.getQualificaProfessionale().equals("Responsabile")){%>
 								<td>
-								
 								<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 								<input type="checkbox" class="check" name="check"
 									value="<%=l.getCodLavorazione()%>">
@@ -162,10 +162,27 @@ elenco = (ArrayList<Lavorazione>) request.getAttribute("ELENCO_LAVORAZIONI");
 								<a href="gestlavorazioni?cmd=aggiorna&id=<%=l.getCodLavorazione()%>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
 								<%} %>	
 									</td>
-									<%} %>										
-										
+									<%} %>												
 							    <td><a class="btn btn-alt-primary" href="gestpersonale?cmd=viewall&id=<%=l.getCodLavorazione()%>">Visualizza personale coinvolto <i class="fa fa-wrench mr-5"></i></a></td>
 							</tr>
+							<%}else if(db.verificaLavorazioneDipendente(user.getCodiceDipendente(), l.getCodLavorazione())==1){%>
+								<td><a href="gestlavorazioni?cmd=dettagli&id=<%=l.getCodLavorazione()%>"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
+								<td><%=l.getCodLavorazione()%></td>
+								<%if(l.getStato().equals("In lavorazione")){ %>
+							    <td class="btn-primary"><%=l.getStato()%> <i class="fa fa-gears"></i> </td>
+							    <%}else if(l.getStato().equals("Non eseguita")){ %>
+							    <td class="btn-warning"><%=l.getStato()%> <i class="fa fa-times-circle"></i> </td>
+							    <%}else if(l.getStato().equals("Eseguita")){%>
+							    <td class="btn-success"><%=l.getStato()%> <i class="fa fa-check-square"></i> </td>
+							    <%}%>
+								<td><%=l.getNome()%></td>
+								<td><%=db.getSoftwareName(String.valueOf(l.getCodSoftware()))%></td>
+									<td><%=l.getDataInizio()%></td>
+								<%if(l.getDataFine()==null){%> <td>lavorazione non conclusa... <br> <strong>DATA FINE PREVISTA:<%=db.getDataFinePrevista(l.getDataInizio(), db.getGiorniUomoSoftware(l.getCodSoftware()))%></strong></td><%}else{%>
+								<td><%=l.getDataFine()%></td><%}%>
+								<td>€<%=db.getCostoSoftware(l.getCodSoftware())%></td>
+								 <td><a class="btn btn-alt-primary" href="gestpersonale?cmd=viewall&id=<%=l.getCodLavorazione()%>">Visualizza personale coinvolto <i class="fa fa-wrench mr-5"></i></a></td>
+							<%}%>
 							<%} %>	
 						</tbody>
 					</table>

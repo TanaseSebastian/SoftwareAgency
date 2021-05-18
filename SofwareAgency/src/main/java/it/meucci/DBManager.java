@@ -278,6 +278,22 @@ public class DBManager{
 			logger.info("email false");
 		return false;
 	}
+	
+	
+	//metodo che mi verifica se l'email esiste nel database-----------------
+	public int controlEmailAndgetID(String email) throws SQLException {
+		int codiceDipendente=0;
+
+		String sql = "Select codiceDipendente from Dipendenti Where Email='" + email +"';";
+		rs = query.executeQuery(sql);
+
+		while(rs.next())
+		{
+			codiceDipendente = rs.getInt("codiceDipendente");
+		}
+			logger.info("email false");
+		return codiceDipendente;
+	}
 
 
 
@@ -1307,7 +1323,7 @@ public class DBManager{
 				}
 				
 				
-				//funzione che mi permette di controllare se una lavorazione appartiene al responsabile che ta accedendo al sito
+				//funzione che mi permette di controllare se una lavorazione appartiene al responsabile che sta accedendo al sito
 				public int verificaLavorazioneResponsabile(int codSostware, int codResponsabile) throws Exception {
 					String sql="SELECT * FROM software where codSoftware=? and codResponsabile=? ";
 					PreparedStatement pstm=connessione.prepareStatement(sql);
@@ -1322,6 +1338,29 @@ public class DBManager{
 					}
 					return count;
 				}
+				
+			
+				//SELECT * FROM personale_coinvolto where codDipendente=13 and codLavorazione=4 
+				
+				///funzione che mi permette di controllare se una lavorazione appartiene al dipendente che sta accedendo al sito
+				public int verificaLavorazioneDipendente(int codDipendente, int codLavorazione) throws Exception {
+					String sql="SELECT * FROM personale_coinvolto where codDipendente=? and codLavorazione=? ";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setInt(1,codDipendente);
+					pstm.setInt(2,codLavorazione);
+					rs= pstm.executeQuery();
+					int count = 0;
+
+					while (rs.next()) {
+						++count;
+						// Conto il numero di righe
+					}
+					return count;
+				}
+				
+				
+				
+				
 				// query per gli ammontare degli stipendi
 				//SELECT SUM(stipendio),qualificaProfessionale from dipendenti GROUP BY qualificaProfessionale
 				//SELECT SUM(stipendio),nomeProfessione from dipendenti GROUP BY nomeProfessione

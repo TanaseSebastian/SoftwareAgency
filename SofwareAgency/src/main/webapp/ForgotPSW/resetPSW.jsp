@@ -1,3 +1,10 @@
+<%@ page language="java" import="java.util.*,it.meucci.*"
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+Dipendente userForgot;
+userForgot = (Dipendente) session.getAttribute("SESSION_USERFORGOT");
+String src="..//immaginiProfilo/"+userForgot.getImmagineProfilo();
+%>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -14,12 +21,12 @@
       
           <!-- Icon -->
           <div class="fadeIn first">
-            <img src="..//assets//img/userIcon.png" id="icon" alt="User Icon" />
+            <img src="<%=src%>" id="icon" alt="User Icon" style="border-radius: 50%;" />
           </div>
       
           <!-- Login Form -->
           <form action="..//gestforgot?cmd=resetpsw" method="post">
-            <input type="password" id="password" class="fadeIn third" name="password" placeholder="nuova password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Deve contenere almeno un numero,una lettera maiuscola e una lettera minuscola, e deve essere composta da almeno 8 o più caratteri"  required onkeyup='check();'>
+            <input type="password" id="password" class="fadeIn third" name="password" placeholder="nuova password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Deve contenere almeno un numero,una lettera maiuscola e una lettera minuscola, e deve essere composta da almeno 8 o piÃ¹ caratteri"  required onkeyup='check();'>
             <input type="password" id="confirm_password" class="fadeIn third" name="confirm-password" placeholder="conferma la password" required onkeyup='check();'>
             <h2 id='message'></h2>
             <input type="submit" class="fadeIn fourth" value="Resetta la password">

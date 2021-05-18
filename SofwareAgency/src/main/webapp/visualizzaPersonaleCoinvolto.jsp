@@ -13,6 +13,7 @@ if(righe==null){
 	DBManager db=new DBManager();
 	elenco = (ArrayList<Personale>)request.getAttribute("ELENCO_PERSONALE_COINVOLTO");
 	String codiceLavorazione = (String)request.getAttribute("codiceLavorazione");
+	Lavorazione l=db.getLavorazione(codiceLavorazione);
 	String srcImmagineProfiloUtente="";
 %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -45,11 +46,13 @@ if(righe==null){
 					<h2 class="h4 font-w400 text-white-op mb-0">in questa sezione
 						potrai vedere tutto i dipendenti coinvolti in questa lavorazione.</h2>
 					<br>
+					<%if(db.verificaLavorazioneResponsabile(l.getCodSoftware(), user.getCodiceDipendente())==1 && user.getQualificaProfessionale().equals("Responsabile")) {%>
 					<button type="button" class="btn btn-outline-success "
 						data-target="#chooseDepartment" data-toggle="modal">
 						<i class="fa fa-plus" aria-hidden="true"></i> aggiungi personale
 						coinvolto
 					</button>
+					<%}%>
 				</div>
 			</div>
 		</div>
@@ -91,6 +94,7 @@ if(righe==null){
 						data-page-length=<%=righe%>>
 						<%request.getSession().setAttribute("numeroRighe", "10"); %>
 						<thead>
+						<%if(db.verificaLavorazioneResponsabile(l.getCodSoftware(), user.getCodiceDipendente())==1 && user.getQualificaProfessionale().equals("Responsabile")) {%>
 							<div style="margin-bottom: 10px; margin-top: 20px;"">
 								<button type="submit"
 									class="col-md-3 btn btn-outline-danger ml-10 "
@@ -99,6 +103,7 @@ if(righe==null){
 									dipendenti selezionati
 								</button>
 							</div>
+							<%} %>
 							<div style="margin-bottom: 10px; margin-top: 20px;"">
 								<button type="button"
 									class="col-md-3 btn btn-outline-primary ml-10 "
@@ -109,9 +114,11 @@ if(righe==null){
 							</div>
 							<div style="margin-bottom: 10px; margin-top: 20px;"></div>
 							<tr>
+							<%if(db.verificaLavorazioneResponsabile(l.getCodSoftware(), user.getCodiceDipendente())==1 && user.getQualificaProfessionale().equals("Responsabile")) {%>
 								<th><input type="checkbox" id="checkboxAll"
 									onclick='$(".check").prop("checked",$ (this).prop("checked"));'>Seleziona
 									tutto</th>
+									<%} %>
 								<th>Immagine Profilo</th>
 								<th>Dettagli</th>
 								<th>Codice Dipendente</th>
@@ -119,7 +126,9 @@ if(righe==null){
 								<th>Nome Professione</th>
 								<th>Data inzio</th>
 								<th>Data Fine</th>
+								<%if(db.verificaLavorazioneResponsabile(l.getCodSoftware(), user.getCodiceDipendente())==1 && user.getQualificaProfessionale().equals("Responsabile")) {%>
 								<th>Aggiorna</th>
+								<%} %>
 							</tr>
 						</thead>
 						<tbody>
@@ -130,10 +139,12 @@ if(righe==null){
 							    Dipendente d=db.getUser(String.valueOf(p.getCodDipendente()));
 							 %>
 							<tr>
+							<%if(db.verificaLavorazioneResponsabile(l.getCodSoftware(), user.getCodiceDipendente())==1 && user.getQualificaProfessionale().equals("Responsabile")) {%>
 								<td><input type="checkbox" class="check" name="check"
 									value="<%=d.getCodiceDipendente()%>"></td>
+									<%} %>
 									
-									<td>
+							<td>
 								 							<%
 								 							
 								 							Dipendente d2=db.getUser(String.valueOf(p.getCodDipendente()));
@@ -143,7 +154,6 @@ if(righe==null){
 																	%>
  							<img class="img-avatar img-avatar32" src="<%=srcImmagineProfiloUtente%>">
  							</td>	
-									
 								<td><a
 									href="gestpersonale?cmd=dettagli&id=<%=p.getCodLavorazione()%>&cd=<%=p.getCodDipendente()%>"><i
 										class="fa fa-info-circle" aria-hidden="true"></i></a></td>
@@ -154,9 +164,11 @@ if(righe==null){
 								<td><%=p.getDataInizio()%></td>
 								<%if(p.getDataFine()==null){%> <td>in corso</td><%}else{%>
 								<td><%=p.getDataFine()%></td><%}%>
+								<%if(db.verificaLavorazioneResponsabile(l.getCodSoftware(), user.getCodiceDipendente())==1 && user.getQualificaProfessionale().equals("Responsabile")) {%>
 								<td><a
 									href="gestpersonale?cmd=aggiorna&id=<%=p.getCodLavorazione()%>&cd=<%=p.getCodDipendente()%>"><i
 										class="fa fa-pencil" aria-hidden="true"></i></a></td>
+										<%}%>
 							</tr>
 
 							<%
