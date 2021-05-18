@@ -5,6 +5,7 @@ import java.util.Properties;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
+import javax.mail.BodyPart;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Multipart;
@@ -74,6 +75,22 @@ public class SendMail {
                     messageBodyPart1.setContent(body, "text/html; charset=utf-8");
                     multipart.addBodyPart(messageBodyPart);
                     multipart.addBodyPart(messageBodyPart1);
+                    
+                    
+                    //parte con immagine logo
+                    // second part (the image)
+                    messageBodyPart = new MimeBodyPart();
+                    DataSource fds = new FileDataSource
+                      ("/home/sebastian/_logo.png");
+                    messageBodyPart.setDataHandler(new DataHandler(fds));
+                    messageBodyPart.setHeader("Content-ID","<image>");
+
+                    // add it
+                    multipart.addBodyPart(messageBodyPart);
+                    
+                    
+                    
+                    
                     message.setContent(multipart);
                    
                     System.out.println("Sto inviando..");
@@ -82,7 +99,7 @@ public class SendMail {
                     transport.connect(host, from, pass);
                     transport.sendMessage(message, message.getAllRecipients());
                     transport.close();
-
+                    
                     System.out.println("Email inviata.");
 
                 } catch (MessagingException e) {
@@ -103,9 +120,28 @@ public class SendMail {
                      for( int i = 0; i < toAddress.length; i++) {
                          message.addRecipient(Message.RecipientType.TO, toAddress[i]);
                      }
-
+                     
                      message.setSubject(subject);
-                     message.setContent(body, "text/html; charset=utf-8");
+                     
+                     MimeMultipart multipart = new MimeMultipart("related");
+                     BodyPart messageBodyPart = new MimeBodyPart();
+                     
+                     messageBodyPart.setContent(body, "text/html; charset=utf-8");
+                     
+                     multipart.addBodyPart(messageBodyPart);
+                     
+                     // second part (the image)
+                     messageBodyPart = new MimeBodyPart();
+                     DataSource fds = new FileDataSource
+                       ("/home/sebastian/_logo.png");
+                     messageBodyPart.setDataHandler(new DataHandler(fds));
+                     messageBodyPart.setHeader("Content-ID","<image>");
+
+                     // add it
+                     multipart.addBodyPart(messageBodyPart);
+
+                     // put everything together
+                     message.setContent(multipart);
             
             
             

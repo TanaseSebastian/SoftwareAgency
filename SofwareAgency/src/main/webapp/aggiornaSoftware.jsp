@@ -11,7 +11,6 @@
 	String pwDB = prop.getProperty("Pasword");
 %>
 <%
-
 	Software s = (Software)request.getAttribute("PACCHETTO_SOFTWARE");
 	DBManager db=new DBManager();
 %>

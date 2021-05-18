@@ -408,17 +408,14 @@ DBManager db = new DBManager();
 					id="form2">
 					<div class="col-md-12 form-group">
 						<div class="form-group mb-3">
-							<input type="text" class="form-control" name="tipo"
-								id="tipo" value="<%=utente%>" hidden="hidden"
-								readonly="readonly">
 								<input type="text" class="form-control" name="id"
-								id="id" value="<%=user.getCodiceDipendente()%>" hidden="hidden"
+								id="id" value="<%=d.getCodiceDipendente()%>" hidden="hidden"
 								readonly="readonly">
 								<input type="text" class="form-control" name="cf"
-								id="cf" value="<%=user.getCf()%>" hidden="hidden"
+								id="cf" value="<%=d.getCf()%>" hidden="hidden"
 								readonly="readonly">
 								<input type="text" class="form-control" hidden="hidden" name="email" id="email"
-								value=<%=user.getEmail()%>> <label class="label"
+								value=<%=d.getEmail()%>> <label class="label"
 								for="password">Password</label> <input type="password"
 								name="password" id="password" class="form-control"
 								placeholder="Inserisci Password"

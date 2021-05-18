@@ -10,6 +10,7 @@ if (righe == null) {
 }
 DBManager db = new DBManager();
 elenco = (ArrayList<Dipendente>) request.getAttribute("ELENCO_AMMINISTRATORI");
+String srcImmagineProfiloUtente="";
 %>
 <%@include file="header.jsp"%>
 <!-- Main Container -->
@@ -73,6 +74,7 @@ elenco = (ArrayList<Dipendente>) request.getAttribute("ELENCO_AMMINISTRATORI");
 						request.getSession().setAttribute("numeroRighe", "10");
 						%>
 						<thead>
+						<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 							<div style="margin-bottom: 10px; margin-top: 20px;"">
 								<button type="submit"
 									class="col-md-3 btn btn-outline-danger ml-10 "
@@ -81,6 +83,7 @@ elenco = (ArrayList<Dipendente>) request.getAttribute("ELENCO_AMMINISTRATORI");
 									clienti selezionati
 								</button>
 							</div>
+							<%}%>
 							<div style="margin-bottom: 10px; margin-top: 20px;"">
 								<button type="button"
 									class="col-md-3 btn btn-outline-primary ml-10 "
@@ -90,15 +93,20 @@ elenco = (ArrayList<Dipendente>) request.getAttribute("ELENCO_AMMINISTRATORI");
 									righe
 								</button>
 							</div>
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 							<div style="margin-bottom: 10px; margin-top: 20px;"">
 								<a type="button" class="col-md-3 btn btn-outline-success ml-10 "
 									href="nuovoAmministratore.jsp"><i class="fa fa-plus"
 									aria-hidden="true"></i> Inserisci nuovo amministratore</a>
 							</div>
+							<%} %>
 							<tr>
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 								<th><input type="checkbox" id="checkboxAll"
 									onclick='$(".check").prop("checked",$ (this).prop("checked"));'>Seleziona
 									tutto</th>
+									<%} %>
+								<th>Immagine Profilo</th>
 								<th>Dettagli</th>
 								<th>Codice Dipendente</th>
 								<th>Full Name</th>
@@ -106,7 +114,9 @@ elenco = (ArrayList<Dipendente>) request.getAttribute("ELENCO_AMMINISTRATORI");
 								<th>Nome Professione</th>
 								<th>Stipendio</th>
 								<th>Dipartimento</th>
+								<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 								<th>Aggiorna</th>
+								<%} %>
 							</tr>
 						</thead>
 						<tbody>
@@ -115,8 +125,18 @@ elenco = (ArrayList<Dipendente>) request.getAttribute("ELENCO_AMMINISTRATORI");
 								d = (Dipendente) elenco.get(i);
 							%>
 							<tr>
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 								<td><input type="checkbox" class="check" name="check"
 									value="<%=d.getCodiceDipendente()%>"></td>
+									<%}%>
+									<td>
+								 							<%
+								 							System.out.println(d.getImmagineProfilo());
+								 							srcImmagineProfiloUtente="immaginiProfilo/"+d.getImmagineProfilo();
+								 							System.out.println(srcImmagineProfiloUtente);
+																	%>
+ 							<img class="img-avatar img-avatar32" src="<%=srcImmagineProfiloUtente%>">
+ 							</td>						
 								<td><a
 									href="gestutenti?cmd=dettagli&id=<%=d.getCodiceDipendente()%>"><i
 										class="fa fa-info-circle" aria-hidden="true"></i></a></td>
@@ -126,9 +146,11 @@ elenco = (ArrayList<Dipendente>) request.getAttribute("ELENCO_AMMINISTRATORI");
 								<td><%=d.getNomeProfessione()%></td>
 								<td><%="€" + d.getStipendio()%></td>
 								<td><%=db.getNomeDipartimento(String.valueOf(d.getCodDipartimento()))%></td>
+								<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 								<td><a
 									href="gestutenti?cmd=aggiorna&tipoutente=amministratore&id=<%=d.getCodiceDipendente()%>"><i
 										class="fa fa-pencil" aria-hidden="true"></i></a></td>
+								<%} %>
 							</tr>
 
 							<%

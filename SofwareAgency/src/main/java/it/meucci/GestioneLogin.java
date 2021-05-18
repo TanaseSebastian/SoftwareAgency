@@ -92,11 +92,11 @@ public class GestioneLogin extends HttpServlet {
 			  request.getSession().setAttribute("Benvenuto", "false");
 			 
 			if(user.getAmministratore().equals("N")) {
-				logger.info("l'utente e' un cliente,per cui rimando sulla index.");
-				response.sendRedirect("index.jsp");
+				logger.info("l'utente NON e' un amministratore,lo sto facendo accedere al panello di amministrazione con limitazioni.");
+				response.sendRedirect("dashboard.jsp");
 			}
 			else if(user.getAmministratore().equals("Y")) {
-				logger.info("l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.");
+				logger.info("l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione con privilegi elevati.");
 				response.sendRedirect("dashboard.jsp");
 			}
 		}

@@ -1,0 +1,42 @@
+
+-----------------------PARTE LAVORAZIONI-------------------------------
+
+visualizza lavorazioni amministratore e dirigente possono fare tutto
+
+responsabile puo modificare,eliminare e aggiungere personale solamente ai software di cui è responsabile
+
+dipendente può visualizzare solo le lavorazioni in cui è coinvolto e vedere il personale coinvolto di quella lavorazione,ma non può nè eliminare e ne modificare alcuna opzione
+
+-----inserimento lavorazione
+
+responsabile può solo inserire una lavorazione di un software di cui è il responsabile+++
+
+
+
+----------------------------------------------------------------------
+
+-----------------------PARTE CLIENTI-------------------------------
+
+visualizza clienti amministratore e dirigente possono fare tutto
+
+Responsabile e dipendente possono solamente visualizza i clienti senza alcun permesso di eliminare o modificare
+
+---------------------------------------------------------------------
+
+-----------------------PARTE ORDINI-------------------------------
+
+visualizza ordini amministratore e dirigente possono fare tutto
+
+Responsabile e dipendente non possono accedere a questa sezione
+
+---------------------------------------------------------------------
+
+
+--------------------PARTE RICERCHE AVANZATE--------------------
+
+visualizza ricerche amministratore e dirigente possono accedere
+
+Responsabile e dipendente non possono accedere a questa sezione
+
+---------------------------------------------------------------------
+

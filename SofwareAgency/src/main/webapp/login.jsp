@@ -10,25 +10,25 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-        <title>Codebase</title>
+        <title>SeTech</title>
 
-        <meta name="description" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+        <meta name="description" content="SeTech">
         <meta name="author" content="pixelcave">
         <meta name="robots" content="noindex, nofollow">
 
         <!-- Open Graph Meta -->
-        <meta property="og:title" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework">
-        <meta property="og:site_name" content="Codebase">
-        <meta property="og:description" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+        <meta property="og:title" content="SeTech">
+        <meta property="og:site_name" content="SeTech">
+        <meta property="og:description" content="SeTech">
         <meta property="og:type" content="website">
         <meta property="og:url" content="">
         <meta property="og:image" content="">
 
         <!-- Icons -->
         <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-        <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+        <link rel="shortcut icon" href="assets/media/favicons/logo.png.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/logo.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/logo.png">
         <!-- END Icons -->
 
         <!-- Stylesheets -->
@@ -65,9 +65,11 @@
                             <div class="content content-full">
                                 <!-- Header -->
                                 <div class="px-30 py-10">
-                                    <a class="link-effect font-w700" href="index.html">
-                                        <i class="si si-fire"></i>
-                                        <span class="font-size-xl text-primary-dark">code</span><span class="font-size-xl">base</span>
+                                    <a class="link-effect font-w700" href="login.jsp">
+                                        <img style="height: 25px;"
+							 src="assets/img/_logo.png"> <span
+								class="font-size-xl text-dual-primary-dark">Se</span><span
+								class="font-size-xl text-primary">Tech</span>
                                     </a>
                                     <h1 class="h3 font-w700 mt-30 mb-10">Welcome to Your Dashboard</h1>
                                     <h2 class="h5 font-w400 text-muted mb-0">Please sign in</h2>

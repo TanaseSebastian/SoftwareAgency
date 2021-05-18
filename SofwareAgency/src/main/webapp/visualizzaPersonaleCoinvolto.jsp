@@ -12,6 +12,8 @@ if(righe==null){
 }
 	DBManager db=new DBManager();
 	elenco = (ArrayList<Personale>)request.getAttribute("ELENCO_PERSONALE_COINVOLTO");
+	String codiceLavorazione = (String)request.getAttribute("codiceLavorazione");
+	String srcImmagineProfiloUtente="";
 %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
@@ -58,8 +60,8 @@ if(righe==null){
 	<div class="bg-body-light border-b">
 		<div class="content py-5 text-center">
 			<nav class="breadcrumb bg-body-light mb-0">
-				<a class="breadcrumb-item" href="dashboard.jsp">Dashboard</a> <span
-					class="breadcrumb-item active">Lavorazioni Software</span> <span
+				<a class="breadcrumb-item" href="dashboard.jsp">Dashboard</a> <a href="gestlavorazioni?cmd=viewall"
+					class="breadcrumb-item">Lavorazioni Software</a> <span
 					class="breadcrumb-item active">Visualizza Personale
 					Coinvolto</span>
 			</nav>
@@ -92,7 +94,7 @@ if(righe==null){
 							<div style="margin-bottom: 10px; margin-top: 20px;"">
 								<button type="submit"
 									class="col-md-3 btn btn-outline-danger ml-10 "
-									onclick="if(confirm('Sei sicuro di voler eliminare definitivamente queste operazioni dal database?')){submitForm('gestutenti?cmd=elimina&tipo=dipendente')}else{return false}">
+									onclick="if(confirm('Sei sicuro di voler eliminare definitivamente questi dipendenti dalla lavorazione?')){submitForm('gestpersonale?cmd=elimina')}else{return false}">
 									<i class="fa fa-trash" aria-hidden="true"></i>Elimina i
 									dipendenti selezionati
 								</button>
@@ -101,7 +103,7 @@ if(righe==null){
 								<button type="button"
 									class="col-md-3 btn btn-outline-primary ml-10 "
 									data-target="#chooseEntries" data-toggle="modal"
-									data-id="visualizzaDipendenti.jsp" id="changeEntriesButton">
+									data-id="visualizzaPersonaleCoinvolto.jsp" id="changeEntriesButton">
 									<i class="fa fa-eye" aria-hidden="true"></i> Cambia numero
 									righe
 							</div>
@@ -110,6 +112,7 @@ if(righe==null){
 								<th><input type="checkbox" id="checkboxAll"
 									onclick='$(".check").prop("checked",$ (this).prop("checked"));'>Seleziona
 									tutto</th>
+								<th>Immagine Profilo</th>
 								<th>Dettagli</th>
 								<th>Codice Dipendente</th>
 								<th>Full Name</th>
@@ -129,23 +132,37 @@ if(righe==null){
 							<tr>
 								<td><input type="checkbox" class="check" name="check"
 									value="<%=d.getCodiceDipendente()%>"></td>
+									
+									<td>
+								 							<%
+								 							
+								 							Dipendente d2=db.getUser(String.valueOf(p.getCodDipendente()));
+								 							System.out.println(d2.getImmagineProfilo());
+								 							srcImmagineProfiloUtente="immaginiProfilo/"+d2.getImmagineProfilo();
+								 							System.out.println(srcImmagineProfiloUtente);
+																	%>
+ 							<img class="img-avatar img-avatar32" src="<%=srcImmagineProfiloUtente%>">
+ 							</td>	
+									
 								<td><a
-									href="gestlavorazioni?cmd=dettagli&id=<%=p.getCodLavorazione()%>"><i
+									href="gestpersonale?cmd=dettagli&id=<%=p.getCodLavorazione()%>&cd=<%=p.getCodDipendente()%>"><i
 										class="fa fa-info-circle" aria-hidden="true"></i></a></td>
 								<td><%=d.getCodiceDipendente()%></td>
 								<td><%=d.getCognome()+" "+d.getNome()%></td>
 								<td><%= d.getNomeProfessione()%></td>
 								<%-- <td><%= db.getNomeDipartimento(String.valueOf(d.getCodDipartimento()))%></td> --%>
 								<td><%=p.getDataInizio()%></td>
-								<td><%=p.getDataFine()%></td>
+								<%if(p.getDataFine()==null){%> <td>in corso</td><%}else{%>
+								<td><%=p.getDataFine()%></td><%}%>
 								<td><a
-									href="gestutenti?cmd=aggiorna&tipoutente=dipendente&id=<%=d.getCodiceDipendente()%>"><i
+									href="gestpersonale?cmd=aggiorna&id=<%=p.getCodLavorazione()%>&cd=<%=p.getCodDipendente()%>"><i
 										class="fa fa-pencil" aria-hidden="true"></i></a></td>
 							</tr>
 
 							<%
 										     }
 										 %>
+							<input name="codiceLavorazione" value="<%=codiceLavorazione%>" hidden>
 						</tbody>
 					</table>
 				</form>
@@ -181,7 +198,7 @@ if(righe==null){
 												value="${row.nome}" /></option>
 									</c:forEach>
 								</select>
-								<input type="text" value="<%=p.getCodLavorazione()%>" name="id" readonly="readonly" hidden>
+								<input type="text" value="<%=codiceLavorazione%>" name="id" readonly="readonly" hidden>
 							</center>
 						</div>
 						<div class="text-center" style="margin-top: 30px;">
@@ -199,7 +216,72 @@ if(righe==null){
 </main>
 <!-- END Main Container -->
 
-<%@include file="footer.jsp"%>
+   <!-- Footer -->
+            <footer id="page-footer" class="opacity-0">
+                <div class="content py-20 font-size-sm clearfix">
+                    <div class="text-center">
+                        Esame di stato 2020-2021 Istituto tecnico A.Meucci Casarano(LE) classe VBI Specializazzione: INFORMATICA E TELECOMUNICAZIONI Alunno: <a class="font-w600" href="https://www.linkedin.com/in/tanasesebastian/" target="_blank">Tanase Sebastian</a> &copy; <span class="js-year-copy"></span>
+                    </div>
+                </div>
+            </footer>
+            <!-- END Footer -->
+        </div>
+        <!-- END Page Container -->
+        
+         <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sicuro di voler uscire?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Seleziona "Logout" se sei sicuro di voler terminare la sessione.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Annulla</button>
+                    <a class="btn btn-primary" href="logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+          <!-- modulo per scelta della quantità di elementi datatables-->
+ <div class="modal" id="chooseEntries" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4>
+                Indicare il numero di righe che si vuole vedere.
+              </h4>
+          </div>
+          <div class="modal-body">
+          <form action="" method="post" id="chooseEntriesForm" name="chooseEntriesForm" role="form" >
+          <input name="codiceLavorazione" value="<%=p.getCodLavorazione()%>" hidden>
+            <div class="col-md-12 form-group">
+				<center>
+				<select id="select-entries" name="select-entries" class="col-md-6 " required>
+				 <option value="" disabled selected hidden>Seleziona numero righe</option>
+					<option value="1">1</option>
+					<option value="10">10</option>
+					<option value="25">25</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+					<option value="-1">TUTTE</option>
+				</select>
+				</center>
+            </div>
+          <div class="text-center" style="margin-top: 30px;">
+           <button type="button" class="btn btn-danger" data-dismiss="modal">Annulla</button>
+          <button type="submit" class="btn btn-primary">Prosegui <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+          </div>
+        </form>
+          </div>
+      </div>
+  </div>
+  </div>
 <%@include file="librerie.jsp"%>
 </body>
 </html>

@@ -7,8 +7,6 @@
 	    <script src="app/vendor/datatables/jquery.dataTables.min.js"></script>
 	    <script src="app/vendor/datatables/dataTables.bootstrap4.min.js"></script> 
     
-
-
         <script src="assets/js/codebase.core.min.js"></script>
         <script src="assets/js/codebase.app.min.js"></script>
         <script src="assets/js/plugins/flatpickr/flatpickr.min.js"></script>
@@ -99,6 +97,16 @@
 <script>
 $(document).ready(function() {
     $('#dataTable').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    } );
+} );
+</script>
+<script>
+$(document).ready(function() {
+    $('#dataTable2').DataTable( {
         dom: 'Bfrtip',
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'

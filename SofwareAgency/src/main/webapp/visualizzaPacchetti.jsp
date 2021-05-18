@@ -73,6 +73,7 @@ elenco = (ArrayList<Software>) request.getAttribute("ELENCO_SOFTWARE");
 						request.getSession().setAttribute("numeroRighe", "10");
 						%>
 						<thead>
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") || user.getQualificaProfessionale().equals("Responsabile")){%>
 							<div style="margin-bottom: 10px; margin-top: 20px;"">
 								<button type="submit"
 									class="col-md-3 btn btn-outline-danger ml-10 "
@@ -81,6 +82,7 @@ elenco = (ArrayList<Software>) request.getAttribute("ELENCO_SOFTWARE");
 									pacchetti selezionati
 								</button>
 							</div>
+							<%} %>
 							<div style="margin-bottom: 10px; margin-top: 20px;"">
 								<button type="button"
 									class="col-md-3 btn btn-outline-primary ml-10 "
@@ -90,22 +92,28 @@ elenco = (ArrayList<Software>) request.getAttribute("ELENCO_SOFTWARE");
 									righe
 								</button>
 							</div>
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") || user.getQualificaProfessionale().equals("Responsabile")){%>
 							<div style="margin-bottom: 10px; margin-top: 20px;"">
 								<a type="button" class="col-md-3 btn btn-outline-success ml-10 "
 									href="nuovoSoftware.jsp"><i class="fa fa-plus"
 									aria-hidden="true"></i> Inserisci nuovo pacchetto software</a>
 							</div>
+							<%}%>
 							<tr>
+							  <%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") || user.getQualificaProfessionale().equals("Responsabile")){%>
 								<th><input type="checkbox" id="checkboxAll"
 									onclick='$(".check").prop("checked",$ (this).prop("checked"));'>Seleziona
 									tutto</th>
+								<%}%>
 								<th>Dettagli</th>
 								<th>Codice software</th>
 								<th>Nome Software</th>
 								<th>Tempo in Giorni/Uomo</th>
 								<th>Costo</th>
 								<th>Responsabile</th>
+								<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") || user.getQualificaProfessionale().equals("Responsabile")){%>
 								<th>Aggiorna</th>
+								<%} %>
 							</tr>
 						</thead>
 						<tbody>
@@ -114,8 +122,21 @@ elenco = (ArrayList<Software>) request.getAttribute("ELENCO_SOFTWARE");
 								s = (Software)elenco.get(i);
 							%>
 							<tr>
-								<td><input type="checkbox" class="check" name="check"
-									value="<%=s.getCodSoftware()%>"></td>
+								<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") || user.getQualificaProfessionale().equals("Responsabile")){%>
+								<td>
+								
+								<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
+								<input type="checkbox" class="check" name="check"
+									value="<%=s.getCodSoftware()%>">
+								<%}//chiudo primo if
+								else if(user.getCodiceDipendente()==s.getCodResponsabile() && user.getQualificaProfessionale().equals("Responsabile")) {%>
+								<!-- il responsabile può eliminare solamente i software di cui è responsabile -->
+								<input type="checkbox" class="check" name="check"
+									value="<%=s.getCodSoftware()%>">
+								<%} %>	
+									
+									</td>
+								<%} %>
 								<td><a
 									href="gestsoftware?cmd=dettagli&id=<%=s.getCodSoftware()%>"><i
 										class="fa fa-info-circle" aria-hidden="true"></i></a></td>
@@ -124,9 +145,23 @@ elenco = (ArrayList<Software>) request.getAttribute("ELENCO_SOFTWARE");
 								<td><%=s.getTempoGiorniUomo()%></td>
 								<td><%="€" + s.getCosto()%></td>
 								<td><%=db.getFullName(String.valueOf(s.getCodResponsabile()))%></td>
-								<td><a
-									href="gestsoftware?cmd=aggiorna&id=<%=s.getCodSoftware()%>"><i
-										class="fa fa-pencil" aria-hidden="true"></i></a></td>
+								<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") || user.getQualificaProfessionale().equals("Responsabile")){%>
+								<td>
+								
+								
+								<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
+								<a href="gestsoftware?cmd=aggiorna&id=<%=s.getCodSoftware()%>"><i
+										class="fa fa-pencil" aria-hidden="true"></i></a>
+								<%}//chiudo primo if
+								else if(user.getCodiceDipendente()==s.getCodResponsabile() && user.getQualificaProfessionale().equals("Responsabile")) {%>
+								<!-- il responsabile può modificare solamente i software di cui è responsabile -->
+								<a href="gestsoftware?cmd=aggiorna&id=<%=s.getCodSoftware()%>"><i
+										class="fa fa-pencil" aria-hidden="true"></i></a>
+								<%} %>
+										
+										
+										</td>
+								<%} %>
 							</tr>
 
 							<%

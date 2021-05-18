@@ -218,7 +218,7 @@ public class DBManager{
 	}
 
 
-	//metodo che resetta la password con codice fiscale---------------------------------
+	//metodo che resetta la password con email--------------------------------
 	public int resetPasswordEmail(String email,String password) throws SQLException {
 		int nRighe=0;
 		try {
@@ -331,6 +331,9 @@ public class DBManager{
 			d.setCodDipartimento(rs.getInt("codDipartimento"));
 			d.setImmagineProfilo(rs.getString("immagineProfilo"));
 			d.setAmministratore(rs.getString("amministratore"));
+			d.setDataNascita(rs.getString("dataNascita"));
+			d.setProvincia(rs.getString("provincia"));
+			d.setImmagineProfilo(rs.getString("immagineProfilo"));
 			elenco.add(d);
 		}
 
@@ -474,6 +477,8 @@ public class DBManager{
 					logger.info(s.toString());
 					return s;
 				}
+				
+				
 		
 		
 		
@@ -593,6 +598,12 @@ public class DBManager{
 
 					return elenco;
 				}
+				
+				
+				
+				
+				
+				
 				
 				
 				//funzione che elimina un array di Oggetti di tipo Lavorazione
@@ -749,7 +760,577 @@ public class DBManager{
 					return elenco;
 				}
 				
+				
+				
+				//funzione che aggiunge personale in una lavorazione
+				public int aggiungiPersonale(int codiceDipendente,int codLavorazione)
+						throws Exception {
+					String sql = "INSERT INTO personale_coinvolto(codLavorazione,codDipendente,dataInizio) VALUES (?,?,UTC_DATE());";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setInt(1,codLavorazione);
+					pstm.setInt(2,codiceDipendente);
+					logger.info(pstm.toString());
+					int nRighe= pstm.executeUpdate();
+					return nRighe;
+				}
+				
+				
+				//funzione che elimina un array di Oggetti di tipo Lavorazione
+				public int deletePersonale(String[] id,int codiceLavorazione) throws Exception 
+				{
+					String delimiter = ",";
+					String s=String.join(delimiter, id);
+					String deleteSql="DELETE FROM personale_coinvolto WHERE codLavorazione="+codiceLavorazione+" and codDipendente IN ("+s+");";
+					logger.info("QUERY:"+deleteSql);
+					int nRighe=query.executeUpdate(deleteSql);
+					logger.info("Numero personale eliminati dal db:"+nRighe);
+					return nRighe;
+				}
+				
+				
+				//funzione che dato il codice lavorazione restituisce i dettagli
+				public Personale getDettagliPersonale(String codicelavorazione,String codiceDipendente) throws Exception 
+				{
+					String sql="SELECT * FROM personale_coinvolto WHERE codLavorazione=? and codDipendente=?";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setString(1,codicelavorazione);
+					pstm.setString(2,codiceDipendente);
+					rs= pstm.executeQuery();
+					Personale p=new Personale();
+					while(rs.next())
+					{
+						p=new Personale();
+						p.setCodLavorazione(rs.getInt("codLavorazione"));
+						p.setCodDipendente(rs.getInt("codDipendente"));
+						p.setDescrizione(rs.getString("Descrizione"));
+						p.setDataInizio(rs.getString("dataInizio"));
+						p.setDataFine(rs.getString("dataFine"));
+					}
+					logger.info(p.toString());
+					return p;
+				}
+				
+				
+				//funzione che aggiorna il personale coinvolto
+				public int aggiornapersonale(Personale p)
+						throws Exception {
+					String sql="UPDATE personale_coinvolto SET descrizione = ?, dataInizio = ?, dataFine = ?  WHERE codLavorazione = ? AND codDipendente=? ";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setString(1,p.getDescrizione());
+					pstm.setString(2,p.getDataInizio());
+					pstm.setString(3,p.getDataFine());
+					pstm.setInt(4,p.getCodLavorazione());
+					pstm.setInt(5,p.getCodDipendente());
+					int nRighe= pstm.executeUpdate();
+					return nRighe;
+				}
+				
+				
+				
+				//funzione che aggiorna il personale coinvolto
+				public int aggiornapersonaleNoDataFine(Personale p)
+						throws Exception {
+					String sql="UPDATE personale_coinvolto SET descrizione = ?, dataInizio = ?  WHERE codLavorazione = ? AND codDipendente=? ";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setString(1,p.getDescrizione());
+					pstm.setString(2,p.getDataInizio());
+					pstm.setInt(3,p.getCodLavorazione());
+					pstm.setInt(4,p.getCodDipendente());
+					int nRighe= pstm.executeUpdate();
+					return nRighe;
+				}
+				
 		//---------------------------------------------------------------------//		
+				
+				
+		//---------------GESTIONE CLIENTI---------------------------//
+				//funzione che registra un nuovo dipendente
+				public int insertCliente(Cliente c)
+						throws Exception {
+					String sql = "INSERT INTO clienti(nome,indirizzo,ragioneSociale,partitaIva,pec,username,pws) VALUES (?,?,?,?,?,?,md5(?));";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setString(1,c.getNome());
+					pstm.setString(2,c.getIndirizzo());
+					pstm.setString(3,c.getRagioneSociale());
+					pstm.setString(4,c.getPartitaIva());
+					pstm.setString(5,c.getPec());
+					pstm.setString(6,c.getUsername());
+					pstm.setString(7,c.getPws());
+					logger.info(pstm.toString());
+					int nRighe= pstm.executeUpdate();
+					return nRighe;
+				}
+				
+				
+				/*
+				 * //metodo che mi restituisce il nome di un dipendente dato il codiceDipendente
+				 * public String getFullName(String codiceDipendente)throws Exception { String
+				 * sql="SELECT cognome,nome FROM Dipendenti WHERE codiceDipendente='"
+				 * +codiceDipendente+"' ;"; rs = query.executeQuery(sql); String s = ""; if
+				 * (rs.next()) { String COGNOME = rs.getString("cognome"); String NOME =
+				 * rs.getString("nome"); s = COGNOME+" "+NOME; } //logger.info(s); return s; }
+				 */
+				
+				
+				//funzione che aggiorna un nuovo dipendente
+				public int aggiornaCliente(Cliente c)
+						throws Exception {
+					String sql="UPDATE clienti SET nome = ?, indirizzo =?, ragioneSociale = ?, partitaIva = ?, pec = ?, username = ?  WHERE codCliente = ? ";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setString(1,c.getNome());
+					pstm.setString(2,c.getIndirizzo());
+					pstm.setString(3,c.getRagioneSociale());
+					pstm.setString(4,c.getPartitaIva());
+					pstm.setString(5,c.getPec());
+					pstm.setString(6,c.getUsername());
+					pstm.setInt(7,c.getCodCliente());
+					int nRighe= pstm.executeUpdate();
+					return nRighe;
+				}
+				
+
+				//funzione che elimina un array di Oggetti di tipo cliente
+				public int deleteClienti(String[] codiceClienti) throws Exception 
+				{
+					String delimiter = ",";
+					String s=String.join(delimiter, codiceClienti);
+					String deleteSql="DELETE FROM clienti WHERE codCliente IN ("+s+");";
+					logger.info("QUERY:"+deleteSql);
+					int nRighe=query.executeUpdate(deleteSql);
+					logger.info("Numero personale eliminati dal db:"+nRighe);
+					return nRighe;
+				}
+				
+				
+				//funzione che elimina un ogetto tipo cliente
+				public int deleteCliente(String codiceCliente) throws Exception 
+				{
+					String deleteSql="DELETE FROM clienti WHERE codCliente="+codiceCliente+" ;";
+					logger.info("QUERY:"+deleteSql);
+					int nRighe=query.executeUpdate(deleteSql);
+					logger.info("Numero personale eliminati dal db:"+nRighe);
+					return nRighe;
+				}
+				
+				
+				//funzione che dato il codice lavorazione restituisce i dettagli
+				public Cliente getCliente(String codiceCliente) throws Exception 
+				{
+					String sql="SELECT * FROM clienti WHERE codCliente=?";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setString(1,codiceCliente);
+					rs= pstm.executeQuery();
+					Cliente c=new Cliente();
+					while(rs.next())
+					{
+						c=new Cliente();
+						c.setCodCliente(rs.getInt("codCliente"));
+						c.setNome(rs.getString("nome"));
+						c.setIndirizzo(rs.getString("indirizzo"));
+						c.setRagioneSociale(rs.getString("ragioneSociale"));
+						c.setPartitaIva(rs.getString("partitaIva"));
+						c.setPec(rs.getString("pec"));
+						c.setUsername(rs.getString("username"));
+					}
+					logger.info(c.toString());
+					return c;
+				}
+				
+				//metodo che resetta la password con codiceCliente--------------------------------
+				public int resetPasswordCliente(String codCliente,String password) throws SQLException {
+					int nRighe=0;
+					try {
+						String sql = "UPDATE Clienti SET psw = md5(?) WHERE codCliente = ?";
+						PreparedStatement pstm=connessione.prepareStatement(sql);
+						pstm.setString(1,password);
+						pstm.setString(2,codCliente);
+						logger.info(pstm.toString());
+						nRighe= pstm.executeUpdate();
+						if(nRighe==1)logger.info("password modificata ");
+
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					return nRighe;
+				}
+				
+				
+				//metodo che mi restituisce il nome di un azienda dato il codice Cliente
+				public String getClienteName(int codiceCliente)throws Exception {
+					String sql="SELECT nome FROM clienti WHERE codCliente='"+codiceCliente+"' ;";
+					rs = query.executeQuery(sql);
+					String s = "";
+					if (rs.next()) {
+						String NOME = rs.getString("nome");
+						s = NOME;
+					}
+					//logger.info(s);
+					return s;
+				}
+				
+				
+		//----------------------------------------------------------//
+				
+				
+				//---------GESTIONE ORDINI----------//
+				
+				//funzione che inserisce un nuovo ordine
+				public int insertOrdine(Ordine o)
+						throws Exception {
+					String sql = "INSERT INTO ordini(codCliente,dataOrdine,descrizione) VALUES (?,?,?);";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setInt(1,o.getCodCliente());
+					pstm.setString(2,o.getDataOrdine());
+					pstm.setString(3,o.getDescrizione());
+					logger.info(pstm.toString());
+					int nRighe= pstm.executeUpdate();
+					return nRighe;
+				}
+				
+				//funzione che dato il codice ordine restituisce un oggetto di tipo ordine
+				public Ordine getOrdine(String codiceOrdine) throws Exception 
+				{
+					String sql="SELECT * FROM Ordini WHERE codOrdine=?";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setString(1,codiceOrdine);
+					rs= pstm.executeQuery();
+					Ordine o=new Ordine();
+					while(rs.next())
+					{
+						o=new Ordine(rs.getInt(1),rs.getInt(2),rs.getString(3), rs.getString(4), rs.getString(5));
+					}
+
+					logger.info(o.toString());
+					return o;
+				}
+				
+				
+				//metodo che restituisce il codice ordine di un ordine dato cliente e data
+				public  int getOrderCode(int codCliente,String data) throws SQLException {
+					String sql="SELECT codOrdine FROM ordini WHERE codCliente=? and dataOrdine=?;";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setInt(1,codCliente);
+					pstm.setString(2,data);
+					rs= pstm.executeQuery();
+					int codOrdine = 0;
+					if (rs.next()) {
+						codOrdine = rs.getInt("codOrdine");;
+					}
+					return codOrdine;
+				}
+				
+				
+				//funzione che inserisce un pacchetto software nel dettaglioOrdine
+				public int inserisciDettaglioOrdine(int codOrdine,String codSoftware) throws Exception {
+					String sql = "INSERT INTO dettagliOrdine VALUES (?,?);";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setInt(1,codOrdine);
+					pstm.setString(2,codSoftware);
+					logger.info(pstm.toString());
+					int nRighe= pstm.executeUpdate();
+					return nRighe;
+				}
+				
+				
+				
+				
+				
+				//funzione che ritorna i dettagli di un ordine
+				public ArrayList<DettaglioOrdine> getDettagliOrdine(String codiceOrdine) throws Exception 
+				{
+					ArrayList<DettaglioOrdine> elenco = new ArrayList<DettaglioOrdine>();
+					String sql="";
+					sql="SELECT * FROM dettagliordine WHERE codOrdine=?";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setString(1,codiceOrdine);
+					rs= pstm.executeQuery();
+					DettaglioOrdine dettaglio;
+					while(rs.next())
+					{
+						dettaglio=new DettaglioOrdine();
+						dettaglio.setCodOrdine(rs.getString("codOrdine"));
+						dettaglio.setCodSoftware(rs.getString("codSoftware"));
+						elenco.add(dettaglio);
+					}
+					logger.info("Dettaglio ordine, contiene numero software: " + elenco.size());
+					return elenco;
+				}
+
+				
+				
+				//funzione che elimina un ogetto tipo ordine
+				public int deleteOrdine(String codiceOrdine) throws Exception 
+				{
+					String deleteSql="DELETE FROM ordini WHERE codOrdine="+codiceOrdine+";";
+					logger.info("QUERY:"+deleteSql);
+					int nRighe=query.executeUpdate(deleteSql);
+					logger.info("ordine eliminato con successo");
+					return nRighe;
+				}
+				
+				
+				
+				//----------------------------------//
+				
+				
+				//-------------FATTURA----------------//
+				public int insertFattura(String dataEmissione,double importo,String file) throws Exception
+				{
+				int nRighe=0;
+				File theFile = new File(file);
+				FileInputStream input = new FileInputStream(theFile);
+				String sqlInsert = "INSERT INTO fatture(dataEmissione,importo,documento) VALUES (?,?,?)";
+				PreparedStatement pstm=connessione.prepareStatement(sqlInsert);
+				pstm.setString(1, dataEmissione);
+				pstm.setDouble(2, importo);
+				pstm.setBinaryStream(3, input);
+				nRighe= pstm.executeUpdate();
+				return nRighe;
+				}
+				
+				
+				//metodo che restituisce il codice fattura di una fattura dato importo e datetime
+				public  int getFatturaCode(double importo,String data) throws SQLException {
+					String sql="SELECT codFattura FROM fatture WHERE importo=? and dataEmissione=?;";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setDouble(1,importo);
+					pstm.setString(2,data);
+					rs= pstm.executeQuery();
+					int codFattura = 0;
+					if (rs.next()) {
+						codFattura = rs.getInt(1);;
+					}
+					return codFattura;
+				}
+				
+				
+				//funzione che inserisce la chiave esterna codiceFattura in un ordine e cambia lo stato dell'ordine in eseguito
+				public int inserisciFattura(int codOrdine,int codFattura) throws Exception {
+					String sql = "UPDATE ordini SET codFattura = ? , stato='Eseguito' WHERE codOrdine = ?";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setInt(1,codFattura);
+					pstm.setInt(2,codOrdine);
+					logger.info(pstm.toString());
+					int nRighe= pstm.executeUpdate();
+					return nRighe;
+				}
+				
+				
+				//metodo per vedere le fatture
+				public int viewFattura(int id) throws Exception
+				{
+				int nRighe=0;
+				String sql = "SELECT Documento from fatture where codFattura=?";
+				PreparedStatement pstm=connessione.prepareStatement(sql);
+				pstm.setInt(1, id);
+				
+				// 3. Set up a handle to the file
+				
+				// Leggo le proprietà da file properties
+						Properties prop;
+						ReadPropertyFileFromClassPath obj = new ReadPropertyFileFromClassPath();
+						prop = obj.loadProperties("DB.properties");
+						String pathStampe = prop.getProperty("pathStampe");
+				
+				File theFile = new File(pathStampe+"documento.pdf");
+				FileOutputStream output = new FileOutputStream(theFile);
+				rs=pstm.executeQuery();
+				if (rs.next()) {
+
+					InputStream input = rs.getBinaryStream("documento"); 
+					logger.info("sto leggendo il documeto dal database...");
+					
+					byte[] buffer = new byte[1024];
+					while (input.read(buffer) > 0) {
+						output.write(buffer);
+					}
+					
+					logger.info("\nIl file è stato salvato in: " + theFile.getAbsolutePath());
+					
+					logger.info("\nCompletato con successo!");
+				}
+				return nRighe;
+				}
+				
+				//----------------------------------//
+				
+				
+				
+				
+				//---------------PARTE QUERY--------------------//
+				
+				//metodo che restituisce il codice lavorazione dato il codice software
+				public  int getCodeLavorazione(int codSoftware) throws SQLException {
+					String sql="SELECT codLavorazione FROM lavorazioni WHERE codSoftware=?;";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setInt(1,codSoftware);
+					rs= pstm.executeQuery();
+					int codLavorazione = 0;
+					if (rs.next()) {
+						codLavorazione = rs.getInt("codLavorazione");;
+					}
+					return codLavorazione;
+				}
+				
+			
+				//funzione che ritorna elenco lavorazioni eseguite tra due date
+				public ArrayList<Lavorazione> getLavorazioniTerminate(String inizio,String fine) throws Exception 
+				{
+					ArrayList<Lavorazione> elenco = new ArrayList<Lavorazione>();
+					String sql="";
+					sql="SELECT * FROM lavorazioni WHERE stato='Eseguita' and dataInizio>=? and dataFine<=?;";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setString(1,inizio);
+					pstm.setString(2,fine);
+					rs= pstm.executeQuery();
+					Lavorazione l;
+
+					while(rs.next())
+					{
+						l=new Lavorazione();
+						l.setCodLavorazione(rs.getInt("codLavorazione"));
+						l.setCodSoftware(rs.getInt("codSoftware"));
+						l.setNome(rs.getString("nome"));
+						l.setStato(rs.getString("stato"));
+						l.setDescrizione(rs.getString("descrizione"));
+						l.setDataInizio(rs.getString("dataInizio"));
+						l.setDataFine(rs.getString("dataFine"));
+						elenco.add(l);
+					}
+
+					logger.info("ELENCO LAVORAZIONI CARICATE: " + elenco.size());
+
+					return elenco;
+				}
+				
+				
+				//funzione che ritorna elenco lavorazioni non eseguite
+				public ArrayList<Lavorazione> getLavorazioniNonEseguite() throws Exception 
+				{
+					ArrayList<Lavorazione> elenco = new ArrayList<Lavorazione>();
+					String sql="";
+					sql="SELECT * FROM lavorazioni WHERE stato='In lavorazione';";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					rs= pstm.executeQuery();
+					Lavorazione l;
+
+					while(rs.next())
+					{
+						l=new Lavorazione();
+						l.setCodLavorazione(rs.getInt("codLavorazione"));
+						l.setCodSoftware(rs.getInt("codSoftware"));
+						l.setNome(rs.getString("nome"));
+						l.setStato(rs.getString("stato"));
+						l.setDescrizione(rs.getString("descrizione"));
+						l.setDataInizio(rs.getString("dataInizio"));
+						l.setDataFine(rs.getString("dataFine"));
+						elenco.add(l);
+					}
+
+					logger.info("ELENCO LAVORAZIONI CARICATE: " + elenco.size());
+
+					return elenco;
+				}
+				
+				//metodo che restituisce data di fine prevista dato l'inzio della lavorazione e i giorni uomo del software
+				public String getDataFinePrevista(String dataInizio,int giorni) throws SQLException {
+					String sql="SELECT DATE_ADD(?, INTERVAL ? DAY);";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setString(1,dataInizio);
+					pstm.setInt(2,giorni);
+					rs= pstm.executeQuery();
+					String dataFinePrevista="";
+					if (rs.next()) {
+						dataFinePrevista = rs.getString(1);;
+					}
+					return dataFinePrevista;
+				}
+				
+				
+				
+				//funzione che mi restituisce il costo di un software dato il codice software
+				public  int getCostoSoftware(int codSoftware) throws SQLException {
+					String sql="select software.costo from software where codSoftware=?;"; 
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setInt(1,codSoftware);
+					rs= pstm.executeQuery();
+					int costo = 0;
+					if (rs.next()) {
+						costo = rs.getInt(1);;
+					}
+					return costo;
+				}
+				
+				
+				//funzione che restituisce i giorni uomo di un software data il codice software
+				public  int getGiorniUomoSoftware(int codSoftware) throws SQLException {
+					String sql="select software.tempoGiorniUomo from software where codSoftware=?;";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setInt(1,codSoftware);
+					rs= pstm.executeQuery();
+					int giorniUomo = 0;
+					if (rs.next()) {
+						giorniUomo = rs.getInt(1);;
+					}
+					return giorniUomo;
+				}
+				
+				//funzione che ritorna elenco personale ordinato per data di nascita e provincia
+				public ArrayList<Dipendente> getPersonaleOrdered() throws Exception 
+				{
+					ArrayList<Dipendente> elenco = new ArrayList<Dipendente>();
+					String sql="select * from dipendenti ORDER by dataNascita and provincia;";
+					rs=query.executeQuery(sql);
+					Dipendente d;
+
+					while(rs.next())
+					{
+						d=new Dipendente();
+						d.setCodiceDipendente(rs.getInt("codiceDipendente"));
+						d.setNome(rs.getString("nome"));
+						d.setCognome(rs.getString("cognome"));
+						d.setQualificaProfessionale(rs.getString("qualificaProfessionale"));
+						d.setNomeProfessione(rs.getString("nomeProfessione"));
+						d.setStipendio(rs.getString("stipendio"));
+						d.setCodDipartimento(rs.getInt("codDipartimento"));
+						d.setImmagineProfilo(rs.getString("immagineProfilo"));
+						d.setAmministratore(rs.getString("amministratore"));
+						d.setDataNascita(rs.getString("dataNascita"));
+						d.setProvincia(rs.getString("provincia"));
+						d.setImmagineProfilo(rs.getString("immagineProfilo"));
+						elenco.add(d);
+					}
+
+					logger.info("DIPENDENTI CARICATI: " + elenco.size());
+
+					return elenco;
+				}
+				
+				
+				//funzione che mi permette di controllare se una lavorazione appartiene al responsabile che ta accedendo al sito
+				public int verificaLavorazioneResponsabile(int codSostware, int codResponsabile) throws Exception {
+					String sql="SELECT * FROM software where codSoftware=? and codResponsabile=? ";
+					PreparedStatement pstm=connessione.prepareStatement(sql);
+					pstm.setInt(1,codSostware);
+					pstm.setInt(2,codResponsabile);
+					rs= pstm.executeQuery();
+					int count = 0;
+
+					while (rs.next()) {
+						++count;
+						// Conto il numero di righe
+					}
+					return count;
+				}
+				// query per gli ammontare degli stipendi
+				//SELECT SUM(stipendio),qualificaProfessionale from dipendenti GROUP BY qualificaProfessionale
+				//SELECT SUM(stipendio),nomeProfessione from dipendenti GROUP BY nomeProfessione
+				
+				//----------------------------------------------//
+				
+				
+				
+				
 				
 				
 	public void close() throws Exception {

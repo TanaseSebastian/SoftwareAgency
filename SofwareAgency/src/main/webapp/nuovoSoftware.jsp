@@ -118,10 +118,19 @@
                                             <div class="col-md-8">
                                                 <label for="re-listing-bedrooms">Project Manager</label>
                                                 <select class="form-control form-control-lg" id="responsabile" name="responsabile">
+                                                    <!--   se la persona è un amministratore o dirigente può inserire qualsiasi amministratore -->
+                                                      <%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
                                                     <option selected="selected" hidden>Seleziona</option>
                                                     <sql:query var="manager" dataSource="${myDS}">
 										   		    select * from dipendenti Where codDipartimento=2 and qualificaProfessionale="Responsabile";
 										    		</sql:query>
+										    		<%}//chiudo primo if
+													else if(user.getQualificaProfessionale().equals("Responsabile")) {%>
+													<!-- il responsabile può inserire solamente un software di cui è responsabile -->
+													 <sql:query var="manager" dataSource="${myDS}">
+										   		    select * from dipendenti Where codiceDipendente=<%=user.getCodiceDipendente() %>;
+										    		</sql:query>
+													<%} %>
 													<c:forEach var="row" items="${manager.rows}">
 													<option value="${row.codiceDipendente}"><c:out
 													value="${row.cognome} ${row.nome}" /></option>

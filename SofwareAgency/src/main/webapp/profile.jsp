@@ -1,4 +1,3 @@
-
 <%@ page language="java" import="it.meucci.*"
 	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="header.jsp"%>
@@ -23,7 +22,7 @@
 				<h1 class="h3 text-white font-w700 mb-10"><%=user.getCognome() + " " + user.getNome()%></h1>
 				<h2 class="h5 text-white-op">
 					<%=user.getNomeProfessione()%> presso
-					<a class="text-primary-light" href="javascript:void(0)">@codebase</a>
+					<a class="text-primary-light" href="javascript:void(0)">@SeTech</a>
 				</h2>
 				<!-- END Personal -->
 

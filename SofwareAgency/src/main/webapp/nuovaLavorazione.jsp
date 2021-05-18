@@ -62,10 +62,17 @@
                                   			 <div class="form-group">
                                                 <label for="software">Software</label>
                                                 <select class="form-control form-control-lg" id="software" name="software">
+                                                 <%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
                                                     <option selected="selected" hidden>Seleziona software</option>
                                                     <sql:query var="software" dataSource="${myDS}">
-										   		    select * from software;
+										   		    select * from software WHERE software.codSoftware NOT IN (select lavorazioni.codSoftware from lavorazioni);
 										    		</sql:query>
+										    		<%}//chiudo primo if
+													else if(user.getQualificaProfessionale().equals("Responsabile")) {%>
+													<sql:query var="software" dataSource="${myDS}">
+										   		    select * from software WHERE software.codResponsabile=<%=user.getCodiceDipendente()%> and software.codSoftware NOT IN (select lavorazioni.codSoftware from lavorazioni) 
+										    		</sql:query>
+													<%} %>
 													<c:forEach var="row" items="${software.rows}">
 													<option value="${row.codSoftware}"><c:out
 													value="${row.nome}" /></option>

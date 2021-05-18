@@ -21,11 +21,8 @@ ReadPropertyFileFromClassPath obj = new ReadPropertyFileFromClassPath();
 prop = obj.loadProperties("DB.properties");
 String pathImages= prop.getProperty("pathImages");
 String srcImmagineProfilo;
-if(user.getImmagineProfilo()!=null){
-  srcImmagineProfilo="immaginiProfilo/"+user.getImmagineProfilo();}
-else{
-	srcImmagineProfilo="assets/media/avatars/avatar0.jpg";
-}
+srcImmagineProfilo="immaginiProfilo/"+user.getImmagineProfilo();
+
 %>
 <!doctype html>
 <html lang="it" class="no-focus">
@@ -34,14 +31,14 @@ else{
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-<title>Codebase</title>
+<title>SeTech</title>
 <!-- Icons -->
 <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-<link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+<link rel="shortcut icon" href="assets/media/favicons/logo.png">
 <link rel="icon" type="image/png" sizes="192x192"
-	href="assets/media/favicons/favicon-192x192.png">
+	href="assets/media/favicons/logo.png">
 <link rel="apple-touch-icon" sizes="180x180"
-	href="assets/media/favicons/apple-touch-icon-180x180.png">
+	href="assets/media/favicons/logo.png">
 <!-- END Icons -->
 <!-- Page JS Plugins CSS -->
 <!-- Custom styles for this page -->
@@ -52,6 +49,15 @@ else{
 <link rel="stylesheet" href="assets/js/plugins/slick/slick.css">
 <link rel="stylesheet" href="css/buttons.css">
 <link rel="stylesheet" href="assets/js/plugins/slick/slick-theme.css">
+<!-- Page JS Plugins CSS -->
+        <link rel="stylesheet" href="assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+        <link rel="stylesheet" href="assets/js/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+        <link rel="stylesheet" href="assets/js/plugins/select2/css/select2.min.css">
+        <link rel="stylesheet" href="assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.css">
+        <link rel="stylesheet" href="assets/js/plugins/jquery-auto-complete/jquery.auto-complete.min.css">
+        <link rel="stylesheet" href="assets/js/plugins/ion-rangeslider/css/ion.rangeSlider.css">
+        <link rel="stylesheet" href="assets/js/plugins/dropzonejs/dist/dropzone.css">
+        <link rel="stylesheet" href="assets/js/plugins/flatpickr/flatpickr.min.css">
 <!-- -Questo per lo stile-->
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700&display=swap">
@@ -99,8 +105,8 @@ div.dataTables_wrapper div.dataTables_info {
 						<!-- Logo -->
 						<span
 							class="content-header-item font-w700 font-size-xl float-left animated fadeIn">
-							<span class="text-dual-primary-dark">c</span><span
-							class="text-primary">b</span>
+							<img style="height: 25px;"
+							 src="assets/img/_logo.png">
 						</span>
 						<!-- END Logo -->
 					</div>
@@ -120,10 +126,10 @@ div.dataTables_wrapper div.dataTables_info {
 
 						<!-- Logo -->
 						<div class="content-header-item">
-							<a class="link-effect font-w700" href="index.html"> <i
-								class="si si-fire text-primary"></i> <span
-								class="font-size-xl text-dual-primary-dark">code</span><span
-								class="font-size-xl text-primary">base</span>
+							<a class="link-effect font-w700" href="index.html"> <img style="height: 25px;"
+							 src="assets/img/_logo.png"> <span
+								class="font-size-xl text-dual-primary-dark">Se</span><span
+								class="font-size-xl text-primary">Tech</span>
 							</a>
 						</div>
 						<!-- END Logo -->
@@ -172,60 +178,126 @@ div.dataTables_wrapper div.dataTables_info {
 					<ul class="nav-main">
 						<li><a href="dashboard.jsp"><i class="si si-cup"></i><span
 								class="sidebar-mini-hide">Dashboard</span></a></li>
-
-
-						<li class="nav-main-heading"><span
-							class="sidebar-mini-visible">P.A.</span><span
-							class="sidebar-mini-hidden">Personale aziendale</span></li>
 						<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
 								class="si si-vector"></i><span class="sidebar-mini-hide">Dipendenti
-							</span><span class="font-size-s text-primary">(crud)</span></a>
+							</span>
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
+							<span class="font-size-s text-primary">(crud)</span>
+							<%} %>
+							</a>
 							<ul>
 								<li><a href="gestutenti?cmd=viewall&tipo=dipendente">Visualizza
 										Dipendenti</a></li>
+										<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 								<li><a href="nuovoDipendente.jsp">Inserisci Nuovo
 										Dipendente</a></li>
-							</ul></li>
+										<%} %>
+							</ul>
+							</li>
+							
+							
+							
 						<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
 								class="si si-vector"></i><span class="sidebar-mini-hide">Amministratori
-							</span><span class="font-size-s text-primary">(crud)</span></a>
+							</span>
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
+							<span class="font-size-s text-primary">(crud)</span>
+							<%} %>
+							</a>
 							<ul>
 								<li><a href="gestutenti?cmd=viewall&tipo=amministratore">Visualizza
 										Amministratori</a></li>
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 								<li><a href="nuovoAmministratore.jsp">Inserisci Nuovo
 										Dipendente</a></li>
+										<%}%>
 							</ul></li>
 
-
-
-						<li class="nav-main-heading"><span
-							class="sidebar-mini-visible">P.S.</span><span
-							class="sidebar-mini-hidden">Pacchetti software</span></li>
+						
 						<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
 								class="si si-puzzle"></i><span class="sidebar-mini-hide">Software
-							</span><span class="font-size-s text-primary">(crud)</span></a>
+							</span>
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
+							<span class="font-size-s text-primary">(crud)</span>
+							<%} %>
+							</a>
 							<ul>
 								<li><a href="gestsoftware?cmd=viewall">Visualizza
 										software</a></li>
+								<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") || user.getQualificaProfessionale().equals("Responsabile") ){%>
 								<li><a href="nuovoSoftware.jsp">Inserisci nuovo
 										software</a></li>
-								<li><a href="#">Altro</a></li>
+									<% } %>
 							</ul></li>
 
-
-
-						<li class="nav-main-heading"><span
-							class="sidebar-mini-visible">L.S.</span><span
-							class="sidebar-mini-hidden">Lavorazioni SOFTWARE</span></li>
 						<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
 								class="si si-flag"></i><span class="sidebar-mini-hide">Lavorazioni
-							</span><span class="font-size-s text-primary">(crud)</span></a>
+							</span>
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
+							<span class="font-size-s text-primary">(crud)</span>
+							<%} %>
+							</a>
 							<ul>
-								<li><a href="gestlavorazioni?cmd=viewall">Visualizza lavorazioni <span
-										class="font-size-s text-primary">(crud)</span></a></li>
+								<li><a href="gestlavorazioni?cmd=viewall">Visualizza lavorazioni
+								<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
+										<span class="font-size-s text-primary">(crud)</span>
+										<%} %>
+										</a></li>
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") || user.getQualificaProfessionale().equals("Responsabile") ){%>
 								<li><a href="nuovaLavorazione.jsp">Inserisci nuova lavorazione</a></li>
-								<li><a href="#">Altro</a></li>
+								<%} %>
 							</ul></li>
+							
+							
+					<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") || user.getQualificaProfessionale().equals("Responsabile") ){%>
+						<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
+								class="si si-flag"></i><span class="sidebar-mini-hide">Clienti
+							</span>
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
+							<span class="font-size-s text-primary">(crud)</span>
+							<%} %>
+							</a>
+							<ul>
+								<li><a href="visualizzaClienti.jsp">Visualizza Clienti
+								<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
+									<span class="font-size-s text-primary">(crud)</span>
+									<%} %>
+										</a></li>
+								<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>		
+								<li><a href="nuovoCliente.jsp">Inserisci nuovo Cliente</a></li>
+								<%} %>
+							</ul></li>
+							<%} %>
+							
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") ){%>
+							<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
+								class="si si-flag"></i><span class="sidebar-mini-hide">Ordini
+							</span>
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
+							<span class="font-size-s text-primary">(crud)</span>
+							<%} %>
+							</a>
+							<ul>
+								<li><a href="visualizzaOrdini.jsp">Visualizza Ordini
+								<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
+									<span class="font-size-s text-primary">(crud)</span>
+									<%} %>
+										</a></li>
+										<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") ){%>
+								<li><a href="nuovoOrdine.jsp">Inserisci nuovo ordine</a></li>
+								<%} %>
+							</ul></li>
+							<%}%>
+							
+							<!-- parte delle query -->
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") ){%>
+							<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
+								class="si si-vector"></i><span class="sidebar-mini-hide">Ricerche avanzate
+							</span></a>
+							<ul>
+								<li><a href="query.jsp">Scegli ricerca</a></li>
+							</ul></li>
+							<%} %>
 					</ul>
 				</div>
 				<!-- END Side Navigation -->

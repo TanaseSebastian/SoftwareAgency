@@ -64,17 +64,21 @@ if(righe==null){
 		<%request.getSession().setAttribute("MESSAGGIO", ""); %>
 			
 			<div class="row">
-			<button type="button" class="col-md-12 btn btn-success btn-lg ">
-						     <i class="fa fa-plus" aria-hidden="true"></i> Aggiungi personale scelto
-					      </button>
+			<button type="submit"
+				class="col-md-12 btn btn-success btn-lg "
+				onclick="if(confirm('Sei sicuro di voler aggiungere questi utenti alla lavorazione?')){submitForm('gestpersonale?cmd=aggiungi')}else{return false}">
+			<!-- 	onclick="if(confirm('Sei sicuro di voler aggiungere questi dipendenti all'interno di questa lavorazione?')){submitForm('gestpersonale?cmd=aggiungi')}else{return false}"> -->
+				<i class="fa fa-plus" aria-hidden="true"></i> Aggiungi personale scelto
+			</button>
 			</div>
 		 					
 
 	 <!-- Checkable Table (.js-table-checkable class is initialized in Helpers.tableToolsCheckable()) -->
                    <h2 class="content-heading">Tabella del personale disponibile REPARTO: <%=db.getNomeDipartimento(dipartimento) %></h2>
-                    <div class="block">
+                   
                         <div class="table-responsive">
                         <form id="form" method="post">
+                         <input type="text" id="idLavorazione" name="idLavorazione" value="<%=codiceLavorazione%>" hidden>
                             <!-- If you put a checkbox in thead section, it will automatically toggle all tbody section checkboxes -->
                             <table class="js-table-checkable table table-hover" id="dataTable" cellspacing="0"
 						data-page-length='-1'>
@@ -104,7 +108,7 @@ if(righe==null){
 									 <tr>
                                         <td class="text-center">
                                             <label class="css-control css-control-primary css-checkbox">
-                                                <input type="checkbox" class="css-control-input check" value="${row.codDipendente}">
+                                                <input type="checkbox" class="css-control-input check" name="check" value="${row.codiceDipendente}">
                                                 <span class="css-control-indicator"></span>
                                             </label>
                                         </td>
@@ -130,7 +134,7 @@ if(righe==null){
                             </table>
                             <form>
                         </div>
-                    </div>
+                    
                     <!-- END Checkable Table -->
 	</div>
 	<!-- END Page Content -->

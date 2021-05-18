@@ -12,6 +12,7 @@ if(righe==null){
 }
 	DBManager db=new DBManager();
 	elenco = (ArrayList<Dipendente>)request.getAttribute("ELENCO_DIPENDENTI");
+	String srcImmagineProfiloUtente="";
 %>
 <%@include file="header.jsp"%>
 <!-- Main Container -->
@@ -28,10 +29,16 @@ if(righe==null){
                                 <h1 class="h2 font-w700 text-white mb-10">Visualizza Dipendenti</h1>
                                 <h2 class="h4 font-w400 text-white-op mb-0">in questa sezione potrai vedere tutto i dipendenti che compongono l'azienda .</h2>
                                 <br>
+                                
+                                <%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
+                               <!--  nuovo dipendente -->
                                 <a type="button"
 								class="btn btn-outline-success "
 								href="nuovoDipendente.jsp"><i class="fa fa-plus"
 									aria-hidden="true"></i> Inserisci nuovo dipendente</a>
+							  <!-- nuovo dipendente -->
+							  <%} %>
+							  
                             </div>
                         </div>
                     </div>
@@ -74,13 +81,19 @@ if(righe==null){
 					data-page-length=<%=righe%>>
 					<%request.getSession().setAttribute("numeroRighe", "10"); %>
 					<thead>
+					
+					<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
+					<!-- elimina -->
 					<div style="margin-bottom: 10px; margin-top: 20px;"">
 							<button type="submit" class="col-md-3 btn btn-outline-danger ml-10 "
 						onclick="if(confirm('Sei sicuro di voler eliminare definitivamente queste operazioni dal database?')){submitForm('gestutenti?cmd=elimina&tipo=dipendente')}else{return false}">
 					<i class="fa fa-trash" aria-hidden="true"></i> Elimina i
 									clienti selezionati
 					</button>
-						</div>
+					</div>
+				   <!-- elimina -->
+					<%}%>	
+						
 						<div style="margin-bottom: 10px; margin-top: 20px;"">
 							<button type="button"
 								class="col-md-3 btn btn-outline-primary ml-10 "
@@ -91,7 +104,10 @@ if(righe==null){
 						<div style="margin-bottom: 10px; margin-top: 20px;"">
 						</div>
 						<tr>
+						<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 							<th><input type="checkbox" id="checkboxAll" onclick='$(".check").prop("checked",$ (this).prop("checked"));'>Seleziona tutto</th>
+							<%} %>
+							<th>Immagine Profilo</th>
 							<th>Dettagli</th>
 							<th>Codice Dipendente</th>
 							<th>Full Name</th>
@@ -99,7 +115,11 @@ if(righe==null){
 							<th>Nome Professione</th>
 							<th>Stipendio</th>
 							<th>Dipartimento</th>
+							<th>Data Di Nascita</th>
+							<th>Provincia</th>
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 							<th>Aggiorna</th>
+							<%} %>
 						</tr>
 					</thead>
 					<tbody>
@@ -110,7 +130,18 @@ if(righe==null){
 										    
 										 %>
 						<tr>
- 							<td><input type="checkbox" class="check" name="check" value="<%=d.getCodiceDipendente()%>"></td>							
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
+ 							<td><input type="checkbox" class="check" name="check" value="<%=d.getCodiceDipendente()%>"></td>
+ 							<%} %>
+ 							
+ 							<td>
+								 								<%
+								 							System.out.println(d.getImmagineProfilo());
+								 							srcImmagineProfiloUtente="immaginiProfilo/"+d.getImmagineProfilo();
+								 							System.out.println(srcImmagineProfiloUtente);
+																	%>
+ 							<img class="img-avatar img-avatar32" src="<%=srcImmagineProfiloUtente%>">
+ 							</td>						
  							<td><a href="gestutenti?cmd=dettagli&id=<%=d.getCodiceDipendente()%>"><i class="fa fa-info-circle" aria-hidden="true"></i></a></td>
 							<td><%=d.getCodiceDipendente()%></td>
 							<td><%=d.getCognome()+" "+d.getNome()%></td>
@@ -118,9 +149,11 @@ if(righe==null){
 							<td><%= d.getNomeProfessione()%></td>
 							<td><%= "€"+d.getStipendio()%></td>
 							<td><%= db.getNomeDipartimento(String.valueOf(d.getCodDipartimento()))%></td>
-							<td><a
-									href="gestutenti?cmd=aggiorna&tipoutente=dipendente&id=<%=d.getCodiceDipendente()%>"><i
-										class="fa fa-pencil" aria-hidden="true"></i></a></td>
+							<td><%=d.getDataNascita()%></td>
+							<td><%=d.getProvincia()%></td>
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
+							<td><a href="gestutenti?cmd=aggiorna&tipoutente=dipendente&id=<%=d.getCodiceDipendente()%>"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+							<%} %>
 						</tr>
 
 						<%

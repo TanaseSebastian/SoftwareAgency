@@ -11352,7 +11352,7 @@ a.badge-secondary:focus, a.badge-secondary.focus {
 #page-container.main-content-boxed > #page-header .content,
 #page-container.main-content-boxed > #main-container .content,
 #page-container.main-content-boxed > #page-footer .content {
-  max-width: 1200px;
+  max-width: 100%;
 }
 
 @media (min-width: 992px) {

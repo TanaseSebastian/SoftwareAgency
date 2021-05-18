@@ -65,8 +65,6 @@ public class GestioneUtentiServlet extends HttpServlet {
 					rd.forward(request, response);
 				}
 
-
-
 			} catch (Exception e) {
 				e.printStackTrace();
 				response.sendRedirect("404.jsp");
@@ -77,7 +75,6 @@ public class GestioneUtentiServlet extends HttpServlet {
 		//dettagli di un dipendente/amministratore
 		else if(comando.equals("dettagli"))
 		{
-
 			String id= request.getParameter("id");
 			Dipendente d=new Dipendente();
 			try {
@@ -111,7 +108,6 @@ public class GestioneUtentiServlet extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
 			//System.out.println(p.toString());
 			request.setAttribute("UTENTE", d);
 			request.setAttribute("tipoutente", tipoUtente);
@@ -173,21 +169,26 @@ public class GestioneUtentiServlet extends HttpServlet {
 							+ "<title>Messaggio</title>"
 							+ "</head>"
 							+ "<body style='text-align: center; font-size: larger;'>"
-							+ "<p style=\"color: #197ED1; font-size:40px; font-weight: 900; font-family:sans-serif;\">codebase</p>"
-							+ "<p style=\"color: black; font-size: x-large; font-weight: 900;\">Caro collaboratore, Codebase l'ha registrata con successo nel nostro sistema.</p>"
+							+"<img src=\"cid:image\">"
+							+ "<p style=\"color: #197ED1; font-size:40px; font-weight: 900; font-family:sans-serif;\">Setech</p>"
+							+ "<p style=\"color: black; font-size: x-large; font-weight: 900;\">Caro collaboratore, Setech l'ha registrata con successo nel nostro sistema.</p>"
 							+ "<h2>Ecco le credenziali per completare la registrazione:</h2>"
 							+ "<p>username :<strong style='color:#197ED1;'>"+d.getUsername()+"</strong></p>"
 							+ "<p>Codice di registrazione: <strong style='color:#197ED1;'>"+d.getCodiceRegistrazione()+"</p>"
+							+"<br>"
+							+"<br>"
 							+"<a style=\"padding: 20px; border-radius: 30px; background-color:#197ED1; color:white; text-decoration: none; font-weight: bolder; margin-top: 10px; margin-bottom: 10px;\"  href=\"http://localhost:8080/SofwareAgency/registrazione.jsp\">Completa la registrazione</a>"
+							+"<br>"
+							+"<br>"
 							+"<h3>importante: <strong>attenzione a non perdere le credenziali,sono necessarie per completare la registrazione correttamente</strong></h3>"
 							+"<p style=\"color: #197ED1;\"><strong>Per qualsiasi dubbio o problema non esitare a contattarci tramite telefono o email.</strong></p>"
-							+"<p style=\"color: #197ED1; font-size: x-large; font-weight: 900;\">Codebase le augura una buona giornata.</p>"
+							+"<p style=\"color: #197ED1; font-size: x-large; font-weight: 900;\">Setech le augura una buona giornata.</p>"
 							+"</body>"
 							+"</html>";
 
 
 					//invio dell'email con i parametri
-					sender.sendFromGMail(to, "Codebase,registrazione eseguita",messaggioDaInviare,null,null);
+					sender.sendFromGMail(to, "Setech,registrazione eseguita",messaggioDaInviare,null,null);
 
 					//div che contiene il messaggio di ringraziamento,ovvero l'operazione il codice è stato eseguito correttamente
 					String thankyoupage="<div class=\"jumbotron text-center\">\r\n"
@@ -259,21 +260,26 @@ public class GestioneUtentiServlet extends HttpServlet {
 							+ "<title>Messaggio</title>"
 							+ "</head>"
 							+ "<body style='text-align: center; font-size: larger;'>"
-							+ "<p style=\"color: #197ED1; font-size:40px; font-weight: 900; font-family:sans-serif;\">codebase</p>"
-							+ "<p style=\"color: black; font-size: x-large; font-weight: 900;\">Caro collaboratore, Codebase l'ha registrata con successo nel nostro sistema.</p>"
+							+"<img src=\"cid:image\">"
+							+ "<p style=\"color: #197ED1; font-size:40px; font-weight: 900; font-family:sans-serif;\">Setech</p>"
+							+ "<p style=\"color: black; font-size: x-large; font-weight: 900;\">Caro collaboratore, Setech l'ha registrata con successo nel nostro sistema.</p>"
 							+ "<h2>Ecco le credenziali per completare la registrazione:</h2>"
 							+ "<p>username :<strong style='color:#197ED1;'>"+d.getUsername()+"</strong></p>"
 							+ "<p>Codice di registrazione: <strong style='color:#197ED1;'>"+d.getCodiceRegistrazione()+"</p>"
+							+"<br>"
+							+"<br>"
 							+"<a style=\"padding: 20px; border-radius: 30px; background-color:#197ED1; color:white; text-decoration: none; font-weight: bolder; margin-top: 10px; margin-bottom: 10px;\"  href=\"http://localhost:8080/SofwareAgency/registrazione.jsp\">Completa la registrazione</a>"
+							+"<br>"
+							+"<br>"
 							+"<h3>importante: <strong>attenzione a non perdere le credenziali,sono necessarie per completare la registrazione correttamente</strong></h3>"
 							+"<p style=\"color: #197ED1;\"><strong>Per qualsiasi dubbio o problema non esitare a contattarci tramite telefono o email.</strong></p>"
-							+"<p style=\"color: #197ED1; font-size: x-large; font-weight: 900;\">Codebase le augura una buona giornata.</p>"
+							+"<p style=\"color: #197ED1; font-size: x-large; font-weight: 900;\">Setech le augura una buona giornata.</p>"
 							+"</body>"
 							+"</html>";
 
 
 					//invio dell'email con i parametri
-					sender.sendFromGMail(to, "Codebase,registrazione eseguita",messaggioDaInviare,null,null);
+					sender.sendFromGMail(to, "Setech,registrazione eseguita",messaggioDaInviare,null,null);
 
 					//div che contiene il messaggio di ringraziamento,ovvero l'operazione il codice è stato eseguito correttamente
 					String thankyoupage="<div class=\"jumbotron text-center\">\r\n"
@@ -437,12 +443,16 @@ public class GestioneUtentiServlet extends HttpServlet {
 			case "visualizzaLavorazioni.jsp":
 				response.sendRedirect("gestlavorazioni?cmd=viewall");
 				break;
+			case "visualizzaPersonaleCoinvolto.jsp":
+				String id=request.getParameter("codiceLavorazione");
+				response.sendRedirect("gestpersonale?cmd=viewall&id="+id);
+				break;
 			default:
 				response.sendRedirect(requestPage);
 				break;
 			}
 		}
-
+		
 
 
 		//funzione che modifica l'utente			
