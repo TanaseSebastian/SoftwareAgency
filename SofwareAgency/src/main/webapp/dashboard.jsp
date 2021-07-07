@@ -25,12 +25,7 @@
                 <!-- END Hero -->
 
 
-                <!-- Page Content -->
-                <div class="content">
-                    <h2 class="content-heading">Blank <small>Get Started</small></h2>
-                    <p>Create your own awesome project!</p>
-                </div>
-                <!-- END Page Content -->
+      
             </main>
             <!-- END Main Container -->
 
@@ -52,39 +47,15 @@
 						<div class="pt-30">
 							<div class="row justify-content-center text-center">
 								<div class="col-md-10 col-lg-8">
-									<i class="si si-fire fa-4x text-primary"></i>
-									<h3 class="font-size-h2 font-w300 mt-20">Welcome to
-										Codebase!</h3>
-									<p class="text-muted">This is a modal you can show to your
-										users when they first sign in to their dashboard. It is a
-										great place to welcome and introduce them to your application
-										and its functionality.</p>
+								<center><img src="assets/img/_logo.png"></center>
+									<h3 class="font-size-h2 font-w300 mt-20">Benvenuto in
+										Setech!</h3>
+									<p class="text-muted">Caro collaboratore benvenuto nella dashboard di Setech, ti auguriamo un buon lavoro e una buona giornata!.</p>
 									<button type="button"
 										class="btn btn-sm btn-hero btn-noborder btn-primary mb-10 mx-5"
 										onclick="jQuery('.js-slider').slick('slickGoTo', 1);">
-										Key features <i class="fa fa-arrow-right ml-5"></i>
+										Completa il profilo <i class="fa fa-arrow-right ml-5"></i>
 									</button>
-								</div>
-							</div>
-						</div>
-						<div class="slick-slide pt-30">
-							<div class="row justify-content-center">
-								<div class="col-md-10 col-lg-8">
-									<h3 class="font-size-h2 font-w300 mb-5">Backup</h3>
-									<p class="text-muted">Backups are taken with every new
-										change to ensure complete piece of mind. They are kept safe
-										for immediate restores.</p>
-									<h3 class="font-size-h2 font-w300 mb-5">Invoices</h3>
-									<p class="text-muted">They are sent automatically to your
-										clients with the completion of every project, so you don't
-										have to worry about getting paid.</p>
-									<div class="text-center">
-										<button type="button"
-											class="btn btn-sm btn-hero btn-noborder btn-primary mb-10 mx-5"
-											onclick="jQuery('.js-slider').slick('slickGoTo', 2);">
-											Complete Profile <i class="fa fa-arrow-right ml-5"></i>
-										</button>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -120,7 +91,7 @@
 										<div class="form-group">
 											<button type="submit"
 												class="btn btn-sm btn-hero btn-noborder btn-success mb-10 mx-5">
-												Get Started <i class="fa fa-check ml-5"></i>
+												Invia <i class="fa fa-check ml-5"></i>
 											</button>
 										</div>
 									</form>
@@ -136,8 +107,11 @@
 </div>
 <!-- END Onboarding Modal -->
 			
-			<%}%>
-            <%request.getSession().setAttribute("Benvenuto", "false"); %>
+			<%}
+			
+			request.getSession().setAttribute("Benvenuto", "false");
+															
+			%>
 
            
 		<%@include file="footer.jsp"%>

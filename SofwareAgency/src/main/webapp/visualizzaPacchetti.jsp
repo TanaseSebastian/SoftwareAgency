@@ -30,6 +30,14 @@ elenco = (ArrayList<Software>) request.getAttribute("ELENCO_SOFTWARE");
 					<h2 class="h4 font-w400 text-white-op mb-0">in questa sezione
 						potrai vedere tutti i pacchetti software che possiede
 						l'azienda .</h2>
+						
+							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") || user.getQualificaProfessionale().equals("Responsabile")){%>
+							<div style="margin-bottom: 10px; margin-top: 20px;"">
+								<a type="button" class="col-md-3 btn btn-outline-success ml-10 "
+									href="nuovoSoftware.jsp"><i class="fa fa-plus"
+									aria-hidden="true"></i> Inserisci nuovo pacchetto software</a>
+							</div>
+							<%}%>
 				</div>
 			</div>
 		</div>
@@ -92,13 +100,6 @@ elenco = (ArrayList<Software>) request.getAttribute("ELENCO_SOFTWARE");
 									righe
 								</button>
 							</div>
-							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") || user.getQualificaProfessionale().equals("Responsabile")){%>
-							<div style="margin-bottom: 10px; margin-top: 20px;"">
-								<a type="button" class="col-md-3 btn btn-outline-success ml-10 "
-									href="nuovoSoftware.jsp"><i class="fa fa-plus"
-									aria-hidden="true"></i> Inserisci nuovo pacchetto software</a>
-							</div>
-							<%}%>
 							<tr>
 							  <%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente") || user.getQualificaProfessionale().equals("Responsabile")){%>
 								<th><input type="checkbox" id="checkboxAll"

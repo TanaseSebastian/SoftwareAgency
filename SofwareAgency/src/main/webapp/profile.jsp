@@ -40,7 +40,6 @@
 	<!-- Main Content -->
 	<div class="content">
 		<!-- User Profile -->
-
 		<%=messaggio%>
 		<%
 		request.getSession().setAttribute("MESSAGGIO", "");

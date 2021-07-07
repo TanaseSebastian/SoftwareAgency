@@ -35,7 +35,7 @@
                     <div class="content py-5 text-center">
                         <nav class="breadcrumb bg-body-light mb-0">
                         <a class="breadcrumb-item" href="dashboard.jsp">Dashboard</a>
-                            <a class="breadcrumb-item" href="visualizzaPacchetti.jsp">Lavorazioni Software</a>
+                            <a class="breadcrumb-item" href="gestlavorazioni?cmd=viewall">Lavorazioni Software</a>
                             <span class="breadcrumb-item active">Nuova Lavorazione</span>
                         </nav>
                     </div>
@@ -65,12 +65,12 @@
                                                  <%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
                                                     <option selected="selected" hidden>Seleziona software</option>
                                                     <sql:query var="software" dataSource="${myDS}">
-										   		    select * from software WHERE software.codSoftware NOT IN (select lavorazioni.codSoftware from lavorazioni);
+										   		    select * from software;
 										    		</sql:query>
 										    		<%}//chiudo primo if
 													else if(user.getQualificaProfessionale().equals("Responsabile")) {%>
 													<sql:query var="software" dataSource="${myDS}">
-										   		    select * from software WHERE software.codResponsabile=<%=user.getCodiceDipendente()%> and software.codSoftware NOT IN (select lavorazioni.codSoftware from lavorazioni) 
+										   		    select * from software WHERE software.codResponsabile=<%=user.getCodiceDipendente()%> 
 										    		</sql:query>
 													<%} %>
 													<c:forEach var="row" items="${software.rows}">

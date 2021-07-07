@@ -54,8 +54,8 @@ public class GestioneLogin extends HttpServlet {
 				  request.getSession().setAttribute("Benvenuto", "true");
 				 
 				if(user.getAmministratore().equals("N")) {
-					logger.info("l'utente e' un cliente,per cui rimando sulla index.");
-					response.sendRedirect("index.jsp");
+					logger.info("l'utente e' un dipendente,per cui rimando su benvenuto nella dashboard.");
+					response.sendRedirect("dashboard.jsp");
 				}
 				else if(user.getAmministratore().equals("Y")) {
 					logger.info("l'utente e' un amministratore,lo sto facendo accedere al panello di amministrazione.");

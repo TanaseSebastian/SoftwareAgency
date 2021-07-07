@@ -529,15 +529,7 @@ public class GestioneUtentiServlet extends HttpServlet {
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		//--------IMPORTANTE FUNZIONE CHE AGGIRONA IMMAGINE DI PROFILO-----------------//
+		//-------- FUNZIONE CHE AGGIRONA IMMAGINE DI PROFILO-----------------//
 		else if(comando.equals("adminUpdateImage")) {
 			String codiceDipendente = request.getParameter("codiceDipendente");
 			Part file=request.getPart("avatarNewImg");

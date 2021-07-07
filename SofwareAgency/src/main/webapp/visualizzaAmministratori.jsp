@@ -30,6 +30,14 @@ String srcImmagineProfiloUtente="";
 					<h2 class="h4 font-w400 text-white-op mb-0">in questa sezione
 						potrai vedere tutto il personale amministrativo che compone
 						l'azienda .</h2>
+						
+								<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
+							<div style="margin-bottom: 10px; margin-top: 20px;"">
+								<a type="button" class="col-md-3 btn btn-outline-success ml-10 "
+									href="nuovoAmministratore.jsp"><i class="fa fa-plus"
+									aria-hidden="true"></i> Inserisci nuovo amministratore</a>
+							</div>
+							<%} %>
 				</div>
 			</div>
 		</div>
@@ -93,13 +101,7 @@ String srcImmagineProfiloUtente="";
 									righe
 								</button>
 							</div>
-							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
-							<div style="margin-bottom: 10px; margin-top: 20px;"">
-								<a type="button" class="col-md-3 btn btn-outline-success ml-10 "
-									href="nuovoAmministratore.jsp"><i class="fa fa-plus"
-									aria-hidden="true"></i> Inserisci nuovo amministratore</a>
-							</div>
-							<%} %>
+					
 							<tr>
 							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 								<th><input type="checkbox" id="checkboxAll"

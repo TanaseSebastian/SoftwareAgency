@@ -209,7 +209,7 @@ div.dataTables_wrapper div.dataTables_info {
 										Amministratori</a></li>
 							<%if(user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")){%>
 								<li><a href="nuovoAmministratore.jsp">Inserisci Nuovo
-										Dipendente</a></li>
+										Amministratore</a></li>
 										<%}%>
 							</ul></li>
 

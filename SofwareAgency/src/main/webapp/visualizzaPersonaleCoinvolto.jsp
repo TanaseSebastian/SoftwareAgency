@@ -46,7 +46,7 @@ if(righe==null){
 					<h2 class="h4 font-w400 text-white-op mb-0">in questa sezione
 						potrai vedere tutto i dipendenti coinvolti in questa lavorazione.</h2>
 					<br>
-					<%if(db.verificaLavorazioneResponsabile(l.getCodSoftware(), user.getCodiceDipendente())==1 && user.getQualificaProfessionale().equals("Responsabile")) {%>
+					<%if(db.verificaLavorazioneResponsabile(l.getCodSoftware(), user.getCodiceDipendente())==1 && user.getQualificaProfessionale().equals("Responsabile") || user.getAmministratore().equals("Y") || user.getQualificaProfessionale().equals("Dirigente")) {%>
 					<button type="button" class="btn btn-outline-success "
 						data-target="#chooseDepartment" data-toggle="modal">
 						<i class="fa fa-plus" aria-hidden="true"></i> aggiungi personale
